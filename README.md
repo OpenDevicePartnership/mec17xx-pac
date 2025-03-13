@@ -1,2 +1,1 @@
-# embedded-rust-template
-Template repository for Embedded Rust development
+# Microchip MCU Peripheral Access Crate

@@ -1,0 +1,75 @@
+[package]
+name = "microchip-pac"
+version = "0.1.0"
+authors = [ "Felipe Balbi <febalbi@microsoft.com>" ]
+edition = "2021"
+license = "MIT"
+description = "Peripheral Access Crate for Microchip ;mcu devices"
+repository = "https://github.com/OpenDevicePartnership/microchip-pac"
+readme = "README.md"
+keywords = [ "microchip", "mec17", "mec172", "no_std", "embedded" ]
+categories = [ "embedded", "no_std" ]
+rust-version = "1.85"
+exclude = [ "svd/*", "transforms/*" ]
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = { version = ">=0.7.5,<0.8", optional = true }
+defmt = { version = "0.3.10", optional = true }
+
+[features]
+default = []
+rt = ["cortex-m-rt/device"]
+defmt = ["dep:defmt"]
+
+#! ### Chip selection features
+
+## CEC1702: Temporarily disabled, generated code doesn't compile
+# cec1702 = []
+
+## CEC1712
+cec1712h_b2_sx = []
+cec1712h_n2_sx = []
+cec1712h_s2_sx = []
+
+## CEC1734
+cec1734_s0_2hw = []
+cec1734_s0_2zw = []
+
+## CEC1736
+cec1736_s0_2hw = []
+cec1736_s0_2zw = []
+
+## MEC1701: Temporarily disabled, generated code doesn't compile
+# mec1701h = []
+# mec1701q = []
+
+## MEC1703: Temporarily disabled, generated code doesn't compile
+# mec1703h = []
+# mec1703q = []
+
+## MEC1704: Temporarily disabled, generated code doesn't compile
+# mec1704q = []
+
+## MEC1705: Temporarily disabled, generated code doesn't compile
+# mec1705q = []
+
+## MEC1721
+mec1721n_b0_lj = []
+mec1721n_b0_sz = []
+
+## MEC1723
+mec1723n_b0_lj = []
+mec1723n_b0_sz = []
+mec1723n_f0_sz = []
+mec1723n_p0_9y = []
+
+## MEC1724
+mec1724n_b0_lj = []
+mec1724n_b0_sz = []
+
+## MEC1725
+mec1725n_b0_lj = []
+
+## MEC1727
+mec1727n_b0_sz = []

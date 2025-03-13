@@ -17,7 +17,7 @@ jobs:
     name: ${{ matrix.target }}
     strategy:
       matrix:
-        target: [thumbv8m.main-none-eabihf]
+        target: [thumbv7em-none-eabihf]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,4 +27,4 @@ jobs:
       - name: rustup target add ${{ matrix.target }}
         run: rustup target add ${{ matrix.target }}
       - name: cargo check
-        run: cargo check --target ${{ matrix.target }} --no-default-features
+        run: cargo check --target ${{ matrix.target }} --no-default-features -F mec1723n_b0_sz
