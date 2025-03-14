@@ -1,0 +1,21 @@
+transforms:
+  - !Delete
+      from: sys_tick::.* # We get from cortex_m
+
+  - !Delete
+      from: nvic::.* # We get from cortex_m
+
+  - !Delete
+      from: system_control::.* # We get from cortex_m
+
+  - !MergeFieldsets
+    from: gpio::regs::Ctrl\d+
+    to: gpio::regs::Ctrl
+    check: NoCheck
+
+  - !MergeFieldsets
+    from: gpio::regs::Ctrl2p\d*
+    to: gpio::regs::Ctrl2p
+    check: NoCheck
+
+  - !Sanitize

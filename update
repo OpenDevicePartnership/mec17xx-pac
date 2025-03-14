@@ -1,0 +1,272 @@
+#!/usr/bin/env -S cargo +nightly -Zscript
+---cargo
+[package]
+version = "0.1.0"
+edition = "2021"
+[dependencies]
+clap = { version = "4.2", features = ["derive"] }
+color-eyre = "0.6.3"
+indicatif = "0.17.11"
+reqwest = { version = "0.12.12", features = ["blocking"]}
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+walkdir = "2.5.0"
+zip-extract = "0.2.1"
+---
+
+use std::env;
+use std::ffi::OsStr;
+use std::fs::{self, File};
+use std::process::Command;
+use std::time::Duration;
+
+use clap::Parser;
+use color_eyre::eyre::Result;
+use indicatif::ProgressBar;
+use tracing::trace;
+use walkdir::{DirEntry, WalkDir};
+
+const CHIPTOOL_URL: &'static str = "https://github.com/embassy-rs/chiptool";
+const MICROCHIP_DOWNLOADS_URL: &'static str = "https://packs.download.microchip.com";
+const MEC_ATPACK_NAME: &'static str = "Microchip.MEC17xx_DFP.1.4.221.atpack";
+const CEC_ATPACK_NAME: &'static str = "Microchip.CEC_DFP.2.0.261.atpack";
+
+#[derive(Parser, Debug)]
+#[command(
+    name = "gen",
+    author = "Felipe Balbi <febalbi@microsoft.com>",
+    about = "Generate metapac for Microchip CECxx MCU family",
+    version = "1.0.0"
+)]
+struct Cli;
+
+impl Cli {
+    #[tracing::instrument]
+    fn run(self) -> Result<()> {
+        let gen = Generator::new();
+        gen.install_svd2rust()?;
+        gen.install_chiptool()?;
+        gen.install_sd()?;
+        gen.download_atpacks()?;
+        gen.unpack_atpacks()?;
+        gen.copy_svds()?;
+        gen.generate_pac()?;
+        gen.done()
+    }
+}
+
+#[derive(Debug)]
+struct Generator {
+    pb: ProgressBar,
+}
+
+impl Generator {
+    fn new() -> Self {
+        let pb = ProgressBar::new_spinner();
+        pb.enable_steady_tick(Duration::from_millis(100));
+
+        Self { pb }
+    }
+
+    #[tracing::instrument]
+    fn install_svd2rust(&self) -> Result<()> {
+        trace!("Installing svd2rust");
+        self.pb.set_message("Installing 'svd2rust'");
+        self.cargo(&["install", "svd2rust"])
+    }
+
+    #[tracing::instrument]
+    fn install_chiptool(&self) -> Result<()> {
+        trace!("Installing chiptool");
+        self.pb.set_message("Installing 'chiptool'");
+        self.cargo(&["install", "--git", CHIPTOOL_URL])
+    }
+
+    #[tracing::instrument]
+    fn install_sd(&self) -> Result<()> {
+        trace!("Installing sd");
+        self.pb.set_message("Installing 'sd'");
+        self.cargo(&["install", "sd"])
+    }
+
+    #[tracing::instrument]
+    fn download_atpacks(&self) -> Result<()> {
+        self.download_atpack(MEC_ATPACK_NAME)?;
+        self.download_atpack(CEC_ATPACK_NAME)
+    }
+
+    #[tracing::instrument]
+    fn download_atpack(&self, atpack: &str) -> Result<()> {
+        trace!("Downloading '{}'", atpack);
+        self.pb.set_message(format!("Downloading '{}'", atpack));
+        let mut dir = env::current_dir()?;
+        dir.push("tmp");
+        dir.push("atpack");
+        fs::create_dir_all(&dir)?;
+
+        dir.push(atpack);
+
+        let mut file = File::create(&dir)?;
+        let url = format!("{}/{}", MICROCHIP_DOWNLOADS_URL, atpack);
+        let mut resp = reqwest::blocking::get(url)?;
+        resp.copy_to(&mut file)?;
+
+        Ok(())
+    }
+
+    #[tracing::instrument]
+    fn unpack_atpacks(&self) -> Result<()> {
+        self.unpack_atpack(MEC_ATPACK_NAME)?;
+        self.unpack_atpack(CEC_ATPACK_NAME)
+    }
+
+    #[tracing::instrument]
+    fn unpack_atpack(&self, atpack: &str) -> Result<()> {
+        trace!("Unpacking '{}'", atpack);
+        self.pb.set_message(format!("Unpacking '{}'", atpack));
+
+        let mut src = env::current_dir()?;
+        src.push("tmp");
+        src.push("atpack");
+        src.push(atpack);
+
+        let mut extract = env::current_dir()?;
+        extract.push("tmp");
+        extract.push("extract");
+        fs::create_dir_all(&extract)?;
+
+        let file = File::open(src)?;
+        zip_extract::extract(file, &extract, false)?;
+
+        Ok(())
+    }
+
+    #[tracing::instrument]
+    fn copy_svds(&self) -> Result<()> {
+        let mut extract = env::current_dir()?;
+        extract.push("tmp");
+        extract.push("extract");
+
+        for entry in WalkDir::new(extract).into_iter().filter_map(Result::ok) {
+            // Manually checked list of minimal SVDs to support
+            // everything in both families.
+            let target_name = match entry.file_name().to_str().unwrap() {
+                "CEC1702.svd" => "cec1702.svd",
+                "CEC1712H_B2_SX.svd" => "cec1712.svd",
+                "CEC1734_S0_2ZW.svd" => "cec1734.svd",
+                "CEC1736_S0_2ZW.svd" => "cec1736.svd",
+                "MEC1701Q.svd" => "mec1701.svd",
+                "MEC1703K.svd" => "mec1703.svd",
+                "MEC1704Q.svd" => "mec1704.svd",
+                "MEC1705Q.svd" => "mec1705.svd",
+                "MEC1721N_B0_LJ.svd" => "mec1721.svd",
+                "MEC1723N_B0_LJ.svd" => "mec1723_4.svd",
+                "MEC17250N_B0_LJ.svd" => "mec1725.svd",
+                "MEC1727N_B0_SZ.svd" => "mec1727.svd",
+                _ => continue,
+            };
+
+            trace!("Copying '{:?}' to 'svd'", entry);
+            fs::copy(entry.path(), &format!("svd/{}", target_name))?;
+        }
+
+        Ok(())
+    }
+
+    #[tracing::instrument]
+    fn generate_pac(&self) -> Result<()> {
+        let mut svds = env::current_dir()?;
+        svds.push("svd");
+
+        for svd in WalkDir::new(svds).into_iter().filter_map(Result::ok) {
+            if svd.path().extension() == Some(&OsStr::new("svd")) {
+                self.generate_pac_for(&svd)?;
+            }
+        }
+
+        Ok(())
+    }
+
+    #[tracing::instrument]
+    fn generate_pac_for(&self, svd: &DirEntry) -> Result<()> {
+        trace!("Generating PAC for '{:?}'", svd);
+        self.pb.set_message(format!(
+            "Generating PAC for '{}'",
+            svd.file_name().to_str().unwrap()
+        ));
+
+        // Generate lib.rs and device.x
+        self.pb.set_message("Running 'chiptool'");
+        Command::new("chiptool")
+            .args([
+                "generate",
+                "--svd",
+                svd.path().to_str().unwrap(),
+                "--transform",
+                "svd/transforms.yaml",
+            ])
+            .output()?;
+
+        // Let cargo fmt format our code
+        self.pb.set_message("Running 'rustfmt'");
+        Command::new("rustfmt").arg("lib.rs").output()?;
+
+        // If on Windows, run dos2unix on all .rs files. We're
+        // assuming dos2unix to be installed as there isn't an easy
+        // way to install it that works on all Windows
+        #[cfg(target_family = "windows")]
+        {
+            trace!("Running 'dos2unix'");
+            self.pb.set_message("Running 'dos2unix'");
+            Command::new("dos2unix").arg("lib.rs");
+        }
+
+        trace!("Removing '#![no_std]' from {:?}", svd);
+        self.pb.set_message("Removing '#![no_std]' annotation");
+        Command::new("sd")
+            .args(&[r#"#!\[no_std]"#, "", "lib.rs"])
+            .output()?;
+
+        trace!("Renaming 'lib.rs' to 'src/chips/{}/pac.rs'", svd.path().file_stem().unwrap().to_str().unwrap());
+        self.pb.set_message("Renaming 'lib.rs' to 'pac.rs'");
+        fs::rename(
+            "lib.rs",
+            &format!(
+                "src/chips/{}/pac.rs",
+                svd.path().file_stem().unwrap().to_str().unwrap()
+            ),
+        )?;
+
+        // Rename device.x
+        trace!("Renaming 'device.x'");
+        self.pb.set_message("Renaming 'device.x'");
+        fs::rename(
+            "device.x",
+            &format!(
+                "src/chips/{}/device.x",
+                svd.path().file_stem().unwrap().to_str().unwrap()
+            ),
+        )?;
+
+        Ok(())
+    }
+
+    #[tracing::instrument]
+    fn cargo(&self, args: &[&str]) -> Result<()> {
+        Command::new("cargo").args(args).output()?;
+        Ok(())
+    }
+
+    #[tracing::instrument]
+    fn done(self) -> Result<()> {
+        self.pb.finish_with_message("done 👍");
+        Ok(())
+    }
+}
+
+fn main() -> Result<()> {
+    color_eyre::install()?;
+    tracing_subscriber::fmt::init();
+
+    Cli::parse().run()
+}
