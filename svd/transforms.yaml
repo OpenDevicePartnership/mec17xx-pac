@@ -10,12 +10,25 @@ transforms:
 
   - !MergeFieldsets
     from: gpio::regs::Ctrl\d+
-    to: gpio::regs::Ctrl
+    to: gpio::regs::Ctrl1
     check: NoCheck
 
   - !MergeFieldsets
     from: gpio::regs::Ctrl2p\d*
-    to: gpio::regs::Ctrl2p
+    to: gpio::regs::Ctrl2
     check: NoCheck
 
+  - !RenameRegisters
+    block: gpio::Gpio
+    from: ctrl(\d+)
+    to: ctrl1p$1
+
+  - !MakeBlock
+    blocks: gpio::Gpio
+    from: ctrl(\d)p(\d+)
+    to_outer: port$2
+    to_inner: ctrl$1
+    to_block: gpio::Port
+
   - !Sanitize
+
