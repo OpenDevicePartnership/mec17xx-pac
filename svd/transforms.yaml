@@ -23,12 +23,175 @@ transforms:
     from: ctrl(\d+)
     to: ctrl1p$1
 
+  - !RenameFields
+      fieldset: gpio::regs::Ctrl1
+      from: (alt_)?gpio_(.*)
+      to: $1$2
+
   - !MakeBlock
     blocks: gpio::Gpio
     from: ctrl(\d)p(\d+)
     to_outer: port$2
     to_inner: ctrl$1
     to_block: gpio::Port
+
+  - !Add
+    ir:
+      enum/Pull:
+        description: Configure internal pull-up and pull-down resistors.
+        bit_size: 2
+        variants:
+          - name: None
+            value: 0
+            description: Pin tristates when no active driver is present on the pin.
+
+          - name: Up
+            value: 1
+            description: Pull up enabled.
+
+          - name: Down
+            value: 2
+            description: Pull down enabled.
+
+          - name: Repeater
+            value: 3
+            description: Pin is kept at previous voltage level when no active driver is present on the pin.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: pu_pd
+    enum: Pull
+
+  - !Add
+    ir:
+      enum/Pgs:
+        description: Power Gating Signals provide the chip Power Emulation options.
+        bit_size: 2
+        variants:
+          - name: VTR
+            value: 0
+            description: The output buffer is tristated when VTR_PWRGD=0.
+
+          - name: VCC
+            value: 1
+            description: The output buffer is tristated when VCC_PWRGD=0.
+
+          - name: Unpowered
+            value: 2
+            description: The always unpowered setting on a GPIO will force the pin to tristate. The input and output are disabled, and the pad is in the lowest power state.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: pwr_gating
+    enum: Pgs
+
+  - !Add
+    ir:
+      enum/BufferType:
+        description: Pin buffer drive type.
+        bit_size: 1
+        variants:
+          - name: PUSH_PULL
+            value: 0
+            description: Output buffer type is Open-drain.
+
+          - name: OPEN_DRAIN
+            value: 1
+            description: Output buffer type is Push-pull.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: out_buff_type
+    enum: BufferType
+
+  - !Add
+    ir:
+      enum/Dir:
+        description: Pin direction.
+        bit_size: 1
+        variants:
+          - name: INPUT
+            value: 0
+            description: Input GPIO.
+
+          - name: OUTPUT
+            value: 1
+            description: Output GPIO.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: dir
+    enum: Dir
+
+  - !Add
+    ir:
+      enum/Sel:
+        bit_size: 1
+        variants:
+          - name: PIN
+            value: 0
+            description: Single GPIO output data bit is enabled. 
+
+          - name: GROUP
+            value: 1
+            description: Grouped Output GPIO is enabled.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: out_sel
+    enum: Sel
+
+  - !Add
+    ir:
+      enum/Pol:
+        bit_size: 1
+        variants:
+          - name: NON_INVERTED
+            value: 0
+            description: Non-inverted polarity.
+
+          - name: INVERTED
+            value: 1
+            description: Inverted polarity.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: pol
+    enum: Pol
+
+  - !Add
+    ir:
+      enum/Function:
+        bit_size: 3
+        variants:
+          - name: GPIO
+            value: 0
+            description: GPIO function selected.
+
+          - name: F1
+            value: 1
+            description: Function 1 selected.
+            
+          - name: F2
+            value: 2
+            description: Function 2 selected.
+
+          - name: F3
+            value: 3
+            description: Function 3 selected.
+
+          - name: F4
+            value: 4
+            description: Function 4 selected.
+
+          - name: F5
+            value: 5
+            description: Function 5 selected.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl1
+    field: mux_ctrl
+    enum: Function
 
   - !Sanitize
 

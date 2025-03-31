@@ -668,6 +668,244 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
 pub use Interrupt as interrupt;
+#[doc = "Pin buffer drive type."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum BufferType {
+    #[doc = "Output buffer type is Open-drain."]
+    PUSH_PULL = 0x0,
+    #[doc = "Output buffer type is Push-pull."]
+    OPEN_DRAIN = 0x01,
+}
+impl BufferType {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> BufferType {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for BufferType {
+    #[inline(always)]
+    fn from(val: u8) -> BufferType {
+        BufferType::from_bits(val)
+    }
+}
+impl From<BufferType> for u8 {
+    #[inline(always)]
+    fn from(val: BufferType) -> u8 {
+        BufferType::to_bits(val)
+    }
+}
+#[doc = "Pin direction."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Dir {
+    #[doc = "Input GPIO."]
+    INPUT = 0x0,
+    #[doc = "Output GPIO."]
+    OUTPUT = 0x01,
+}
+impl Dir {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Dir {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Dir {
+    #[inline(always)]
+    fn from(val: u8) -> Dir {
+        Dir::from_bits(val)
+    }
+}
+impl From<Dir> for u8 {
+    #[inline(always)]
+    fn from(val: Dir) -> u8 {
+        Dir::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Function {
+    #[doc = "GPIO function selected."]
+    GPIO = 0x0,
+    #[doc = "Function 1 selected."]
+    F1 = 0x01,
+    #[doc = "Function 2 selected."]
+    F2 = 0x02,
+    #[doc = "Function 3 selected."]
+    F3 = 0x03,
+    #[doc = "Function 4 selected."]
+    F4 = 0x04,
+    #[doc = "Function 5 selected."]
+    F5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl Function {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Function {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Function {
+    #[inline(always)]
+    fn from(val: u8) -> Function {
+        Function::from_bits(val)
+    }
+}
+impl From<Function> for u8 {
+    #[inline(always)]
+    fn from(val: Function) -> u8 {
+        Function::to_bits(val)
+    }
+}
+#[doc = "Power Gating Signals provide the chip Power Emulation options."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pgs {
+    #[doc = "The output buffer is tristated when VTR_PWRGD=0."]
+    VTR = 0x0,
+    #[doc = "The output buffer is tristated when VCC_PWRGD=0."]
+    VCC = 0x01,
+    #[doc = "The always unpowered setting on a GPIO will force the pin to tristate. The input and output are disabled, and the pad is in the lowest power state."]
+    UNPOWERED = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl Pgs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pgs {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pgs {
+    #[inline(always)]
+    fn from(val: u8) -> Pgs {
+        Pgs::from_bits(val)
+    }
+}
+impl From<Pgs> for u8 {
+    #[inline(always)]
+    fn from(val: Pgs) -> u8 {
+        Pgs::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol {
+    #[doc = "Non-inverted polarity."]
+    NON_INVERTED = 0x0,
+    #[doc = "Inverted polarity."]
+    INVERTED = 0x01,
+}
+impl Pol {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol {
+    #[inline(always)]
+    fn from(val: u8) -> Pol {
+        Pol::from_bits(val)
+    }
+}
+impl From<Pol> for u8 {
+    #[inline(always)]
+    fn from(val: Pol) -> u8 {
+        Pol::to_bits(val)
+    }
+}
+#[doc = "Configure internal pull-up and pull-down resistors."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pull {
+    #[doc = "Pin tristates when no active driver is present on the pin."]
+    NONE = 0x0,
+    #[doc = "Pull up enabled."]
+    UP = 0x01,
+    #[doc = "Pull down enabled."]
+    DOWN = 0x02,
+    #[doc = "Pin is kept at previous voltage level when no active driver is present on the pin."]
+    REPEATER = 0x03,
+}
+impl Pull {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pull {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pull {
+    #[inline(always)]
+    fn from(val: u8) -> Pull {
+        Pull::from_bits(val)
+    }
+}
+impl From<Pull> for u8 {
+    #[inline(always)]
+    fn from(val: Pull) -> u8 {
+        Pull::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sel {
+    #[doc = "Single GPIO output data bit is enabled."]
+    PIN = 0x0,
+    #[doc = "Grouped Output GPIO is enabled."]
+    GROUP = 0x01,
+}
+impl Sel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sel {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sel {
+    #[inline(always)]
+    fn from(val: u8) -> Sel {
+        Sel::from_bits(val)
+    }
+}
+impl From<Sel> for u8 {
+    #[inline(always)]
+    fn from(val: Sel) -> u8 {
+        Sel::to_bits(val)
+    }
+}
 pub mod acpi_ec0 {
     #[doc = "The ACPI Embedded Controller Interface (ACPI-ECI) provides a four byte full duplex data interface which is a superset of the standard ACPI Embedded Controller Interface (ACPI-ECI) one byte data interface. The ACPI Embedded Controller Interface (ACPI-ECI) defaults to the standard one byte interface."]
     #[derive(Copy, Clone, Eq, PartialEq)]

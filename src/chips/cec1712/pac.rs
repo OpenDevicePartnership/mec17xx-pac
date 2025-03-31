@@ -492,6 +492,244 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
 pub use Interrupt as interrupt;
+#[doc = "Pin buffer drive type."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum BufferType {
+    #[doc = "Output buffer type is Open-drain."]
+    PUSH_PULL = 0x0,
+    #[doc = "Output buffer type is Push-pull."]
+    OPEN_DRAIN = 0x01,
+}
+impl BufferType {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> BufferType {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for BufferType {
+    #[inline(always)]
+    fn from(val: u8) -> BufferType {
+        BufferType::from_bits(val)
+    }
+}
+impl From<BufferType> for u8 {
+    #[inline(always)]
+    fn from(val: BufferType) -> u8 {
+        BufferType::to_bits(val)
+    }
+}
+#[doc = "Pin direction."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Dir {
+    #[doc = "Input GPIO."]
+    INPUT = 0x0,
+    #[doc = "Output GPIO."]
+    OUTPUT = 0x01,
+}
+impl Dir {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Dir {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Dir {
+    #[inline(always)]
+    fn from(val: u8) -> Dir {
+        Dir::from_bits(val)
+    }
+}
+impl From<Dir> for u8 {
+    #[inline(always)]
+    fn from(val: Dir) -> u8 {
+        Dir::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Function {
+    #[doc = "GPIO function selected."]
+    GPIO = 0x0,
+    #[doc = "Function 1 selected."]
+    F1 = 0x01,
+    #[doc = "Function 2 selected."]
+    F2 = 0x02,
+    #[doc = "Function 3 selected."]
+    F3 = 0x03,
+    #[doc = "Function 4 selected."]
+    F4 = 0x04,
+    #[doc = "Function 5 selected."]
+    F5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl Function {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Function {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Function {
+    #[inline(always)]
+    fn from(val: u8) -> Function {
+        Function::from_bits(val)
+    }
+}
+impl From<Function> for u8 {
+    #[inline(always)]
+    fn from(val: Function) -> u8 {
+        Function::to_bits(val)
+    }
+}
+#[doc = "Power Gating Signals provide the chip Power Emulation options."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pgs {
+    #[doc = "The output buffer is tristated when VTR_PWRGD=0."]
+    VTR = 0x0,
+    #[doc = "The output buffer is tristated when VCC_PWRGD=0."]
+    VCC = 0x01,
+    #[doc = "The always unpowered setting on a GPIO will force the pin to tristate. The input and output are disabled, and the pad is in the lowest power state."]
+    UNPOWERED = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl Pgs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pgs {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pgs {
+    #[inline(always)]
+    fn from(val: u8) -> Pgs {
+        Pgs::from_bits(val)
+    }
+}
+impl From<Pgs> for u8 {
+    #[inline(always)]
+    fn from(val: Pgs) -> u8 {
+        Pgs::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol {
+    #[doc = "Non-inverted polarity."]
+    NON_INVERTED = 0x0,
+    #[doc = "Inverted polarity."]
+    INVERTED = 0x01,
+}
+impl Pol {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol {
+    #[inline(always)]
+    fn from(val: u8) -> Pol {
+        Pol::from_bits(val)
+    }
+}
+impl From<Pol> for u8 {
+    #[inline(always)]
+    fn from(val: Pol) -> u8 {
+        Pol::to_bits(val)
+    }
+}
+#[doc = "Configure internal pull-up and pull-down resistors."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pull {
+    #[doc = "Pin tristates when no active driver is present on the pin."]
+    NONE = 0x0,
+    #[doc = "Pull up enabled."]
+    UP = 0x01,
+    #[doc = "Pull down enabled."]
+    DOWN = 0x02,
+    #[doc = "Pin is kept at previous voltage level when no active driver is present on the pin."]
+    REPEATER = 0x03,
+}
+impl Pull {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pull {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pull {
+    #[inline(always)]
+    fn from(val: u8) -> Pull {
+        Pull::from_bits(val)
+    }
+}
+impl From<Pull> for u8 {
+    #[inline(always)]
+    fn from(val: Pull) -> u8 {
+        Pull::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sel {
+    #[doc = "Single GPIO output data bit is enabled."]
+    PIN = 0x0,
+    #[doc = "Grouped Output GPIO is enabled."]
+    GROUP = 0x01,
+}
+impl Sel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sel {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sel {
+    #[inline(always)]
+    fn from(val: u8) -> Sel {
+        Sel::from_bits(val)
+    }
+}
+impl From<Sel> for u8 {
+    #[inline(always)]
+    fn from(val: Sel) -> u8 {
+        Sel::to_bits(val)
+    }
+}
 pub mod adc {
     #[doc = "This block is designed to convert external analog voltage readings into digital values."]
     #[derive(Copy, Clone, Eq, PartialEq)]
@@ -6129,25 +6367,25 @@ pub mod gpio {
         impl Ctrl1 {
             #[doc = "These bits are used to enable an internal pull-up or pull-down resistor."]
             #[inline(always)]
-            pub const fn pu_pd(&self) -> u8 {
+            pub const fn pu_pd(&self) -> super::super::Pull {
                 let val = (self.0 >> 0usize) & 0x03;
-                val as u8
+                super::super::Pull::from_bits(val as u8)
             }
             #[doc = "These bits are used to enable an internal pull-up or pull-down resistor."]
             #[inline(always)]
-            pub fn set_pu_pd(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
+            pub fn set_pu_pd(&mut self, val: super::super::Pull) {
+                self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
             }
             #[doc = "The GPIO pin will be tristated when the selected power well is off."]
             #[inline(always)]
-            pub const fn pwr_gating(&self) -> u8 {
+            pub const fn pwr_gating(&self) -> super::super::Pgs {
                 let val = (self.0 >> 2usize) & 0x03;
-                val as u8
+                super::super::Pgs::from_bits(val as u8)
             }
             #[doc = "The GPIO pin will be tristated when the selected power well is off."]
             #[inline(always)]
-            pub fn set_pwr_gating(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
+            pub fn set_pwr_gating(&mut self, val: super::super::Pgs) {
+                self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
             }
             #[doc = "Determines the interrupt capability of the GPIO input."]
             #[inline(always)]
@@ -6173,58 +6411,58 @@ pub mod gpio {
             }
             #[doc = "0 = Push-Pull, 1 = Open Drain"]
             #[inline(always)]
-            pub const fn out_buff_type(&self) -> bool {
+            pub const fn out_buff_type(&self) -> super::super::BufferType {
                 let val = (self.0 >> 8usize) & 0x01;
-                val != 0
+                super::super::BufferType::from_bits(val as u8)
             }
             #[doc = "0 = Push-Pull, 1 = Open Drain"]
             #[inline(always)]
-            pub fn set_out_buff_type(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
+            pub fn set_out_buff_type(&mut self, val: super::super::BufferType) {
+                self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
             }
             #[doc = "Buffer direction when GPIO selected by pin mux 0 = Input, 1 = Output"]
             #[inline(always)]
-            pub const fn gpio_dir(&self) -> bool {
+            pub const fn dir(&self) -> super::super::Dir {
                 let val = (self.0 >> 9usize) & 0x01;
-                val != 0
+                super::super::Dir::from_bits(val as u8)
             }
             #[doc = "Buffer direction when GPIO selected by pin mux 0 = Input, 1 = Output"]
             #[inline(always)]
-            pub fn set_gpio_dir(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+            pub fn set_dir(&mut self, val: super::super::Dir) {
+                self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
             }
             #[doc = "GPIO outputs registe select.0=GPIO ALTERNATE_GPIO_DATA 1=GPIO Output Register."]
             #[inline(always)]
-            pub const fn gpio_out_sel(&self) -> bool {
+            pub const fn out_sel(&self) -> super::super::Sel {
                 let val = (self.0 >> 10usize) & 0x01;
-                val != 0
+                super::super::Sel::from_bits(val as u8)
             }
             #[doc = "GPIO outputs registe select.0=GPIO ALTERNATE_GPIO_DATA 1=GPIO Output Register."]
             #[inline(always)]
-            pub fn set_gpio_out_sel(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
+            pub fn set_out_sel(&mut self, val: super::super::Sel) {
+                self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
             }
             #[doc = "1=Inverted; 0=Non-inverted"]
             #[inline(always)]
-            pub const fn pol(&self) -> bool {
+            pub const fn pol(&self) -> super::super::Pol {
                 let val = (self.0 >> 11usize) & 0x01;
-                val != 0
+                super::super::Pol::from_bits(val as u8)
             }
             #[doc = "1=Inverted; 0=Non-inverted"]
             #[inline(always)]
-            pub fn set_pol(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+            pub fn set_pol(&mut self, val: super::super::Pol) {
+                self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
             }
             #[doc = "00 = GPIO Function, 01 = Function 1, 10 = Function 2, 11 = Function 3."]
             #[inline(always)]
-            pub const fn mux_ctrl(&self) -> u8 {
+            pub const fn mux_ctrl(&self) -> super::super::Function {
                 let val = (self.0 >> 12usize) & 0x07;
-                val as u8
+                super::super::Function::from_bits(val as u8)
             }
             #[doc = "00 = GPIO Function, 01 = Function 1, 10 = Function 2, 11 = Function 3."]
             #[inline(always)]
-            pub fn set_mux_ctrl(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
+            pub fn set_mux_ctrl(&mut self, val: super::super::Function) {
+                self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
             }
             #[doc = "GPIO input disable"]
             #[inline(always)]
@@ -6239,24 +6477,24 @@ pub mod gpio {
             }
             #[doc = "GPIO Alternate Data Register."]
             #[inline(always)]
-            pub const fn alt_gpio_data(&self) -> bool {
+            pub const fn alt_data(&self) -> bool {
                 let val = (self.0 >> 16usize) & 0x01;
                 val != 0
             }
             #[doc = "GPIO Alternate Data Register."]
             #[inline(always)]
-            pub fn set_alt_gpio_data(&mut self, val: bool) {
+            pub fn set_alt_data(&mut self, val: bool) {
                 self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
             }
             #[doc = "GPIO input from pin, independent of the Mux selection for the pin or the Direction."]
             #[inline(always)]
-            pub const fn gpio_inp(&self) -> bool {
+            pub const fn inp(&self) -> bool {
                 let val = (self.0 >> 24usize) & 0x01;
                 val != 0
             }
             #[doc = "GPIO input from pin, independent of the Mux selection for the pin or the Direction."]
             #[inline(always)]
-            pub fn set_gpio_inp(&mut self, val: bool) {
+            pub fn set_inp(&mut self, val: bool) {
                 self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
             }
         }
@@ -6274,20 +6512,20 @@ pub mod gpio {
                     .field("intr_det", &self.intr_det())
                     .field("edge_en", &self.edge_en())
                     .field("out_buff_type", &self.out_buff_type())
-                    .field("gpio_dir", &self.gpio_dir())
-                    .field("gpio_out_sel", &self.gpio_out_sel())
+                    .field("dir", &self.dir())
+                    .field("out_sel", &self.out_sel())
                     .field("pol", &self.pol())
                     .field("mux_ctrl", &self.mux_ctrl())
                     .field("inp_dis", &self.inp_dis())
-                    .field("alt_gpio_data", &self.alt_gpio_data())
-                    .field("gpio_inp", &self.gpio_inp())
+                    .field("alt_data", &self.alt_data())
+                    .field("inp", &self.inp())
                     .finish()
             }
         }
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ctrl1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ctrl1 {{ pu_pd: {=u8:?}, pwr_gating: {=u8:?}, intr_det: {=u8:?}, edge_en: {=bool:?}, out_buff_type: {=bool:?}, gpio_dir: {=bool:?}, gpio_out_sel: {=bool:?}, pol: {=bool:?}, mux_ctrl: {=u8:?}, inp_dis: {=bool:?}, alt_gpio_data: {=bool:?}, gpio_inp: {=bool:?} }}" , self . pu_pd () , self . pwr_gating () , self . intr_det () , self . edge_en () , self . out_buff_type () , self . gpio_dir () , self . gpio_out_sel () , self . pol () , self . mux_ctrl () , self . inp_dis () , self . alt_gpio_data () , self . gpio_inp ())
+                defmt :: write ! (f , "Ctrl1 {{ pu_pd: {:?}, pwr_gating: {:?}, intr_det: {=u8:?}, edge_en: {=bool:?}, out_buff_type: {:?}, dir: {:?}, out_sel: {:?}, pol: {:?}, mux_ctrl: {:?}, inp_dis: {=bool:?}, alt_data: {=bool:?}, inp: {=bool:?} }}" , self . pu_pd () , self . pwr_gating () , self . intr_det () , self . edge_en () , self . out_buff_type () , self . dir () , self . out_sel () , self . pol () , self . mux_ctrl () , self . inp_dis () , self . alt_data () , self . inp ())
             }
         }
         #[doc = "The GPIO PIN_CTRL2 Registers"]
