@@ -1054,6 +1054,70 @@ impl From<Sel> for u8 {
         Sel::to_bits(val)
     }
 }
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum SlewCtrl {
+    SLOW = 0x0,
+    FAST = 0x01,
+}
+impl SlewCtrl {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> SlewCtrl {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for SlewCtrl {
+    #[inline(always)]
+    fn from(val: u8) -> SlewCtrl {
+        SlewCtrl::from_bits(val)
+    }
+}
+impl From<SlewCtrl> for u8 {
+    #[inline(always)]
+    fn from(val: SlewCtrl) -> u8 {
+        SlewCtrl::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Strength {
+    #[doc = "2mA for PIO-12 pins, 4mA for PIO-24 pins."]
+    LOWEST = 0x0,
+    #[doc = "4mA for PIO-12 pins, 8mA for PIO-24 pins."]
+    LOW = 0x01,
+    #[doc = "8mA for PIO-12 pins, 16mA for PIO-24 pins."]
+    MEDIUM = 0x02,
+    #[doc = "12mA for PIO-12 pins, 24mA for PIO-24 pins."]
+    FULL = 0x03,
+}
+impl Strength {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Strength {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Strength {
+    #[inline(always)]
+    fn from(val: u8) -> Strength {
+        Strength::from_bits(val)
+    }
+}
+impl From<Strength> for u8 {
+    #[inline(always)]
+    fn from(val: Strength) -> u8 {
+        Strength::to_bits(val)
+    }
+}
 pub mod acpi_ec0 {
     #[doc = "The ACPI-ECI provides a four byte full duplex data interface."]
     #[derive(Copy, Clone, Eq, PartialEq)]
@@ -27705,25 +27769,25 @@ pub mod gpio {
         impl Ctrl2 {
             #[doc = "Selects slew rate on the pin. 1=fast 0=slow"]
             #[inline(always)]
-            pub const fn slew_ctrl(&self) -> bool {
+            pub const fn slew_ctrl(&self) -> super::super::SlewCtrl {
                 let val = (self.0 >> 0usize) & 0x01;
-                val != 0
+                super::super::SlewCtrl::from_bits(val as u8)
             }
             #[doc = "Selects slew rate on the pin. 1=fast 0=slow"]
             #[inline(always)]
-            pub fn set_slew_ctrl(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+            pub fn set_slew_ctrl(&mut self, val: super::super::SlewCtrl) {
+                self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
             }
             #[doc = "Selects the drive strength on the pin. 00 = 2mA, 01 = 4mA, 10 = 8mA, 11 = 12mA"]
             #[inline(always)]
-            pub const fn driv_stren(&self) -> u8 {
+            pub const fn driv_stren(&self) -> super::super::Strength {
                 let val = (self.0 >> 4usize) & 0x03;
-                val as u8
+                super::super::Strength::from_bits(val as u8)
             }
             #[doc = "Selects the drive strength on the pin. 00 = 2mA, 01 = 4mA, 10 = 8mA, 11 = 12mA"]
             #[inline(always)]
-            pub fn set_driv_stren(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
+            pub fn set_driv_stren(&mut self, val: super::super::Strength) {
+                self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
             }
         }
         impl Default for Ctrl2 {
@@ -27745,7 +27809,7 @@ pub mod gpio {
             fn format(&self, f: defmt::Formatter) {
                 defmt::write!(
                     f,
-                    "Ctrl2 {{ slew_ctrl: {=bool:?}, driv_stren: {=u8:?} }}",
+                    "Ctrl2 {{ slew_ctrl: {:?}, driv_stren: {:?} }}",
                     self.slew_ctrl(),
                     self.driv_stren()
                 )

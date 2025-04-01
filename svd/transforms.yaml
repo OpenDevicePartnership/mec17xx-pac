@@ -193,5 +193,47 @@ transforms:
     field: mux_ctrl
     enum: Function
 
+  - !Add
+    ir:
+      enum/Strength:
+        bit_size: 2
+        variants:
+          - name: LOWEST
+            value: 0
+            description: 2mA for PIO-12 pins, 4mA for PIO-24 pins.
+
+          - name: LOW
+            value: 1
+            description: 4mA for PIO-12 pins, 8mA for PIO-24 pins.
+            
+          - name: MEDIUM
+            value: 2
+            description: 8mA for PIO-12 pins, 16mA for PIO-24 pins.
+
+          - name: FULL
+            value: 3
+            description: 12mA for PIO-12 pins, 24mA for PIO-24 pins.
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl2
+    field: driv_stren
+    enum: Strength
+
+  - !Add
+    ir:
+      enum/SlewCtrl:
+        bit_size: 1
+        variants:
+          - name: SLOW
+            value: 0
+
+          - name: FAST
+            value: 1
+
+  - !ModifyFieldsEnum
+    fieldset: gpio::regs::Ctrl2
+    field: slew_ctrl
+    enum: SlewCtrl
+
   - !Sanitize
 
