@@ -1,7 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (0e58ecb 2025-03-12))"]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (d771c7b 2025-03-27))"]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
@@ -539,47 +538,33 @@ mod _vectors {
         Vector { _handler: LED2 },
         Vector { _handler: LED3 },
         Vector { _handler: PHOT },
-        Vector {
-            _handler: POWERGUARD_0,
-        },
-        Vector {
-            _handler: POWERGUARD_1,
-        },
+        Vector { _handler: POWERGUARD_0 },
+        Vector { _handler: POWERGUARD_1 },
         Vector { _handler: SPISLV },
         Vector { _handler: QMSPI },
         Vector { _handler: TX0 },
         Vector { _handler: RX0 },
         Vector { _handler: TX1 },
         Vector { _handler: RX1 },
-        Vector {
-            _handler: BCM_ERR_0,
-        },
+        Vector { _handler: BCM_ERR_0 },
         Vector {
             _handler: BCM_BUSY_CLR_0,
         },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
-        Vector {
-            _handler: PS2_0_ACT,
-        },
+        Vector { _handler: PS2_0_ACT },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _handler: INTR_PC },
         Vector { _handler: INTR_BM1 },
         Vector { _handler: INTR_BM2 },
         Vector { _handler: INTR_LTR },
-        Vector {
-            _handler: INTR_OOB_UP,
-        },
+        Vector { _handler: INTR_OOB_UP },
         Vector {
             _handler: INTR_OOB_DOWN,
         },
-        Vector {
-            _handler: INTR_FLASH,
-        },
-        Vector {
-            _handler: ESPI_RESET,
-        },
+        Vector { _handler: INTR_FLASH },
+        Vector { _handler: ESPI_RESET },
         Vector { _handler: RTMR },
         Vector { _handler: HTMR0 },
         Vector { _handler: HTMR1 },
@@ -589,12 +574,8 @@ mod _vectors {
         Vector { _handler: WKSUBSEC },
         Vector { _handler: SYSPWR },
         Vector { _handler: RTC },
-        Vector {
-            _handler: RTC_ALARM,
-        },
-        Vector {
-            _handler: VCI_OVRD_IN,
-        },
+        Vector { _handler: RTC_ALARM },
+        Vector { _handler: VCI_OVRD_IN },
         Vector { _handler: VCI_IN0 },
         Vector { _handler: VCI_IN1 },
         Vector { _handler: VCI_IN2 },
@@ -602,47 +583,23 @@ mod _vectors {
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
-        Vector {
-            _handler: PS2_0A_WAKE,
-        },
-        Vector {
-            _handler: PS2_0B_WAKE,
-        },
+        Vector { _handler: PS2_0A_WAKE },
+        Vector { _handler: PS2_0B_WAKE },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _handler: KEYSCAN },
-        Vector {
-            _handler: TIMER16_0,
-        },
-        Vector {
-            _handler: TIMER16_1,
-        },
-        Vector {
-            _handler: TIMER16_2,
-        },
-        Vector {
-            _handler: TIMER16_3,
-        },
-        Vector {
-            _handler: TIMER32_0,
-        },
-        Vector {
-            _handler: TIMER32_1,
-        },
-        Vector {
-            _handler: CNTR_TMR0,
-        },
-        Vector {
-            _handler: CNTR_TMR1,
-        },
-        Vector {
-            _handler: CNTR_TMR2,
-        },
-        Vector {
-            _handler: CNTR_TMR3,
-        },
+        Vector { _handler: TIMER16_0 },
+        Vector { _handler: TIMER16_1 },
+        Vector { _handler: TIMER16_2 },
+        Vector { _handler: TIMER16_3 },
+        Vector { _handler: TIMER32_0 },
+        Vector { _handler: TIMER32_1 },
+        Vector { _handler: CNTR_TMR0 },
+        Vector { _handler: CNTR_TMR1 },
+        Vector { _handler: CNTR_TMR2 },
+        Vector { _handler: CNTR_TMR3 },
         Vector { _handler: CCT },
         Vector { _handler: CCT_CAP0 },
         Vector { _handler: CCT_CAP1 },
@@ -653,9 +610,7 @@ mod _vectors {
         Vector { _handler: CCT_CMP0 },
         Vector { _handler: CCT_CMP1 },
         Vector { _reserved: 0 },
-        Vector {
-            _handler: ESPI_VWIRE,
-        },
+        Vector { _handler: ESPI_VWIRE },
         Vector { _reserved: 0 },
         Vector { _handler: I2CSMB4 },
         Vector { _handler: TACH3 },
@@ -676,28 +631,18 @@ mod _vectors {
 #[doc = "The function of the Watchdog Timer is to provide a mechanism to detect if the internal embedded controller has failed."]
 pub const WDT: wdt::Wdt = unsafe { wdt::Wdt::from_ptr(0x4000_0400usize as _) };
 #[doc = "This 16-bit timer block offers a simple mechanism for firmware to maintain a time base."]
-pub const TIMER16_0: timer16_0::Timer160 =
-    unsafe { timer16_0::Timer160::from_ptr(0x4000_0c00usize as _) };
-pub const TIMER16_1: timer16_0::Timer160 =
-    unsafe { timer16_0::Timer160::from_ptr(0x4000_0c20usize as _) };
-pub const TIMER16_2: timer16_0::Timer160 =
-    unsafe { timer16_0::Timer160::from_ptr(0x4000_0c40usize as _) };
-pub const TIMER16_3: timer16_0::Timer160 =
-    unsafe { timer16_0::Timer160::from_ptr(0x4000_0c60usize as _) };
+pub const TIMER16_0: timer16_0::Timer160 = unsafe { timer16_0::Timer160::from_ptr(0x4000_0c00usize as _) };
+pub const TIMER16_1: timer16_0::Timer160 = unsafe { timer16_0::Timer160::from_ptr(0x4000_0c20usize as _) };
+pub const TIMER16_2: timer16_0::Timer160 = unsafe { timer16_0::Timer160::from_ptr(0x4000_0c40usize as _) };
+pub const TIMER16_3: timer16_0::Timer160 = unsafe { timer16_0::Timer160::from_ptr(0x4000_0c60usize as _) };
 #[doc = "This 32-bit timer block offers a simple mechanism for firmware to maintain a time base."]
-pub const TIMER32_0: timer32_0::Timer320 =
-    unsafe { timer32_0::Timer320::from_ptr(0x4000_0c80usize as _) };
-pub const TIMER32_1: timer32_0::Timer320 =
-    unsafe { timer32_0::Timer320::from_ptr(0x4000_0ca0usize as _) };
+pub const TIMER32_0: timer32_0::Timer320 = unsafe { timer32_0::Timer320::from_ptr(0x4000_0c80usize as _) };
+pub const TIMER32_1: timer32_0::Timer320 = unsafe { timer32_0::Timer320::from_ptr(0x4000_0ca0usize as _) };
 #[doc = "This interface is a 16-bit auto-reloading timer/counter."]
-pub const CNTR_TMR0: cntr_tmr0::CntrTmr0 =
-    unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d00usize as _) };
-pub const CNTR_TMR1: cntr_tmr0::CntrTmr0 =
-    unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d20usize as _) };
-pub const CNTR_TMR2: cntr_tmr0::CntrTmr0 =
-    unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d40usize as _) };
-pub const CNTR_TMR3: cntr_tmr0::CntrTmr0 =
-    unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d60usize as _) };
+pub const CNTR_TMR0: cntr_tmr0::CntrTmr0 = unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d00usize as _) };
+pub const CNTR_TMR1: cntr_tmr0::CntrTmr0 = unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d20usize as _) };
+pub const CNTR_TMR2: cntr_tmr0::CntrTmr0 = unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d40usize as _) };
+pub const CNTR_TMR3: cntr_tmr0::CntrTmr0 = unsafe { cntr_tmr0::CntrTmr0::from_ptr(0x4000_0d60usize as _) };
 #[doc = "This is a 16-bit auto-reloading timer/counter."]
 pub const CCT: cct::Cct = unsafe { cct::Cct::from_ptr(0x4000_1000usize as _) };
 #[doc = "This interface provides a single pin interface which can discriminate a number of quantized RC constants."]
@@ -705,43 +650,26 @@ pub const RC_ID0: rc_id0::RcId0 = unsafe { rc_id0::RcId0::from_ptr(0x4000_1400us
 pub const RC_ID1: rc_id0::RcId0 = unsafe { rc_id0::RcId0::from_ptr(0x4000_1480usize as _) };
 pub const RC_ID2: rc_id0::RcId0 = unsafe { rc_id0::RcId0::from_ptr(0x4000_1500usize as _) };
 #[doc = "DMA Main Registers"]
-pub const DMA_MAIN: dma_main::DmaMain =
-    unsafe { dma_main::DmaMain::from_ptr(0x4000_2400usize as _) };
+pub const DMA_MAIN: dma_main::DmaMain = unsafe { dma_main::DmaMain::from_ptr(0x4000_2400usize as _) };
 #[doc = "DMA Channel 00 Registers"]
-pub const DMA_CHAN00: dma_chan00::DmaChan00 =
-    unsafe { dma_chan00::DmaChan00::from_ptr(0x4000_2440usize as _) };
+pub const DMA_CHAN00: dma_chan00::DmaChan00 = unsafe { dma_chan00::DmaChan00::from_ptr(0x4000_2440usize as _) };
 #[doc = "DMA Channel 01 Registers"]
-pub const DMA_CHAN01: dma_chan01::DmaChan01 =
-    unsafe { dma_chan01::DmaChan01::from_ptr(0x4000_2480usize as _) };
+pub const DMA_CHAN01: dma_chan01::DmaChan01 = unsafe { dma_chan01::DmaChan01::from_ptr(0x4000_2480usize as _) };
 #[doc = "DMA Channel 02 Registers"]
-pub const DMA_CHAN02: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_24c0usize as _) };
-pub const DMA_CHAN03: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2500usize as _) };
-pub const DMA_CHAN04: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2540usize as _) };
-pub const DMA_CHAN05: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2580usize as _) };
-pub const DMA_CHAN06: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_25c0usize as _) };
-pub const DMA_CHAN07: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2600usize as _) };
-pub const DMA_CHAN08: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2640usize as _) };
-pub const DMA_CHAN09: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2680usize as _) };
-pub const DMA_CHAN10: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_26c0usize as _) };
-pub const DMA_CHAN11: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2700usize as _) };
-pub const DMA_CHAN12: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2740usize as _) };
-pub const DMA_CHAN13: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2780usize as _) };
-pub const DMA_CHAN14: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_27c0usize as _) };
-pub const DMA_CHAN15: dma_chan02::DmaChan02 =
-    unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2800usize as _) };
+pub const DMA_CHAN02: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_24c0usize as _) };
+pub const DMA_CHAN03: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2500usize as _) };
+pub const DMA_CHAN04: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2540usize as _) };
+pub const DMA_CHAN05: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2580usize as _) };
+pub const DMA_CHAN06: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_25c0usize as _) };
+pub const DMA_CHAN07: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2600usize as _) };
+pub const DMA_CHAN08: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2640usize as _) };
+pub const DMA_CHAN09: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2680usize as _) };
+pub const DMA_CHAN10: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_26c0usize as _) };
+pub const DMA_CHAN11: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2700usize as _) };
+pub const DMA_CHAN12: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2740usize as _) };
+pub const DMA_CHAN13: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2780usize as _) };
+pub const DMA_CHAN14: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_27c0usize as _) };
+pub const DMA_CHAN15: dma_chan02::DmaChan02 = unsafe { dma_chan02::DmaChan02::from_ptr(0x4000_2800usize as _) };
 #[doc = "This block monitors PowerGuard output signals (or locked rotor signals) from various types of fans, and determines their speed."]
 pub const POWERGUARD_0: powerguard_0::Powerguard0 =
     unsafe { powerguard_0::Powerguard0::from_ptr(0x4000_3000usize as _) };
@@ -776,15 +704,13 @@ pub const TACH3: tach0::Tach0 = unsafe { tach0::Tach0::from_ptr(0x4000_6030usize
 #[doc = "The PECI Interface allows the EC to retrieve temperature readings from PECI-compliant devices."]
 pub const PECI: peci::Peci = unsafe { peci::Peci::from_ptr(0x4000_6400usize as _) };
 #[doc = "SPI Slave Register."]
-pub const SPI_SLAVE: spi_slave::SpiSlave =
-    unsafe { spi_slave::SpiSlave::from_ptr(0x4000_7000usize as _) };
+pub const SPI_SLAVE: spi_slave::SpiSlave = unsafe { spi_slave::SpiSlave::from_ptr(0x4000_7000usize as _) };
 #[doc = "RTOS is a 32-bit timer designed to operate on the 32kHz oscillator which is available during all chip sleep states."]
 pub const RTOS: rtos::Rtos = unsafe { rtos::Rtos::from_ptr(0x4000_7400usize as _) };
 #[doc = "This block is designed to convert external analog voltage readings into digital values."]
 pub const ADC: adc::Adc = unsafe { adc::Adc::from_ptr(0x4000_7c00usize as _) };
 #[doc = "SAF BRIDGE COMPONENT"]
-pub const SAFBC_EC: safbc_ec::SafbcEc =
-    unsafe { safbc_ec::SafbcEc::from_ptr(0x4000_8000usize as _) };
+pub const SAFBC_EC: safbc_ec::SafbcEc = unsafe { safbc_ec::SafbcEc::from_ptr(0x4000_8000usize as _) };
 #[doc = "The TFDP serially transmits EC-originated diagnostic vectors to an external debug trace system."]
 pub const TFDP: tfdp::Tfdp = unsafe { tfdp::Tfdp::from_ptr(0x4000_8c00usize as _) };
 #[doc = "The four PS/2 Ports implementation eliminates the need to bit bang I/O ports to generate PS/2 traffic."]
@@ -803,8 +729,7 @@ pub const FAN1: fan0::Fan0 = unsafe { fan0::Fan0::from_ptr(0x4000_a080usize as _
 #[doc = "The VBAT Register Bank block is a block implemented for miscellaneous battery-backed registers."]
 pub const VBAT: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x4000_a400usize as _) };
 #[doc = "The VBAT RAM is operational while the main power rail is operational, and will retain its values powered by battery power while the main rail is unpowered."]
-pub const VBAT_RAM: vbat_ram::VbatRam =
-    unsafe { vbat_ram::VbatRam::from_ptr(0x4000_a800usize as _) };
+pub const VBAT_RAM: vbat_ram::VbatRam = unsafe { vbat_ram::VbatRam::from_ptr(0x4000_a800usize as _) };
 #[doc = "The Week Timer and the Sub-Week Timer assert the Power-Up Event Output which automatically powers-up the system from the G3 state"]
 pub const WEEK: week::Week = unsafe { week::Week::from_ptr(0x4000_ac80usize as _) };
 #[doc = "The VBAT-Powered Control Interfaces with the RTC With Date and DST Adjustment as well as the Week Alarm."]
@@ -815,16 +740,13 @@ pub const LED1: led0::Led0 = unsafe { led0::Led0::from_ptr(0x4000_b900usize as _
 pub const LED2: led0::Led0 = unsafe { led0::Led0::from_ptr(0x4000_ba00usize as _) };
 pub const LED3: led0::Led0 = unsafe { led0::Led0::from_ptr(0x4000_bb00usize as _) };
 #[doc = "This block provides BC-Link connectivity to a slave device. The BC-Link protocol includes a start bit to signal the beginning of a message and a turnaround (TAR) period for bus transfer between the Master and Companion devices."]
-pub const BC_LINK0: bc_link0::BcLink0 =
-    unsafe { bc_link0::BcLink0::from_ptr(0x4000_cd00usize as _) };
+pub const BC_LINK0: bc_link0::BcLink0 = unsafe { bc_link0::BcLink0::from_ptr(0x4000_cd00usize as _) };
 #[doc = "The ECIA works in conjunction with the processor interrupt interface to handle hardware interrupts andd exceptions."]
 pub const ECIA: ecia::Ecia = unsafe { ecia::Ecia::from_ptr(0x4000_e000usize as _) };
 #[doc = "SAF BRIDGE CACHE INTERFACE"]
-pub const SAFBC_CACHE: safbc_cache::SafbcCache =
-    unsafe { safbc_cache::SafbcCache::from_ptr(0x4000_f000usize as _) };
+pub const SAFBC_CACHE: safbc_cache::SafbcCache = unsafe { safbc_cache::SafbcCache::from_ptr(0x4000_f000usize as _) };
 #[doc = "This block is designed to be accessed internally by the EC via the register interface."]
-pub const EC_REG_BANK: ec_reg_bank::EcRegBank =
-    unsafe { ec_reg_bank::EcRegBank::from_ptr(0x4000_fc00usize as _) };
+pub const EC_REG_BANK: ec_reg_bank::EcRegBank = unsafe { ec_reg_bank::EcRegBank::from_ptr(0x4000_fc00usize as _) };
 #[doc = "This is the CACHE Controller"]
 pub const CACHE: cache::Cache = unsafe { cache::Cache::from_ptr(0x4001_0000usize as _) };
 #[doc = "The QMSPI may be used to communicate with various peripheral devices that use a Serial Peripheral Interface."]
@@ -842,16 +764,11 @@ pub const MBX: mbx::Mbx = unsafe { mbx::Mbx::from_ptr(0x400f_0000usize as _) };
 #[doc = "The Keyboard Controller is a Host/EC Message Interface with hardware assists to emulate 8042 behavior."]
 pub const KBC: kbc::Kbc = unsafe { kbc::Kbc::from_ptr(0x400f_0400usize as _) };
 #[doc = "The ACPI-ECI provides a four byte full duplex data interface."]
-pub const ACPI_EC0: acpi_ec0::AcpiEc0 =
-    unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_0800usize as _) };
-pub const ACPI_EC1: acpi_ec0::AcpiEc0 =
-    unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_0c00usize as _) };
-pub const ACPI_EC2: acpi_ec0::AcpiEc0 =
-    unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_1000usize as _) };
-pub const ACPI_EC3: acpi_ec0::AcpiEc0 =
-    unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_1400usize as _) };
-pub const ACPI_EC4: acpi_ec0::AcpiEc0 =
-    unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_1800usize as _) };
+pub const ACPI_EC0: acpi_ec0::AcpiEc0 = unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_0800usize as _) };
+pub const ACPI_EC1: acpi_ec0::AcpiEc0 = unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_0c00usize as _) };
+pub const ACPI_EC2: acpi_ec0::AcpiEc0 = unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_1000usize as _) };
+pub const ACPI_EC3: acpi_ec0::AcpiEc0 = unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_1400usize as _) };
+pub const ACPI_EC4: acpi_ec0::AcpiEc0 = unsafe { acpi_ec0::AcpiEc0::from_ptr(0x400f_1800usize as _) };
 #[doc = "These features comply with the ACPI Specification through a combination of hardware and EC software."]
 pub const PM1: pm1::Pm1 = unsafe { pm1::Pm1::from_ptr(0x400f_1c00usize as _) };
 #[doc = "The registers listed in the Configuration Register Summary table are for a single instance of the Legacy Port92/GATEA20 logic."]
@@ -862,8 +779,7 @@ pub const UART1: uart0::Uart0 = unsafe { uart0::Uart0::from_ptr(0x400f_2800usize
 #[doc = "The ESPI is used by the system host to configure the chip and communicate with the logical devices implemented in the design."]
 pub const ESPI_IO: espi_io::EspiIo = unsafe { espi_io::EspiIo::from_ptr(0x400f_3400usize as _) };
 #[doc = "The eSPI Memory Component is one of two Logical Devices (along with the I/O Component) that provide access to all the registers in the device."]
-pub const ESPI_MEMORY: espi_memory::EspiMemory =
-    unsafe { espi_memory::EspiMemory::from_ptr(0x400f_3800usize as _) };
+pub const ESPI_MEMORY: espi_memory::EspiMemory = unsafe { espi_memory::EspiMemory::from_ptr(0x400f_3800usize as _) };
 #[doc = "The EMI provides a communication between system host and Embedded Controller."]
 pub const EMI0: emi0::Emi0 = unsafe { emi0::Emi0::from_ptr(0x400f_4000usize as _) };
 pub const EMI1: emi0::Emi0 = unsafe { emi0::Emi0::from_ptr(0x400f_4400usize as _) };
@@ -900,6 +816,308 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
 pub use Interrupt as interrupt;
+#[doc = "Pin buffer drive type."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum BufferType {
+    #[doc = "Output buffer type is Open-drain."]
+    PUSH_PULL = 0x0,
+    #[doc = "Output buffer type is Push-pull."]
+    OPEN_DRAIN = 0x01,
+}
+impl BufferType {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> BufferType {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for BufferType {
+    #[inline(always)]
+    fn from(val: u8) -> BufferType {
+        BufferType::from_bits(val)
+    }
+}
+impl From<BufferType> for u8 {
+    #[inline(always)]
+    fn from(val: BufferType) -> u8 {
+        BufferType::to_bits(val)
+    }
+}
+#[doc = "Pin direction."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Dir {
+    #[doc = "Input GPIO."]
+    INPUT = 0x0,
+    #[doc = "Output GPIO."]
+    OUTPUT = 0x01,
+}
+impl Dir {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Dir {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Dir {
+    #[inline(always)]
+    fn from(val: u8) -> Dir {
+        Dir::from_bits(val)
+    }
+}
+impl From<Dir> for u8 {
+    #[inline(always)]
+    fn from(val: Dir) -> u8 {
+        Dir::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Function {
+    #[doc = "GPIO function selected."]
+    GPIO = 0x0,
+    #[doc = "Function 1 selected."]
+    F1 = 0x01,
+    #[doc = "Function 2 selected."]
+    F2 = 0x02,
+    #[doc = "Function 3 selected."]
+    F3 = 0x03,
+    #[doc = "Function 4 selected."]
+    F4 = 0x04,
+    #[doc = "Function 5 selected."]
+    F5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl Function {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Function {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Function {
+    #[inline(always)]
+    fn from(val: u8) -> Function {
+        Function::from_bits(val)
+    }
+}
+impl From<Function> for u8 {
+    #[inline(always)]
+    fn from(val: Function) -> u8 {
+        Function::to_bits(val)
+    }
+}
+#[doc = "Power Gating Signals provide the chip Power Emulation options."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pgs {
+    #[doc = "The output buffer is tristated when VTR_PWRGD=0."]
+    VTR = 0x0,
+    #[doc = "The output buffer is tristated when VCC_PWRGD=0."]
+    VCC = 0x01,
+    #[doc = "The always unpowered setting on a GPIO will force the pin to tristate. The input and output are disabled, and the pad is in the lowest power state."]
+    UNPOWERED = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl Pgs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pgs {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pgs {
+    #[inline(always)]
+    fn from(val: u8) -> Pgs {
+        Pgs::from_bits(val)
+    }
+}
+impl From<Pgs> for u8 {
+    #[inline(always)]
+    fn from(val: Pgs) -> u8 {
+        Pgs::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol {
+    #[doc = "Non-inverted polarity."]
+    NON_INVERTED = 0x0,
+    #[doc = "Inverted polarity."]
+    INVERTED = 0x01,
+}
+impl Pol {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol {
+    #[inline(always)]
+    fn from(val: u8) -> Pol {
+        Pol::from_bits(val)
+    }
+}
+impl From<Pol> for u8 {
+    #[inline(always)]
+    fn from(val: Pol) -> u8 {
+        Pol::to_bits(val)
+    }
+}
+#[doc = "Configure internal pull-up and pull-down resistors."]
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pull {
+    #[doc = "Pin tristates when no active driver is present on the pin."]
+    NONE = 0x0,
+    #[doc = "Pull up enabled."]
+    UP = 0x01,
+    #[doc = "Pull down enabled."]
+    DOWN = 0x02,
+    #[doc = "Pin is kept at previous voltage level when no active driver is present on the pin."]
+    REPEATER = 0x03,
+}
+impl Pull {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pull {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pull {
+    #[inline(always)]
+    fn from(val: u8) -> Pull {
+        Pull::from_bits(val)
+    }
+}
+impl From<Pull> for u8 {
+    #[inline(always)]
+    fn from(val: Pull) -> u8 {
+        Pull::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sel {
+    #[doc = "Single GPIO output data bit is enabled."]
+    PIN = 0x0,
+    #[doc = "Grouped Output GPIO is enabled."]
+    GROUP = 0x01,
+}
+impl Sel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sel {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sel {
+    #[inline(always)]
+    fn from(val: u8) -> Sel {
+        Sel::from_bits(val)
+    }
+}
+impl From<Sel> for u8 {
+    #[inline(always)]
+    fn from(val: Sel) -> u8 {
+        Sel::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum SlewCtrl {
+    SLOW = 0x0,
+    FAST = 0x01,
+}
+impl SlewCtrl {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> SlewCtrl {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for SlewCtrl {
+    #[inline(always)]
+    fn from(val: u8) -> SlewCtrl {
+        SlewCtrl::from_bits(val)
+    }
+}
+impl From<SlewCtrl> for u8 {
+    #[inline(always)]
+    fn from(val: SlewCtrl) -> u8 {
+        SlewCtrl::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Strength {
+    #[doc = "2mA for PIO-12 pins, 4mA for PIO-24 pins."]
+    LOWEST = 0x0,
+    #[doc = "4mA for PIO-12 pins, 8mA for PIO-24 pins."]
+    LOW = 0x01,
+    #[doc = "8mA for PIO-12 pins, 16mA for PIO-24 pins."]
+    MEDIUM = 0x02,
+    #[doc = "12mA for PIO-12 pins, 24mA for PIO-24 pins."]
+    FULL = 0x03,
+}
+impl Strength {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Strength {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Strength {
+    #[inline(always)]
+    fn from(val: u8) -> Strength {
+        Strength::from_bits(val)
+    }
+}
+impl From<Strength> for u8 {
+    #[inline(always)]
+    fn from(val: Strength) -> u8 {
+        Strength::to_bits(val)
+    }
+}
 pub mod acpi_ec0 {
     #[doc = "The ACPI-ECI provides a four byte full duplex data interface."]
     #[derive(Copy, Clone, Eq, PartialEq)]
@@ -1660,9 +1878,7 @@ pub mod adc {
         }
         impl core::fmt::Debug for ReptEn {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("ReptEn")
-                    .field("r_en", &self.r_en())
-                    .finish()
+                f.debug_struct("ReptEn").field("r_en", &self.r_en()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -2290,7 +2506,14 @@ pub mod adc {
         #[cfg(feature = "defmt")]
         impl defmt::Format for VrefCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "VrefCtrl {{ chrg_dly: {=u16:?}, switch_dly: {=u16:?}, padctrl: {=bool:?}, selstat: {=u8:?} }}" , self . chrg_dly () , self . switch_dly () , self . padctrl () , self . selstat ())
+                defmt::write!(
+                    f,
+                    "VrefCtrl {{ chrg_dly: {=u16:?}, switch_dly: {=u16:?}, padctrl: {=bool:?}, selstat: {=u8:?} }}",
+                    self.chrg_dly(),
+                    self.switch_dly(),
+                    self.padctrl(),
+                    self.selstat()
+                )
             }
         }
     }
@@ -2324,10 +2547,7 @@ pub mod asif {
         }
         #[doc = "Scratch 0 Register"]
         #[inline(always)]
-        pub const fn scratch(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Scratch, crate::common::RW> {
+        pub const fn scratch(self, n: usize) -> crate::common::Reg<regs::Scratch, crate::common::RW> {
             assert!(n < 10usize);
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02usize + n * 1usize) as _) }
         }
@@ -2348,9 +2568,7 @@ pub mod asif {
         }
         #[doc = "LPC Data Out Register"]
         #[inline(always)]
-        pub const fn host_data_out(
-            self,
-        ) -> crate::common::Reg<regs::HostDataOut, crate::common::W> {
+        pub const fn host_data_out(self) -> crate::common::Reg<regs::HostDataOut, crate::common::W> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0eusize) as _) }
         }
         #[doc = "LPC Status Register"]
@@ -2405,9 +2623,7 @@ pub mod asif {
         }
         #[doc = "Timeout Counter Register."]
         #[inline(always)]
-        pub const fn ec_tmout_cntr(
-            self,
-        ) -> crate::common::Reg<regs::EcTmoutCntr, crate::common::RW> {
+        pub const fn ec_tmout_cntr(self) -> crate::common::Reg<regs::EcTmoutCntr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0118usize) as _) }
         }
         #[doc = "Block Configuration Register"]
@@ -2417,9 +2633,7 @@ pub mod asif {
         }
         #[doc = "SPI Clock Generator Register."]
         #[inline(always)]
-        pub const fn ec_spi_clk_gen(
-            self,
-        ) -> crate::common::Reg<regs::EcSpiClkGen, crate::common::RW> {
+        pub const fn ec_spi_clk_gen(self) -> crate::common::Reg<regs::EcSpiClkGen, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0130usize) as _) }
         }
         #[doc = "SPI Control Register"]
@@ -2429,9 +2643,7 @@ pub mod asif {
         }
         #[doc = "SPI Clock Control Register"]
         #[inline(always)]
-        pub const fn ec_spi_clk_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::EcSpiClkCtrl, crate::common::RW> {
+        pub const fn ec_spi_clk_ctrl(self) -> crate::common::Reg<regs::EcSpiClkCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0138usize) as _) }
         }
         #[doc = "SPI Enable Register"]
@@ -2519,9 +2731,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for EcAixl {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcAixl")
-                    .field("ind_low", &self.ind_low())
-                    .finish()
+                f.debug_struct("EcAixl").field("ind_low", &self.ind_low()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -2555,9 +2765,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for EcBah {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcBah")
-                    .field("lpc_bah", &self.lpc_bah())
-                    .finish()
+                f.debug_struct("EcBah").field("lpc_bah", &self.lpc_bah()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -2591,9 +2799,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for EcBal {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcBal")
-                    .field("lpc_bal", &self.lpc_bal())
-                    .finish()
+                f.debug_struct("EcBal").field("lpc_bal", &self.lpc_bal()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -2680,9 +2886,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for EcDataIn {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcDataIn")
-                    .field("data", &self.data())
-                    .finish()
+                f.debug_struct("EcDataIn").field("data", &self.data()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -2724,11 +2928,7 @@ pub mod asif {
         #[cfg(feature = "defmt")]
         impl defmt::Format for EcDataOut {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "EcDataOut {{ ec_data_out: {=u8:?} }}",
-                    self.ec_data_out()
-                )
+                defmt::write!(f, "EcDataOut {{ ec_data_out: {=u8:?} }}", self.ec_data_out())
             }
         }
         #[doc = "EC Interrupt Enable Register"]
@@ -2872,7 +3072,14 @@ pub mod asif {
         #[cfg(feature = "defmt")]
         impl defmt::Format for EcIsts {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "EcIsts {{ cmd_done: {=bool:?}, rd_done: {=bool:?}, wr_done: {=bool:?}, locked_to: {=bool:?} }}" , self . cmd_done () , self . rd_done () , self . wr_done () , self . locked_to ())
+                defmt::write!(
+                    f,
+                    "EcIsts {{ cmd_done: {=bool:?}, rd_done: {=bool:?}, wr_done: {=bool:?}, locked_to: {=bool:?} }}",
+                    self.cmd_done(),
+                    self.rd_done(),
+                    self.wr_done(),
+                    self.locked_to()
+                )
             }
         }
         #[doc = "SPI Clock Control Register"]
@@ -2984,9 +3191,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for EcSpiClkGen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcSpiClkGen")
-                    .field("preld", &self.preld())
-                    .finish()
+                f.debug_struct("EcSpiClkGen").field("preld", &self.preld()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -3130,7 +3335,14 @@ pub mod asif {
         #[cfg(feature = "defmt")]
         impl defmt::Format for EcSpiEn {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "EcSpiEn {{ rxen: {=bool:?}, txen: {=bool:?}, rxbusy: {=bool:?}, txbusy: {=bool:?} }}" , self . rxen () , self . txen () , self . rxbusy () , self . txbusy ())
+                defmt::write!(
+                    f,
+                    "EcSpiEn {{ rxen: {=bool:?}, txen: {=bool:?}, rxbusy: {=bool:?}, txbusy: {=bool:?} }}",
+                    self.rxen(),
+                    self.txen(),
+                    self.rxbusy(),
+                    self.txbusy()
+                )
             }
         }
         #[doc = "EC Status Register"]
@@ -3250,11 +3462,7 @@ pub mod asif {
         #[cfg(feature = "defmt")]
         impl defmt::Format for EcTmoutCntr {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "EcTmoutCntr {{ timeout_cnt: {=u8:?} }}",
-                    self.timeout_cnt()
-                )
+                defmt::write!(f, "EcTmoutCntr {{ timeout_cnt: {=u8:?} }}", self.timeout_cnt())
             }
         }
         #[doc = "LPC AIXH Register"]
@@ -3371,9 +3579,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for HostBah {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("HostBah")
-                    .field("lpc_bah", &self.lpc_bah())
-                    .finish()
+                f.debug_struct("HostBah").field("lpc_bah", &self.lpc_bah()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -3407,9 +3613,7 @@ pub mod asif {
         }
         impl core::fmt::Debug for HostBal {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("HostBal")
-                    .field("lpc_bal", &self.lpc_bal())
-                    .finish()
+                f.debug_struct("HostBal").field("lpc_bal", &self.lpc_bal()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -3451,11 +3655,7 @@ pub mod asif {
         #[cfg(feature = "defmt")]
         impl defmt::Format for HostDataIn {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "HostDataIn {{ lpc_data_in: {=u8:?} }}",
-                    self.lpc_data_in()
-                )
+                defmt::write!(f, "HostDataIn {{ lpc_data_in: {=u8:?} }}", self.lpc_data_in())
             }
         }
         #[doc = "LPC Data Out Register"]
@@ -3491,11 +3691,7 @@ pub mod asif {
         #[cfg(feature = "defmt")]
         impl defmt::Format for HostDataOut {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "HostDataOut {{ lpc_data_out: {=u8:?} }}",
-                    self.lpc_data_out()
-                )
+                defmt::write!(f, "HostDataOut {{ lpc_data_out: {=u8:?} }}", self.lpc_data_out())
             }
         }
         #[doc = "LPC Status Register"]
@@ -3990,7 +4186,13 @@ pub mod cache {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Sts {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Sts {{ validate_done: {=bool:?}, invalidate_done: {=bool:?}, spi_err: {=bool:?} }}" , self . validate_done () , self . invalidate_done () , self . spi_err ())
+                defmt::write!(
+                    f,
+                    "Sts {{ validate_done: {=bool:?}, invalidate_done: {=bool:?}, spi_err: {=bool:?} }}",
+                    self.validate_done(),
+                    self.invalidate_done(),
+                    self.spi_err()
+                )
             }
         }
         #[doc = "CACHE TAG VALIDATE register."]
@@ -4165,8 +4367,7 @@ pub mod cct {
             #[doc = "This register saves the value copied from the Free Running timer on a programmed edge of ICT0."]
             #[inline(always)]
             pub fn set_cap_0(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cap0 {
@@ -4177,9 +4378,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Cap0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cap0")
-                    .field("cap_0", &self.cap_0())
-                    .finish()
+                f.debug_struct("Cap0").field("cap_0", &self.cap_0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4370,8 +4569,7 @@ pub mod cct {
             #[doc = "This register saves the value copied from the Free Running timer on a programmed edge of ICT1."]
             #[inline(always)]
             pub fn set_cap_1(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cap1 {
@@ -4382,9 +4580,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Cap1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cap1")
-                    .field("cap_1", &self.cap_1())
-                    .finish()
+                f.debug_struct("Cap1").field("cap_1", &self.cap_1()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4503,8 +4699,7 @@ pub mod cct {
             #[doc = "This register saves the value copied from the Free Running timer on a programmed edge of ICT2."]
             #[inline(always)]
             pub fn set_cap_2(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cap2 {
@@ -4515,9 +4710,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Cap2 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cap2")
-                    .field("cap_2", &self.cap_2())
-                    .finish()
+                f.debug_struct("Cap2").field("cap_2", &self.cap_2()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4540,8 +4733,7 @@ pub mod cct {
             #[doc = "This register saves the value copied from the Free Running timer on a programmed edge of ICT3."]
             #[inline(always)]
             pub fn set_cap_3(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cap3 {
@@ -4552,9 +4744,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Cap3 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cap3")
-                    .field("cap_3", &self.cap_3())
-                    .finish()
+                f.debug_struct("Cap3").field("cap_3", &self.cap_3()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4577,8 +4767,7 @@ pub mod cct {
             #[doc = "This register saves the value copied from the Free Running timer on a programmed edge of ICT4."]
             #[inline(always)]
             pub fn set_cap_4(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cap4 {
@@ -4589,9 +4778,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Cap4 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cap4")
-                    .field("cap_4", &self.cap_4())
-                    .finish()
+                f.debug_struct("Cap4").field("cap_4", &self.cap_4()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4614,8 +4801,7 @@ pub mod cct {
             #[doc = "This register saves the value copied from the Free Running timer on a programmed edge of ICT5."]
             #[inline(always)]
             pub fn set_cap_5(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cap5 {
@@ -4626,9 +4812,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Cap5 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cap5")
-                    .field("cap_5", &self.cap_5())
-                    .finish()
+                f.debug_struct("Cap5").field("cap_5", &self.cap_5()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4651,8 +4835,7 @@ pub mod cct {
             #[doc = "A COMPARE 0 interrupt is generated when this register matches the value in the Free Running Timer."]
             #[inline(always)]
             pub fn set_comp_0(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Comp0 {
@@ -4663,9 +4846,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Comp0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Comp0")
-                    .field("comp_0", &self.comp_0())
-                    .finish()
+                f.debug_struct("Comp0").field("comp_0", &self.comp_0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4688,8 +4869,7 @@ pub mod cct {
             #[doc = "A COMPARE 1 interrupt is generated when this register matches the value in the Free Running Timer."]
             #[inline(always)]
             pub fn set_comp_1(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Comp1 {
@@ -4700,9 +4880,7 @@ pub mod cct {
         }
         impl core::fmt::Debug for Comp1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Comp1")
-                    .field("comp_1", &self.comp_1())
-                    .finish()
+                f.debug_struct("Comp1").field("comp_1", &self.comp_1()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -4869,8 +5047,7 @@ pub mod cct {
             #[doc = "This register contains the current value of the Free Running Timer."]
             #[inline(always)]
             pub fn set_tmr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FreeRun {
@@ -5007,30 +5184,22 @@ pub mod cntr_tmr0 {
         }
         #[doc = "This bit reflects the current state of the timer's Clock_Required output signal."]
         #[inline(always)]
-        pub const fn timerx_control(
-            self,
-        ) -> crate::common::Reg<regs::TimerxControl, crate::common::RW> {
+        pub const fn timerx_control(self) -> crate::common::Reg<regs::TimerxControl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
         }
         #[doc = "This is the Timer Clock and Event Control Register."]
         #[inline(always)]
-        pub const fn clk_evnt_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::ClkEvntCtrl, crate::common::RW> {
+        pub const fn clk_evnt_ctrl(self) -> crate::common::Reg<regs::ClkEvntCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
         }
         #[doc = "This register is used in Timer and One-Shot modes to set the lower limit of the timer."]
         #[inline(always)]
-        pub const fn timerx_reload(
-            self,
-        ) -> crate::common::Reg<regs::TimerxReload, crate::common::RW> {
+        pub const fn timerx_reload(self) -> crate::common::Reg<regs::TimerxReload, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
         }
         #[doc = "This register returns the current value of the timer in all modes."]
         #[inline(always)]
-        pub const fn timerx_count(
-            self,
-        ) -> crate::common::Reg<regs::TimerxCount, crate::common::RW> {
+        pub const fn timerx_count(self) -> crate::common::Reg<regs::TimerxCount, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
         }
     }
@@ -5104,7 +5273,14 @@ pub mod cntr_tmr0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for ClkEvntCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "ClkEvntCtrl {{ tclk: {=u8:?}, edge: {=u8:?}, event: {=bool:?}, fclk: {=u8:?} }}" , self . tclk () , self . edge () , self . event () , self . fclk ())
+                defmt::write!(
+                    f,
+                    "ClkEvntCtrl {{ tclk: {=u8:?}, edge: {=u8:?}, event: {=bool:?}, fclk: {=u8:?} }}",
+                    self.tclk(),
+                    self.edge(),
+                    self.event(),
+                    self.fclk()
+                )
             }
         }
         #[doc = "This bit reflects the current state of the timer's Clock_Required output signal."]
@@ -5308,11 +5484,7 @@ pub mod cntr_tmr0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for TimerxCount {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "TimerxCount {{ timer_count: {=u16:?} }}",
-                    self.timer_count()
-                )
+                defmt::write!(f, "TimerxCount {{ timer_count: {=u16:?} }}", self.timer_count())
             }
         }
         #[doc = "This register is used in Timer and One-Shot modes to set the lower limit of the timer."]
@@ -5348,11 +5520,7 @@ pub mod cntr_tmr0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for TimerxReload {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "TimerxReload {{ timer_reload: {=u16:?} }}",
-                    self.timer_reload()
-                )
+                defmt::write!(f, "TimerxReload {{ timer_reload: {=u16:?} }}", self.timer_reload())
             }
         }
     }
@@ -5528,9 +5696,7 @@ pub mod dma_chan00 {
         }
         impl core::fmt::Debug for Activate {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate")
-                    .field("chn", &self.chn())
-                    .finish()
+                f.debug_struct("Activate").field("chn", &self.chn()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -5553,8 +5719,7 @@ pub mod dma_chan00 {
             #[doc = "Writes to this register initialize the CRC generator. Reads from this register return the output of the CRC that is calculated from the data transferred by DMA Channel N. The output of the CRC generator is bit-reversed and inverted on reads, as required by the CRC-32-IEEE definition. A CRC can be accumulated across multiple DMA transactions on Channel N. If it is necessary to save the intermediate CRC value, the result of the read of this register must be bit-reversed and inverted before being written back to this register."]
             #[inline(always)]
             pub fn set_crc(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for CrcData {
@@ -5948,7 +6113,13 @@ pub mod dma_chan00 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ien {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ien {{ sts_en_bus_err: {=bool:?}, sts_en_flow_ctrl: {=bool:?}, sts_en_done: {=bool:?} }}" , self . sts_en_bus_err () , self . sts_en_flow_ctrl () , self . sts_en_done ())
+                defmt::write!(
+                    f,
+                    "Ien {{ sts_en_bus_err: {=bool:?}, sts_en_flow_ctrl: {=bool:?}, sts_en_done: {=bool:?} }}",
+                    self.sts_en_bus_err(),
+                    self.sts_en_flow_ctrl(),
+                    self.sts_en_done()
+                )
             }
         }
         #[doc = "DMA Channel N Interrupt Status"]
@@ -6150,9 +6321,7 @@ pub mod dma_chan01 {
         }
         impl core::fmt::Debug for Activate {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate")
-                    .field("chn", &self.chn())
-                    .finish()
+                f.debug_struct("Activate").field("chn", &self.chn()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -6367,8 +6536,7 @@ pub mod dma_chan01 {
             #[doc = "This is the data pattern used to fill memory."]
             #[inline(always)]
             pub fn set_data(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FillData {
@@ -6379,9 +6547,7 @@ pub mod dma_chan01 {
         }
         impl core::fmt::Debug for FillData {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FillData")
-                    .field("data", &self.data())
-                    .finish()
+                f.debug_struct("FillData").field("data", &self.data()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -6415,9 +6581,7 @@ pub mod dma_chan01 {
         }
         impl core::fmt::Debug for FillEn {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FillEn")
-                    .field("mode", &self.mode())
-                    .finish()
+                f.debug_struct("FillEn").field("mode", &self.mode()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -6536,7 +6700,13 @@ pub mod dma_chan01 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ien {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ien {{ sts_en_bus_err: {=bool:?}, sts_en_flow_ctrl: {=bool:?}, sts_en_done: {=bool:?} }}" , self . sts_en_bus_err () , self . sts_en_flow_ctrl () , self . sts_en_done ())
+                defmt::write!(
+                    f,
+                    "Ien {{ sts_en_bus_err: {=bool:?}, sts_en_flow_ctrl: {=bool:?}, sts_en_done: {=bool:?} }}",
+                    self.sts_en_bus_err(),
+                    self.sts_en_flow_ctrl(),
+                    self.sts_en_done()
+                )
             }
         }
         #[doc = "DMA Channel N Interrupt Status"]
@@ -6723,9 +6893,7 @@ pub mod dma_chan02 {
         }
         impl core::fmt::Debug for Activate {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate")
-                    .field("chn", &self.chn())
-                    .finish()
+                f.debug_struct("Activate").field("chn", &self.chn()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -6983,7 +7151,13 @@ pub mod dma_chan02 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ien {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ien {{ sts_en_bus_err: {=bool:?}, sts_en_flow_ctrl: {=bool:?}, sts_en_done: {=bool:?} }}" , self . sts_en_bus_err () , self . sts_en_flow_ctrl () , self . sts_en_done ())
+                defmt::write!(
+                    f,
+                    "Ien {{ sts_en_bus_err: {=bool:?}, sts_en_flow_ctrl: {=bool:?}, sts_en_done: {=bool:?} }}",
+                    self.sts_en_bus_err(),
+                    self.sts_en_flow_ctrl(),
+                    self.sts_en_done()
+                )
             }
         }
         #[doc = "DMA Channel N Interrupt Status"]
@@ -7234,9 +7408,7 @@ pub mod ec_reg_bank {
         }
         #[doc = "AES HASH Byte Swap Control Register."]
         #[inline(always)]
-        pub const fn aesh_bswap_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::AeshBswapCtrl, crate::common::RW> {
+        pub const fn aesh_bswap_ctrl(self) -> crate::common::Reg<regs::AeshBswapCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
         }
         #[doc = "PECI Disable"]
@@ -7246,9 +7418,7 @@ pub mod ec_reg_bank {
         }
         #[doc = "GPIO Bank Power Register"]
         #[inline(always)]
-        pub const fn gpio_bank_pwr(
-            self,
-        ) -> crate::common::Reg<regs::GpioBankPwr, crate::common::RW> {
+        pub const fn gpio_bank_pwr(self) -> crate::common::Reg<regs::GpioBankPwr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x64usize) as _) }
         }
         #[doc = "JTAG Master Configuration Register"]
@@ -7293,9 +7463,7 @@ pub mod ec_reg_bank {
         }
         #[doc = "Analog Comparator Sleep Control Register"]
         #[inline(always)]
-        pub const fn acomp_slp_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::AcompSlpCtrl, crate::common::RW> {
+        pub const fn acomp_slp_ctrl(self) -> crate::common::Reg<regs::AcompSlpCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x98usize) as _) }
         }
         #[doc = "Embedded Reset Enable Register"]
@@ -7600,7 +7768,14 @@ pub mod ec_reg_bank {
         #[cfg(feature = "defmt")]
         impl defmt::Format for DebugCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "DebugCtrl {{ en: {=bool:?}, pin_cfg: {:?}, pu_en: {=bool:?}, bsp_en: {=bool:?} }}" , self . en () , self . pin_cfg () , self . pu_en () , self . bsp_en ())
+                defmt::write!(
+                    f,
+                    "DebugCtrl {{ en: {=bool:?}, pin_cfg: {:?}, pu_en: {=bool:?}, bsp_en: {=bool:?} }}",
+                    self.en(),
+                    self.pin_cfg(),
+                    self.pu_en(),
+                    self.bsp_en()
+                )
             }
         }
         #[doc = "Embedded Reset Count Register"]
@@ -7617,8 +7792,7 @@ pub mod ec_reg_bank {
             #[doc = "Embedded Reset CNT Register."]
             #[inline(always)]
             pub fn set_cnt(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x0007_ffff << 0usize)) | (((val as u32) & 0x0007_ffff) << 0usize);
+                self.0 = (self.0 & !(0x0007_ffff << 0usize)) | (((val as u32) & 0x0007_ffff) << 0usize);
             }
         }
         impl Default for EmdrstCnt {
@@ -7629,9 +7803,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for EmdrstCnt {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EmdrstCnt")
-                    .field("cnt", &self.cnt())
-                    .finish()
+                f.debug_struct("EmdrstCnt").field("cnt", &self.cnt()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -7699,9 +7871,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for EmdrstSts {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EmdrstSts")
-                    .field("sts", &self.sts())
-                    .finish()
+                f.debug_struct("EmdrstSts").field("sts", &self.sts()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -7735,9 +7905,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for EmdrstTout {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EmdrstTout")
-                    .field("tout", &self.tout())
-                    .finish()
+                f.debug_struct("EmdrstTout").field("tout", &self.tout()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -7760,8 +7928,7 @@ pub mod ec_reg_bank {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr0(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FwScr0 {
@@ -7772,9 +7939,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for FwScr0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FwScr0")
-                    .field("scr0", &self.scr0())
-                    .finish()
+                f.debug_struct("FwScr0").field("scr0", &self.scr0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -7808,8 +7973,7 @@ pub mod ec_reg_bank {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr1(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for FwScr1 {
@@ -7851,8 +8015,7 @@ pub mod ec_reg_bank {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr2(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FwScr2 {
@@ -7863,9 +8026,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for FwScr2 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FwScr2")
-                    .field("scr2", &self.scr2())
-                    .finish()
+                f.debug_struct("FwScr2").field("scr2", &self.scr2()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -7888,8 +8049,7 @@ pub mod ec_reg_bank {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr3(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FwScr3 {
@@ -7900,9 +8060,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for FwScr3 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FwScr3")
-                    .field("scr3", &self.scr3())
-                    .finish()
+                f.debug_struct("FwScr3").field("scr3", &self.scr3()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -7968,7 +8126,13 @@ pub mod ec_reg_bank {
         #[cfg(feature = "defmt")]
         impl defmt::Format for GpioBankPwr {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "GpioBankPwr {{ test: {=bool:?}, vtr_lvl2: {=bool:?}, gpio_bank_pwr_lock: {=bool:?} }}" , self . test () , self . vtr_lvl2 () , self . gpio_bank_pwr_lock ())
+                defmt::write!(
+                    f,
+                    "GpioBankPwr {{ test: {=bool:?}, vtr_lvl2: {=bool:?}, gpio_bank_pwr_lock: {=bool:?} }}",
+                    self.test(),
+                    self.vtr_lvl2(),
+                    self.gpio_bank_pwr_lock()
+                )
             }
         }
         #[doc = "JTAG Master Configuration Register"]
@@ -8085,9 +8249,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for JtagMsts {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("JtagMsts")
-                    .field("jtm_done", &self.jtm_done())
-                    .finish()
+                f.debug_struct("JtagMsts").field("jtm_done", &self.jtm_done()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -8110,8 +8272,7 @@ pub mod ec_reg_bank {
             #[doc = "When the JTAG Master Command Register is written, from 1 to 32 bits are shifted out of this register, starting with bit 0, onto the JTAG_TDI pin. Shifting is at the rate determined by the JTM_CLK field in the JTAG Master Configuration Register."]
             #[inline(always)]
             pub fn set_jtm_tdi(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for JtagMtdi {
@@ -8122,9 +8283,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for JtagMtdi {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("JtagMtdi")
-                    .field("jtm_tdi", &self.jtm_tdi())
-                    .finish()
+                f.debug_struct("JtagMtdi").field("jtm_tdi", &self.jtm_tdi()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -8147,8 +8306,7 @@ pub mod ec_reg_bank {
             #[doc = "When the JTAG Master Command Register is written, from 1 to 32 bits are shifted into this register, starting with bit 0, from the JTAG_TDO pin. Shifting is at the rate determined by the JTM_CLK field in the JTAG Master Configuration Register."]
             #[inline(always)]
             pub fn set_jtm_tdo(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for JtagMtdo {
@@ -8159,9 +8317,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for JtagMtdo {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("JtagMtdo")
-                    .field("jtm_tdo", &self.jtm_tdo())
-                    .finish()
+                f.debug_struct("JtagMtdo").field("jtm_tdo", &self.jtm_tdo()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -8184,8 +8340,7 @@ pub mod ec_reg_bank {
             #[doc = "When the JTAG Master Command Register is written, from 1 to 32 bits are shifted out of this register, starting with bit 0, onto the JTAG_TMS pin. Shifting is at the rate determined by the JTM_CLK field in the JTAG Master Configuration Register."]
             #[inline(always)]
             pub fn set_jtm_tms(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for JtagMtms {
@@ -8196,9 +8351,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for JtagMtms {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("JtagMtms")
-                    .field("jtm_tms", &self.jtm_tms())
-                    .finish()
+                f.debug_struct("JtagMtms").field("jtm_tms", &self.jtm_tms()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -8264,7 +8417,13 @@ pub mod ec_reg_bank {
         #[cfg(feature = "defmt")]
         impl defmt::Format for OtpLock {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "OtpLock {{ test: {=bool:?}, vbat_ram_lock: {=bool:?}, vbat_reg_lock: {=bool:?} }}" , self . test () , self . vbat_ram_lock () , self . vbat_reg_lock ())
+                defmt::write!(
+                    f,
+                    "OtpLock {{ test: {=bool:?}, vbat_ram_lock: {=bool:?}, vbat_reg_lock: {=bool:?} }}",
+                    self.test(),
+                    self.vbat_ram_lock(),
+                    self.vbat_reg_lock()
+                )
             }
         }
         #[doc = "PECI Disable"]
@@ -8292,9 +8451,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for PeciDis {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PeciDis")
-                    .field("p_dis", &self.p_dis())
-                    .finish()
+                f.debug_struct("PeciDis").field("p_dis", &self.p_dis()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -8364,9 +8521,7 @@ pub mod ec_reg_bank {
         }
         impl core::fmt::Debug for VwSrcCngf {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("VwSrcCngf")
-                    .field("vw_src", &self.vw_src())
-                    .finish()
+                f.debug_struct("VwSrcCngf").field("vw_src", &self.vw_src()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -8963,8 +9118,7 @@ pub mod ecia {
             #[doc = "Each GIRQx bit can be individually disabled to inhibit an interrupt event. Reads always return the current value of the internal GIRQX_ENABLE bit. The state of the GIRQX_ENABLE bit is determined by the corresponding GIRQX_ENABLE_SET bit and the GIRQX_ENABLE_CLEAR bit. (0=disabled, 1=enabled) (R/WC) 1=All interrupts in the GIRQx Source Register are disabled 0=No effect."]
             #[inline(always)]
             pub fn set_vtor_en_clr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
             }
         }
         impl Default for BlkEnClr {
@@ -8983,11 +9137,7 @@ pub mod ecia {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BlkEnClr {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BlkEnClr {{ vtor_en_clr: {=u32:?} }}",
-                    self.vtor_en_clr()
-                )
+                defmt::write!(f, "BlkEnClr {{ vtor_en_clr: {=u32:?} }}", self.vtor_en_clr())
             }
         }
         #[doc = "Block Enable Set Register"]
@@ -9004,8 +9154,7 @@ pub mod ecia {
             #[doc = "Each GIRQx bit can be individually enabled to assert an interrupt event. Reads always return the current value of the internal GIRQX_ENABLE bit. The state of the GIRQX_ENABLE bit is determined by the corresponding GIRQX_ENABLE_SET bit and the GIRQX_ENABLE_CLEAR bit. (0=disabled, 1=enabled) (R/WS) 1=Interrupts in the GIRQx Source Register may be enabled 0=No effect."]
             #[inline(always)]
             pub fn set_vtor_en_set(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
             }
         }
         impl Default for BlkEnSet {
@@ -9024,11 +9173,7 @@ pub mod ecia {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BlkEnSet {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BlkEnSet {{ vtor_en_set: {=u32:?} }}",
-                    self.vtor_en_set()
-                )
+                defmt::write!(f, "BlkEnSet {{ vtor_en_set: {=u32:?} }}", self.vtor_en_set())
             }
         }
         #[doc = "Block IRQ Vector Register"]
@@ -9045,8 +9190,7 @@ pub mod ecia {
             #[doc = "Each bit in this field reports the status of the group GIRQ interrupt assertion to the NVIC. If the GIRQx interrupt is disabled as a group, by the Block Enable Clear Register, then the corresponding bit will be '0'b and no interrupt will be asserted."]
             #[inline(always)]
             pub fn set_vtor(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x01ff_ffff << 0usize)) | (((val as u32) & 0x01ff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x01ff_ffff << 0usize)) | (((val as u32) & 0x01ff_ffff) << 0usize);
             }
         }
         impl Default for BlkIrqVtor {
@@ -9057,9 +9201,7 @@ pub mod ecia {
         }
         impl core::fmt::Debug for BlkIrqVtor {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BlkIrqVtor")
-                    .field("vtor", &self.vtor())
-                    .finish()
+                f.debug_struct("BlkIrqVtor").field("vtor", &self.vtor()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -9099,16 +9241,12 @@ pub mod emi0 {
         }
         #[doc = "EC Address Access Control Register"]
         #[inline(always)]
-        pub const fn rt_ec_addr_lsb(
-            self,
-        ) -> crate::common::Reg<regs::RtEcAddrLsb, crate::common::RW> {
+        pub const fn rt_ec_addr_lsb(self) -> crate::common::Reg<regs::RtEcAddrLsb, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02usize) as _) }
         }
         #[doc = "EC Address Access Control Register"]
         #[inline(always)]
-        pub const fn rt_ec_addr_msb(
-            self,
-        ) -> crate::common::Reg<regs::RtEcAddrMsb, crate::common::RW> {
+        pub const fn rt_ec_addr_msb(self) -> crate::common::Reg<regs::RtEcAddrMsb, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03usize) as _) }
         }
         #[doc = "EC Data Byte Register"]
@@ -9118,30 +9256,22 @@ pub mod emi0 {
         }
         #[doc = "Interrupt Source LSB Register"]
         #[inline(always)]
-        pub const fn rt_intr_src_lsb(
-            self,
-        ) -> crate::common::Reg<regs::RtIntrSrcLsb, crate::common::RW> {
+        pub const fn rt_intr_src_lsb(self) -> crate::common::Reg<regs::RtIntrSrcLsb, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
         }
         #[doc = "Interrupt Source MSB Register"]
         #[inline(always)]
-        pub const fn rt_intr_src_msb(
-            self,
-        ) -> crate::common::Reg<regs::RtIntrSrcMsb, crate::common::RW> {
+        pub const fn rt_intr_src_msb(self) -> crate::common::Reg<regs::RtIntrSrcMsb, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x09usize) as _) }
         }
         #[doc = "Interrupt Mask LSB Register"]
         #[inline(always)]
-        pub const fn rt_intr_mask_lsb(
-            self,
-        ) -> crate::common::Reg<regs::RtIntrMaskLsb, crate::common::RW> {
+        pub const fn rt_intr_mask_lsb(self) -> crate::common::Reg<regs::RtIntrMaskLsb, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0ausize) as _) }
         }
         #[doc = "Interrupt Mask MSB Register"]
         #[inline(always)]
-        pub const fn rt_intr_mask_msb(
-            self,
-        ) -> crate::common::Reg<regs::RtIntrMaskMsb, crate::common::RW> {
+        pub const fn rt_intr_mask_msb(self) -> crate::common::Reg<regs::RtIntrMaskMsb, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0busize) as _) }
         }
         #[doc = "Application ID Register, APPLICATION_ID When this field is 00h it can be written with any value. When set to a non-zero value, writing that value will clear this register to 00h. When set to a non-zero value, writing any value other than the current contents will have no effect."]
@@ -9438,11 +9568,7 @@ pub mod emi0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for RtIntrMaskMsb {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "RtIntrMaskMsb {{ ec_swi_en_msb: {=u8:?} }}",
-                    self.ec_swi_en_msb()
-                )
+                defmt::write!(f, "RtIntrMaskMsb {{ ec_swi_en_msb: {=u8:?} }}", self.ec_swi_en_msb())
             }
         }
         #[doc = "Interrupt Source LSB Register"]
@@ -9531,11 +9657,7 @@ pub mod emi0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for RtIntrSrcMsb {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "RtIntrSrcMsb {{ ec_swi_msb: {=u8:?} }}",
-                    self.ec_swi_msb()
-                )
+                defmt::write!(f, "RtIntrSrcMsb {{ ec_swi_msb: {=u8:?} }}", self.ec_swi_msb())
             }
         }
     }
@@ -9569,37 +9691,27 @@ pub mod espi_io {
         }
         #[doc = "Peripheral Channel Last Cycle Register (DWord 0)"]
         #[inline(always)]
-        pub const fn pc_lc_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::PcLcAddrLsw, crate::common::R> {
+        pub const fn pc_lc_addr_lsw(self) -> crate::common::Reg<regs::PcLcAddrLsw, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize) as _) }
         }
         #[doc = "Peripheral Channel Last Cycle Register (DWord 1)"]
         #[inline(always)]
-        pub const fn pc_lc_addr_msw(
-            self,
-        ) -> crate::common::Reg<regs::PcLcAddrMsw, crate::common::R> {
+        pub const fn pc_lc_addr_msw(self) -> crate::common::Reg<regs::PcLcAddrMsw, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0104usize) as _) }
         }
         #[doc = "Peripheral Channel Last Cycle Register (DWord 2)"]
         #[inline(always)]
-        pub const fn pc_lc_len_type_tag(
-            self,
-        ) -> crate::common::Reg<regs::PcLcLenTypeTag, crate::common::R> {
+        pub const fn pc_lc_len_type_tag(self) -> crate::common::Reg<regs::PcLcLenTypeTag, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0108usize) as _) }
         }
         #[doc = "Peripheral Channel Error Address Register (DWord 0)"]
         #[inline(always)]
-        pub const fn pc_err_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::PcErrAddrLsw, crate::common::R> {
+        pub const fn pc_err_addr_lsw(self) -> crate::common::Reg<regs::PcErrAddrLsw, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x010cusize) as _) }
         }
         #[doc = "Peripheral Channel Error Address Register (DWord 1)"]
         #[inline(always)]
-        pub const fn pc_err_addr_msw(
-            self,
-        ) -> crate::common::Reg<regs::PcErrAddrMsw, crate::common::R> {
+        pub const fn pc_err_addr_msw(self) -> crate::common::Reg<regs::PcErrAddrMsw, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0110usize) as _) }
         }
         #[doc = "Peripheral Channel Status Register"]
@@ -9614,16 +9726,12 @@ pub mod espi_io {
         }
         #[doc = "BAR Inhibit Register (DWord 0)"]
         #[inline(always)]
-        pub const fn iobar_inh_lsw(
-            self,
-        ) -> crate::common::Reg<regs::IobarInhLsw, crate::common::RW> {
+        pub const fn iobar_inh_lsw(self) -> crate::common::Reg<regs::IobarInhLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0120usize) as _) }
         }
         #[doc = "BAR Inhibit Register (DWord 1)"]
         #[inline(always)]
-        pub const fn iobar_inh_msw(
-            self,
-        ) -> crate::common::Reg<regs::IobarInhMsw, crate::common::RW> {
+        pub const fn iobar_inh_msw(self) -> crate::common::Reg<regs::IobarInhMsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0124usize) as _) }
         }
         #[doc = "eSPI BAR Init Register"]
@@ -9643,135 +9751,97 @@ pub mod espi_io {
         }
         #[doc = "eSPI Memory Base Address Register"]
         #[inline(always)]
-        pub const fn espi_mem_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::EspiMemBaseAddr, crate::common::RW> {
+        pub const fn espi_mem_base_addr(self) -> crate::common::Reg<regs::EspiMemBaseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0138usize) as _) }
         }
         #[doc = "Mailbox BAR Register"]
         #[inline(always)]
-        pub const fn mbx_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::MbxBaseAddr, crate::common::RW> {
+        pub const fn mbx_base_addr(self) -> crate::common::Reg<regs::MbxBaseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x013cusize) as _) }
         }
         #[doc = "8042 Emulated Keyboard Controller BAR Register"]
         #[inline(always)]
-        pub const fn em8042_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Em8042baseAddr, crate::common::RW> {
+        pub const fn em8042_base_addr(self) -> crate::common::Reg<regs::Em8042baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0140usize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Register"]
         #[inline(always)]
-        pub const fn acpi_ec_0_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc0baseAddr, crate::common::RW> {
+        pub const fn acpi_ec_0_base_addr(self) -> crate::common::Reg<regs::AcpiEc0baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0144usize) as _) }
         }
         #[doc = "ACPI EC Channel 1 BAR Register"]
         #[inline(always)]
-        pub const fn acpi_ec_1_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc1baseAddr, crate::common::RW> {
+        pub const fn acpi_ec_1_base_addr(self) -> crate::common::Reg<regs::AcpiEc1baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0148usize) as _) }
         }
         #[doc = "ACPI EC Channel 2 BAR Register"]
         #[inline(always)]
-        pub const fn acpi_ec_2_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc2baseAddr, crate::common::RW> {
+        pub const fn acpi_ec_2_base_addr(self) -> crate::common::Reg<regs::AcpiEc2baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x014cusize) as _) }
         }
         #[doc = "ACPI EC Channel 3 BAR Register"]
         #[inline(always)]
-        pub const fn acpi_ec_3_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc3baseAddr, crate::common::RW> {
+        pub const fn acpi_ec_3_base_addr(self) -> crate::common::Reg<regs::AcpiEc3baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0150usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 BAR Register"]
         #[inline(always)]
-        pub const fn acpi_ec_4_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc4baseAddr, crate::common::RW> {
+        pub const fn acpi_ec_4_base_addr(self) -> crate::common::Reg<regs::AcpiEc4baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0154usize) as _) }
         }
         #[doc = "I/O Base Address Register"]
         #[inline(always)]
-        pub const fn acpi_pm1_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiPm1baseAddr, crate::common::RW> {
+        pub const fn acpi_pm1_base_addr(self) -> crate::common::Reg<regs::AcpiPm1baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0158usize) as _) }
         }
         #[doc = "Legacy (Fast Keyboard) BAR Register"]
         #[inline(always)]
-        pub const fn fast_kdb_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::FastKdbBaseAddr, crate::common::RW> {
+        pub const fn fast_kdb_base_addr(self) -> crate::common::Reg<regs::FastKdbBaseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x015cusize) as _) }
         }
         #[doc = "UART 0 BAR Register"]
         #[inline(always)]
-        pub const fn uart_0_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Uart0baseAddr, crate::common::RW> {
+        pub const fn uart_0_base_addr(self) -> crate::common::Reg<regs::Uart0baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0160usize) as _) }
         }
         #[doc = "UART 1 BAR Register"]
         #[inline(always)]
-        pub const fn uart_1_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Uart1baseAddr, crate::common::RW> {
+        pub const fn uart_1_base_addr(self) -> crate::common::Reg<regs::Uart1baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0164usize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 0 BAR Register"]
         #[inline(always)]
-        pub const fn emi_0_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Emi0baseAddr, crate::common::RW> {
+        pub const fn emi_0_base_addr(self) -> crate::common::Reg<regs::Emi0baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0168usize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 1 BAR Register"]
         #[inline(always)]
-        pub const fn emi_1_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Emi1baseAddr, crate::common::RW> {
+        pub const fn emi_1_base_addr(self) -> crate::common::Reg<regs::Emi1baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x016cusize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 2 BAR Register"]
         #[inline(always)]
-        pub const fn emi_2_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Emi2baseAddr, crate::common::RW> {
+        pub const fn emi_2_base_addr(self) -> crate::common::Reg<regs::Emi2baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0170usize) as _) }
         }
         #[doc = "BIOS Debug Port (Port 80) 0 BAR Register"]
         #[inline(always)]
-        pub const fn port80_0_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Port800baseAddr, crate::common::RW> {
+        pub const fn port80_0_base_addr(self) -> crate::common::Reg<regs::Port800baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0174usize) as _) }
         }
         #[doc = "BIOS Debug Port (Port 80) 1 BAR Register"]
         #[inline(always)]
-        pub const fn port80_1_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::Port801baseAddr, crate::common::RW> {
+        pub const fn port80_1_base_addr(self) -> crate::common::Reg<regs::Port801baseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0178usize) as _) }
         }
         #[doc = "RTC Base Address Register"]
         #[inline(always)]
-        pub const fn rtc_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::RtcBaseAddr, crate::common::RW> {
+        pub const fn rtc_base_addr(self) -> crate::common::Reg<regs::RtcBaseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x017cusize) as _) }
         }
         #[doc = "GLUE Base Address Register"]
         #[inline(always)]
-        pub const fn glue_base_addr(
-            self,
-        ) -> crate::common::Reg<regs::GlueBaseAddr, crate::common::RW> {
+        pub const fn glue_base_addr(self) -> crate::common::Reg<regs::GlueBaseAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x018cusize) as _) }
         }
         #[doc = "LTR Peripheral Status Register"]
@@ -9796,16 +9866,12 @@ pub mod espi_io {
         }
         #[doc = "OOB Channel Receive Address Register"]
         #[inline(always)]
-        pub const fn oob_rx_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::OobRxAddrLsw, crate::common::RW> {
+        pub const fn oob_rx_addr_lsw(self) -> crate::common::Reg<regs::OobRxAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0240usize) as _) }
         }
         #[doc = "OOB Channel Transmit Address Register"]
         #[inline(always)]
-        pub const fn oob_tx_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::OobTxAddrLsw, crate::common::RW> {
+        pub const fn oob_tx_addr_lsw(self) -> crate::common::Reg<regs::OobTxAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0248usize) as _) }
         }
         #[doc = "OOB Channel Receive Length Register"]
@@ -9850,16 +9916,12 @@ pub mod espi_io {
         }
         #[doc = "Flash Access Channel Flash Address Register"]
         #[inline(always)]
-        pub const fn fc_flash_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::FcFlashAddrLsw, crate::common::RW> {
+        pub const fn fc_flash_addr_lsw(self) -> crate::common::Reg<regs::FcFlashAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0280usize) as _) }
         }
         #[doc = "Flash Access Channel Buffer Address Register"]
         #[inline(always)]
-        pub const fn fc_buf_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::FcBufAddrLsw, crate::common::RW> {
+        pub const fn fc_buf_addr_lsw(self) -> crate::common::Reg<regs::FcBufAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0288usize) as _) }
         }
         #[doc = "Flash Access Channel Transfer Length Register"]
@@ -9964,16 +10026,12 @@ pub mod espi_io {
         }
         #[doc = "RPMC OP1 Opcode Display Configuration Register"]
         #[inline(always)]
-        pub const fn rpmc_op_disp_rw(
-            self,
-        ) -> crate::common::Reg<regs::RpmcOpDispRw, crate::common::RW> {
+        pub const fn rpmc_op_disp_rw(self) -> crate::common::Reg<regs::RpmcOpDispRw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0300usize) as _) }
         }
         #[doc = "RPMC OP1 Opcode Num Counter Register"]
         #[inline(always)]
-        pub const fn rpmc_num_disp_rw(
-            self,
-        ) -> crate::common::Reg<regs::RpmcNumDispRw, crate::common::RW> {
+        pub const fn rpmc_num_disp_rw(self) -> crate::common::Reg<regs::RpmcNumDispRw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0304usize) as _) }
         }
         #[doc = "eSPI Activate Register"]
@@ -9988,9 +10046,7 @@ pub mod espi_io {
         }
         #[doc = "eSPI Memory Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn espi_mem_addr(
-            self,
-        ) -> crate::common::Reg<regs::EspiMemAddr, crate::common::RW> {
+        pub const fn espi_mem_addr(self) -> crate::common::Reg<regs::EspiMemAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0338usize) as _) }
         }
         #[doc = "Mailbox Base Address Configuration Register"]
@@ -10005,51 +10061,37 @@ pub mod espi_io {
         }
         #[doc = "ACPI EC 0 Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn acpi_ec0_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc0addr, crate::common::RW> {
+        pub const fn acpi_ec0_addr(self) -> crate::common::Reg<regs::AcpiEc0addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0344usize) as _) }
         }
         #[doc = "ACPI EC 1 Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn acpi_ec1_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc1addr, crate::common::RW> {
+        pub const fn acpi_ec1_addr(self) -> crate::common::Reg<regs::AcpiEc1addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0348usize) as _) }
         }
         #[doc = "ACPI EC 2 Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn acpi_ec2_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc2addr, crate::common::RW> {
+        pub const fn acpi_ec2_addr(self) -> crate::common::Reg<regs::AcpiEc2addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x034cusize) as _) }
         }
         #[doc = "ACPI EC 3 Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn acpi_ec3_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc3addr, crate::common::RW> {
+        pub const fn acpi_ec3_addr(self) -> crate::common::Reg<regs::AcpiEc3addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0350usize) as _) }
         }
         #[doc = "ACPI EC 4 Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn acpi_ec4_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc4addr, crate::common::RW> {
+        pub const fn acpi_ec4_addr(self) -> crate::common::Reg<regs::AcpiEc4addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0354usize) as _) }
         }
         #[doc = "ACPI PM1 Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn acpi_pm1_addr(
-            self,
-        ) -> crate::common::Reg<regs::AcpiPm1addr, crate::common::RW> {
+        pub const fn acpi_pm1_addr(self) -> crate::common::Reg<regs::AcpiPm1addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0358usize) as _) }
         }
         #[doc = "I/O Base Address Configuration Register"]
         #[inline(always)]
-        pub const fn fast_kbd_addr(
-            self,
-        ) -> crate::common::Reg<regs::FastKbdAddr, crate::common::RW> {
+        pub const fn fast_kbd_addr(self) -> crate::common::Reg<regs::FastKbdAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x035cusize) as _) }
         }
         #[doc = "UART 0 Base Address Configuration Register"]
@@ -10079,16 +10121,12 @@ pub mod espi_io {
         }
         #[doc = "BIOS Debug Port (Port 80) 0 BAR Config Register"]
         #[inline(always)]
-        pub const fn port80_0_addr(
-            self,
-        ) -> crate::common::Reg<regs::Port800addr, crate::common::RW> {
+        pub const fn port80_0_addr(self) -> crate::common::Reg<regs::Port800addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0374usize) as _) }
         }
         #[doc = "BIOS Debug Port (Port 80) 1 BAR Config Register"]
         #[inline(always)]
-        pub const fn port80_1_addr(
-            self,
-        ) -> crate::common::Reg<regs::Port801addr, crate::common::RW> {
+        pub const fn port80_1_addr(self) -> crate::common::Reg<regs::Port801addr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0378usize) as _) }
         }
         #[doc = "RTC BAR Config Register"]
@@ -10103,65 +10141,47 @@ pub mod espi_io {
         }
         #[doc = "Mailbox (MBX_Host_SIRQ Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn mbx_host_sirq_irq(
-            self,
-        ) -> crate::common::Reg<regs::MbxHostSirqIrq, crate::common::RW> {
+        pub const fn mbx_host_sirq_irq(self) -> crate::common::Reg<regs::MbxHostSirqIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03acusize) as _) }
         }
         #[doc = "Mailbox (MBX_Host_SMI Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn mbx_host_smi_irq(
-            self,
-        ) -> crate::common::Reg<regs::MbxHostSmiIrq, crate::common::RW> {
+        pub const fn mbx_host_smi_irq(self) -> crate::common::Reg<regs::MbxHostSmiIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03adusize) as _) }
         }
         #[doc = "8042 (KIRQ Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn kirq_8042_irq(
-            self,
-        ) -> crate::common::Reg<regs::Kirq8042irq, crate::common::RW> {
+        pub const fn kirq_8042_irq(self) -> crate::common::Reg<regs::Kirq8042irq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03aeusize) as _) }
         }
         #[doc = "8042 (MIRQ Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn mirq_8042_irq(
-            self,
-        ) -> crate::common::Reg<regs::Mirq8042irq, crate::common::RW> {
+        pub const fn mirq_8042_irq(self) -> crate::common::Reg<regs::Mirq8042irq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03afusize) as _) }
         }
         #[doc = "ACPI EC 0 (EC_OBF Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn acpi_ec0_obf_irq(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc0obfIrq, crate::common::RW> {
+        pub const fn acpi_ec0_obf_irq(self) -> crate::common::Reg<regs::AcpiEc0obfIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b0usize) as _) }
         }
         #[doc = "ACPI EC 1 (EC_OBF Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn acpi_ec1_obf_irq(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc1obfIrq, crate::common::RW> {
+        pub const fn acpi_ec1_obf_irq(self) -> crate::common::Reg<regs::AcpiEc1obfIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b1usize) as _) }
         }
         #[doc = "ACPI EC 2 (EC_OBF Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn acpi_ec2_obf_irq(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc2obfIrq, crate::common::RW> {
+        pub const fn acpi_ec2_obf_irq(self) -> crate::common::Reg<regs::AcpiEc2obfIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b2usize) as _) }
         }
         #[doc = "ACPI EC 3 (EC_OBF Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn acpi_ec3_obf_irq(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc3obfIrq, crate::common::RW> {
+        pub const fn acpi_ec3_obf_irq(self) -> crate::common::Reg<regs::AcpiEc3obfIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b3usize) as _) }
         }
         #[doc = "ACPI EC 4 (EC_OBF Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn acpi_ec4_obf_irq(
-            self,
-        ) -> crate::common::Reg<regs::AcpiEc4obfIrq, crate::common::RW> {
+        pub const fn acpi_ec4_obf_irq(self) -> crate::common::Reg<regs::AcpiEc4obfIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b4usize) as _) }
         }
         #[doc = "UART 0 (UART Interrupt) Selection Register"]
@@ -10176,44 +10196,32 @@ pub mod espi_io {
         }
         #[doc = "EMI 0 (Host Event Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn emi0_host_irq(
-            self,
-        ) -> crate::common::Reg<regs::Emi0hostIrq, crate::common::RW> {
+        pub const fn emi0_host_irq(self) -> crate::common::Reg<regs::Emi0hostIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b7usize) as _) }
         }
         #[doc = "EMI 0 (EC-to-Host Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn emi0_ec_host_irq(
-            self,
-        ) -> crate::common::Reg<regs::Emi0ecHostIrq, crate::common::RW> {
+        pub const fn emi0_ec_host_irq(self) -> crate::common::Reg<regs::Emi0ecHostIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b8usize) as _) }
         }
         #[doc = "EMI 1 (Host Event Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn emi1_host_irq(
-            self,
-        ) -> crate::common::Reg<regs::Emi1hostIrq, crate::common::RW> {
+        pub const fn emi1_host_irq(self) -> crate::common::Reg<regs::Emi1hostIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b9usize) as _) }
         }
         #[doc = "EMI 1 (EC-to-Host Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn emi1_ec_host_irq(
-            self,
-        ) -> crate::common::Reg<regs::Emi1ecHostIrq, crate::common::RW> {
+        pub const fn emi1_ec_host_irq(self) -> crate::common::Reg<regs::Emi1ecHostIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03bausize) as _) }
         }
         #[doc = "EMI 2 (Host Event Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn emi2_host_irq(
-            self,
-        ) -> crate::common::Reg<regs::Emi2hostIrq, crate::common::RW> {
+        pub const fn emi2_host_irq(self) -> crate::common::Reg<regs::Emi2hostIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03bbusize) as _) }
         }
         #[doc = "EMI 2 (EC-to-Host Interrupt) Selection Register"]
         #[inline(always)]
-        pub const fn emi2_ec_host_irq(
-            self,
-        ) -> crate::common::Reg<regs::Emi2ecHostIrq, crate::common::RW> {
+        pub const fn emi2_ec_host_irq(self) -> crate::common::Reg<regs::Emi2ecHostIrq, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03bcusize) as _) }
         }
         #[doc = "RTC (RTC Interrupt) Selection Register"]
@@ -10228,9 +10236,7 @@ pub mod espi_io {
         }
         #[doc = "RPMC OP1 Opcode Num Counter Register"]
         #[inline(always)]
-        pub const fn rpmc_num_disp_r(
-            self,
-        ) -> crate::common::Reg<regs::RpmcNumDispR, crate::common::R> {
+        pub const fn rpmc_num_disp_r(self) -> crate::common::Reg<regs::RpmcNumDispR, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03e4usize) as _) }
         }
         #[doc = "eSPI Virtual Wire Errors Register"]
@@ -10384,9 +10390,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for AcpiEc0obfIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("AcpiEc0obfIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("AcpiEc0obfIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -10539,9 +10543,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for AcpiEc1obfIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("AcpiEc1obfIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("AcpiEc1obfIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -10694,9 +10696,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for AcpiEc2obfIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("AcpiEc2obfIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("AcpiEc2obfIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -10849,9 +10849,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for AcpiEc3obfIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("AcpiEc3obfIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("AcpiEc3obfIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11004,9 +11002,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for AcpiEc4obfIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("AcpiEc4obfIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("AcpiEc4obfIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11159,9 +11155,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Activate {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate")
-                    .field("act", &self.act())
-                    .finish()
+                f.debug_struct("Activate").field("act", &self.act()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11314,9 +11308,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for CapId {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("CapId")
-                    .field("esp_devid", &self.esp_devid())
-                    .finish()
+                f.debug_struct("CapId").field("esp_devid", &self.esp_devid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11350,9 +11342,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for EcCtrlIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcCtrlIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("EcCtrlIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11658,9 +11648,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Emi0ecHostIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi0ecHostIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Emi0ecHostIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11694,9 +11682,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Emi0hostIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi0hostIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Emi0hostIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11849,9 +11835,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Emi1ecHostIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi1ecHostIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Emi1ecHostIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -11885,9 +11869,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Emi1hostIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi1hostIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Emi1hostIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -12040,9 +12022,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Emi2ecHostIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi2ecHostIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Emi2ecHostIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -12076,9 +12056,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Emi2hostIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi2hostIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Emi2hostIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -12411,8 +12389,7 @@ pub mod espi_io {
             #[doc = "Before starting a Flash access, this field must be initialized with the address of the data buffer in the EC's memory space."]
             #[inline(always)]
             pub fn set_blsw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FcBufAddrLsw {
@@ -12423,9 +12400,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for FcBufAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FcBufAddrLsw")
-                    .field("blsw", &self.blsw())
-                    .finish()
+                f.debug_struct("FcBufAddrLsw").field("blsw", &self.blsw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -12556,7 +12531,14 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for FcCfg {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "FcCfg {{ busy: {=bool:?}, eras_blk_size: {=u8:?}, max_payld_sel: {=u8:?}, max_rd_req: {=u8:?} }}" , self . busy () , self . eras_blk_size () , self . max_payld_sel () , self . max_rd_req ())
+                defmt::write!(
+                    f,
+                    "FcCfg {{ busy: {=bool:?}, eras_blk_size: {=u8:?}, max_payld_sel: {=u8:?}, max_rd_req: {=u8:?} }}",
+                    self.busy(),
+                    self.eras_blk_size(),
+                    self.max_payld_sel(),
+                    self.max_rd_req()
+                )
             }
         }
         #[doc = "Flash Access Channel Control Register"]
@@ -12652,8 +12634,7 @@ pub mod espi_io {
             #[doc = "Before starting a Flash access, this field must be initialized to contain the value used by eSPI for addressing the Flash contents."]
             #[inline(always)]
             pub fn set_flsw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FcFlashAddrLsw {
@@ -12664,9 +12645,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for FcFlashAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FcFlashAddrLsw")
-                    .field("flsw", &self.flsw())
-                    .finish()
+                f.debug_struct("FcFlashAddrLsw").field("flsw", &self.flsw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -12932,8 +12911,7 @@ pub mod espi_io {
             #[doc = "Before starting a Flash access, this field must be initialized with the total number of bytes to be transferred in the requested transaction sequence. If the Master attempts to transfer more bytes than this in Read Completions, the transfer is faulted and the DATA_OVERRUN bit in the Flash Access Channel Status Register register is asserted."]
             #[inline(always)]
             pub fn set_tlen(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FcXfrLen {
@@ -12944,9 +12922,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for FcXfrLen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FcXfrLen")
-                    .field("tlen", &self.tlen())
-                    .finish()
+                f.debug_struct("FcXfrLen").field("tlen", &self.tlen()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13024,7 +13000,14 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for GlbCap0 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "GlbCap0 {{ phl_chn: {=bool:?}, vw_chn: {=bool:?}, oob_msg_chn: {=bool:?}, fc_chn: {=bool:?} }}" , self . phl_chn () , self . vw_chn () , self . oob_msg_chn () , self . fc_chn ())
+                defmt::write!(
+                    f,
+                    "GlbCap0 {{ phl_chn: {=bool:?}, vw_chn: {=bool:?}, oob_msg_chn: {=bool:?}, fc_chn: {=bool:?} }}",
+                    self.phl_chn(),
+                    self.vw_chn(),
+                    self.oob_msg_chn(),
+                    self.fc_chn()
+                )
             }
         }
         #[doc = "eSPI Capabilities Global Capabilities 1 Register"]
@@ -13226,8 +13209,7 @@ pub mod espi_io {
             #[doc = "When bit Di of BAR_Inhibit is 1, the BAR for Logical Device i is disabled and its addresses will not be claimed on the eSPI bus, independent of the value of the Valid bit in the BAR. The BAR Inhibit function applies to both I/O transactions and Memory transactions."]
             #[inline(always)]
             pub fn set_lsdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for IobarInhLsw {
@@ -13238,9 +13220,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for IobarInhLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("IobarInhLsw")
-                    .field("lsdw", &self.lsdw())
-                    .finish()
+                f.debug_struct("IobarInhLsw").field("lsdw", &self.lsdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13263,8 +13243,7 @@ pub mod espi_io {
             #[doc = "When bit Di of BAR_Inhibit is 1, the BAR for Logical Device i is disabled and its addresses will not be claimed on the eSPI bus, independent of the value of the Valid bit in the BAR. The BAR Inhibit function applies to both I/O transactions and Memory transactions."]
             #[inline(always)]
             pub fn set_msdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for IobarInhMsw {
@@ -13275,9 +13254,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for IobarInhMsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("IobarInhMsw")
-                    .field("msdw", &self.msdw())
-                    .finish()
+                f.debug_struct("IobarInhMsw").field("msdw", &self.msdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13311,9 +13288,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for IobarInit {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("IobarInit")
-                    .field("init", &self.init())
-                    .finish()
+                f.debug_struct("IobarInit").field("init", &self.init()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13347,9 +13322,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Kirq8042irq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Kirq8042irq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Kirq8042irq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13516,7 +13489,14 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for LtrMesg {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "LtrMesg {{ val: {=u16:?}, scal: {=u8:?}, res_tx_bits: {=u8:?}, req_bit: {=bool:?} }}" , self . val () , self . scal () , self . res_tx_bits () , self . req_bit ())
+                defmt::write!(
+                    f,
+                    "LtrMesg {{ val: {=u16:?}, scal: {=u8:?}, res_tx_bits: {=u8:?}, req_bit: {=bool:?} }}",
+                    self.val(),
+                    self.scal(),
+                    self.res_tx_bits(),
+                    self.req_bit()
+                )
             }
         }
         #[doc = "LTR Peripheral Status Register"]
@@ -13735,9 +13715,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for MbxHostSirqIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MbxHostSirqIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("MbxHostSirqIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13771,9 +13749,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for MbxHostSmiIrq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MbxHostSmiIrq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("MbxHostSmiIrq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13807,9 +13783,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Mirq8042irq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Mirq8042irq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Mirq8042irq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13851,11 +13825,7 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for OobCap {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "OobCap {{ max_payld_siz: {=u8:?} }}",
-                    self.max_payld_siz()
-                )
+                defmt::write!(f, "OobCap {{ max_payld_siz: {=u8:?} }}", self.max_payld_siz())
             }
         }
         #[doc = "eSPI OOB Channel Ready Register"]
@@ -13883,9 +13853,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for OobReady {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("OobReady")
-                    .field("chn", &self.chn())
-                    .finish()
+                f.debug_struct("OobReady").field("chn", &self.chn()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13908,8 +13876,7 @@ pub mod espi_io {
             #[doc = "This field must be initialized to contain the Base Address for accepting the next OOB packet."]
             #[inline(always)]
             pub fn set_rx_buf(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for OobRxAddrLsw {
@@ -13920,9 +13887,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for OobRxAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("OobRxAddrLsw")
-                    .field("rx_buf", &self.rx_buf())
-                    .finish()
+                f.debug_struct("OobRxAddrLsw").field("rx_buf", &self.rx_buf()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -13988,7 +13953,13 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for OobRxCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "OobRxCtrl {{ set_rx_avail: {=bool:?}, chn_en: {=bool:?}, max_payld_size_sel: {=u8:?} }}" , self . set_rx_avail () , self . chn_en () , self . max_payld_size_sel ())
+                defmt::write!(
+                    f,
+                    "OobRxCtrl {{ set_rx_avail: {=bool:?}, chn_en: {=bool:?}, max_payld_size_sel: {=u8:?} }}",
+                    self.set_rx_avail(),
+                    self.chn_en(),
+                    self.max_payld_size_sel()
+                )
             }
         }
         #[doc = "OOB Channel Receive Interrupt Enable Register"]
@@ -14016,9 +13987,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for OobRxIen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("OobRxIen")
-                    .field("rx_ien", &self.rx_ien())
-                    .finish()
+                f.debug_struct("OobRxIen").field("rx_ien", &self.rx_ien()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14072,12 +14041,7 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for OobRxLen {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "OobRxLen {{ msg: {=u16:?}, buf: {=u16:?} }}",
-                    self.msg(),
-                    self.buf()
-                )
+                defmt::write!(f, "OobRxLen {{ msg: {=u16:?}, buf: {=u16:?} }}", self.msg(), self.buf())
             }
         }
         #[doc = "OOB Channel Receive Status Register"]
@@ -14178,8 +14142,7 @@ pub mod espi_io {
             #[doc = "Before starting an OOB Transmit, this field must be initialized to contain the Base Address of the buffer in SRAM. The contents of the transmit buffer should not be modified while TRANSMIT_BUSY is asserted."]
             #[inline(always)]
             pub fn set_tx_buf(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for OobTxAddrLsw {
@@ -14190,9 +14153,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for OobTxAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("OobTxAddrLsw")
-                    .field("tx_buf", &self.tx_buf())
-                    .finish()
+                f.debug_struct("OobTxAddrLsw").field("tx_buf", &self.tx_buf()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14332,9 +14293,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for OobTxLen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("OobTxLen")
-                    .field("msg", &self.msg())
-                    .finish()
+                f.debug_struct("OobTxLen").field("msg", &self.msg()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14484,11 +14443,7 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for PcCap {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "PcCap {{ max_payld_size: {=u8:?} }}",
-                    self.max_payld_size()
-                )
+                defmt::write!(f, "PcCap {{ max_payld_size: {=u8:?} }}", self.max_payld_size())
             }
         }
         #[doc = "Peripheral Channel Error Address Register (DWord 0)"]
@@ -14505,8 +14460,7 @@ pub mod espi_io {
             #[doc = "This field records bits\\[31:0\\] of the 64 bit address of the most recent eSPI transaction that incurred an error."]
             #[inline(always)]
             pub fn set_lsdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for PcErrAddrLsw {
@@ -14517,9 +14471,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for PcErrAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PcErrAddrLsw")
-                    .field("lsdw", &self.lsdw())
-                    .finish()
+                f.debug_struct("PcErrAddrLsw").field("lsdw", &self.lsdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14542,8 +14494,7 @@ pub mod espi_io {
             #[doc = "This field records bits\\[63:32\\] of the 64 bit address of the most recent eSPI transaction that incurred an error."]
             #[inline(always)]
             pub fn set_msdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for PcErrAddrMsw {
@@ -14554,9 +14505,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for PcErrAddrMsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PcErrAddrMsw")
-                    .field("msdw", &self.msdw())
-                    .finish()
+                f.debug_struct("PcErrAddrMsw").field("msdw", &self.msdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14675,8 +14624,7 @@ pub mod espi_io {
             #[doc = "This field records bits\\[31:0\\] of the 64 bit address of the most recent eSPI transaction."]
             #[inline(always)]
             pub fn set_ladr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for PcLcAddrLsw {
@@ -14687,9 +14635,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for PcLcAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PcLcAddrLsw")
-                    .field("ladr", &self.ladr())
-                    .finish()
+                f.debug_struct("PcLcAddrLsw").field("ladr", &self.ladr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14712,8 +14658,7 @@ pub mod espi_io {
             #[doc = "This field records bits\\[63:32\\] of the 64 bit address of the most recent eSPI transaction."]
             #[inline(always)]
             pub fn set_madr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for PcLcAddrMsw {
@@ -14724,9 +14669,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for PcLcAddrMsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PcLcAddrMsw")
-                    .field("madr", &self.madr())
-                    .finish()
+                f.debug_struct("PcLcAddrMsw").field("madr", &self.madr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -14834,11 +14777,7 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for PcReady {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "PcReady {{ phl_chn_rdy: {=bool:?} }}",
-                    self.phl_chn_rdy()
-                )
+                defmt::write!(f, "PcReady {{ phl_chn_rdy: {=bool:?} }}", self.phl_chn_rdy())
             }
         }
         #[doc = "Peripheral Channel Status Register"]
@@ -15010,9 +14949,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for PltrstSrc {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PltrstSrc")
-                    .field("src", &self.src())
-                    .finish()
+                f.debug_struct("PltrstSrc").field("src", &self.src()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -15284,9 +15221,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for ResetIen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("ResetIen")
-                    .field("esp_rien", &self.esp_rien())
-                    .finish()
+                f.debug_struct("ResetIen").field("esp_rien", &self.esp_rien()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -15417,7 +15352,14 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for RpmcNumDispR {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "RpmcNumDispR {{ cs0_op1: {=u8:?}, cs0_cnt: {=u8:?}, cs1_op1: {=u8:?}, cs1_cnt: {=u8:?} }}" , self . cs0_op1 () , self . cs0_cnt () , self . cs1_op1 () , self . cs1_cnt ())
+                defmt::write!(
+                    f,
+                    "RpmcNumDispR {{ cs0_op1: {=u8:?}, cs0_cnt: {=u8:?}, cs1_op1: {=u8:?}, cs1_cnt: {=u8:?} }}",
+                    self.cs0_op1(),
+                    self.cs0_cnt(),
+                    self.cs1_op1(),
+                    self.cs1_cnt()
+                )
             }
         }
         #[doc = "RPMC OP1 Opcode Num Counter Register"]
@@ -15489,7 +15431,14 @@ pub mod espi_io {
         #[cfg(feature = "defmt")]
         impl defmt::Format for RpmcNumDispRw {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "RpmcNumDispRw {{ cs0_op1: {=u8:?}, cs0_cnt: {=u8:?}, cs1_op1: {=u8:?}, cs1_cnt: {=u8:?} }}" , self . cs0_op1 () , self . cs0_cnt () , self . cs1_op1 () , self . cs1_cnt ())
+                defmt::write!(
+                    f,
+                    "RpmcNumDispRw {{ cs0_op1: {=u8:?}, cs0_cnt: {=u8:?}, cs1_op1: {=u8:?}, cs1_cnt: {=u8:?} }}",
+                    self.cs0_op1(),
+                    self.cs0_cnt(),
+                    self.cs1_op1(),
+                    self.cs1_cnt()
+                )
             }
         }
         #[doc = "RPMC OP1 Opcode Display Configuration Register"]
@@ -15873,9 +15822,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Uart0irq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Uart0irq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Uart0irq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -16028,9 +15975,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for Uart1irq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Uart1irq")
-                    .field("irq", &self.irq())
-                    .finish()
+                f.debug_struct("Uart1irq").field("irq", &self.irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -16064,9 +16009,7 @@ pub mod espi_io {
         }
         impl core::fmt::Debug for VwCap {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("VwCap")
-                    .field("max_cnt", &self.max_cnt())
-                    .finish()
+                f.debug_struct("VwCap").field("max_cnt", &self.max_cnt()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -16166,93 +16109,67 @@ pub mod espi_memory {
         }
         #[doc = "Mailbox Memory Base Address"]
         #[inline(always)]
-        pub const fn bar_ldi_mbx_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiMbxH0, crate::common::RW> {
+        pub const fn bar_ldi_mbx_h0(self) -> crate::common::Reg<regs::BarLdiMbxH0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0130usize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR (LSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec0_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc0h0, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec0_h0(self) -> crate::common::Reg<regs::BarLdiAcpiEc0h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x013ausize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR (MSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec0_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc0h1, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec0_h1(self) -> crate::common::Reg<regs::BarLdiAcpiEc0h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x013cusize) as _) }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec1_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc1h0, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec1_h0(self) -> crate::common::Reg<regs::BarLdiAcpiEc1h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0144usize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR (LSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec2_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc2h0, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec2_h0(self) -> crate::common::Reg<regs::BarLdiAcpiEc2h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x014eusize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR (MSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec2_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc2h1, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec2_h1(self) -> crate::common::Reg<regs::BarLdiAcpiEc2h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0150usize) as _) }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec3_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc3h0, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec3_h0(self) -> crate::common::Reg<regs::BarLdiAcpiEc3h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0158usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec4_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc4h0, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec4_h0(self) -> crate::common::Reg<regs::BarLdiAcpiEc4h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x015cusize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR (MSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_acpi_ec4_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiAcpiEc4h1, crate::common::RW> {
+        pub const fn bar_ldi_acpi_ec4_h1(self) -> crate::common::Reg<regs::BarLdiAcpiEc4h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0160usize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 0 Memory Base Address"]
         #[inline(always)]
-        pub const fn bar_ldi_em0_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiEm0h0, crate::common::RW> {
+        pub const fn bar_ldi_em0_h0(self) -> crate::common::Reg<regs::BarLdiEm0h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x016cusize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 1 Memory Base Address (LSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_em1_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiEm1h0, crate::common::RW> {
+        pub const fn bar_ldi_em1_h0(self) -> crate::common::Reg<regs::BarLdiEm1h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0176usize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 1 Memory Base Address (MSB)"]
         #[inline(always)]
-        pub const fn bar_ldi_em1_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiEm1h1, crate::common::RW> {
+        pub const fn bar_ldi_em1_h1(self) -> crate::common::Reg<regs::BarLdiEm1h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0178usize) as _) }
         }
         #[doc = "Embedded Memory Interface (EMI) 2 Memory Base Address"]
         #[inline(always)]
-        pub const fn bar_ldi_em2_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdiEm2h0, crate::common::RW> {
+        pub const fn bar_ldi_em2_h0(self) -> crate::common::Reg<regs::BarLdiEm2h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0180usize) as _) }
         }
         #[doc = "SRAM 0 Memory Base Address Config"]
@@ -16307,23 +16224,17 @@ pub mod espi_memory {
         }
         #[doc = "Bus Master 1 Host Address Register (DWord 0)"]
         #[inline(always)]
-        pub const fn bm1_host_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::Bm1hostAddrLsw, crate::common::RW> {
+        pub const fn bm1_host_addr_lsw(self) -> crate::common::Reg<regs::Bm1hostAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0214usize) as _) }
         }
         #[doc = "Bus Master 1 Host Address Register (DWord 1)"]
         #[inline(always)]
-        pub const fn bm1_host_addr_msw(
-            self,
-        ) -> crate::common::Reg<regs::Bm1hostAddrMsw, crate::common::RW> {
+        pub const fn bm1_host_addr_msw(self) -> crate::common::Reg<regs::Bm1hostAddrMsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0218usize) as _) }
         }
         #[doc = "Bus Master 1 Internal Address Register"]
         #[inline(always)]
-        pub const fn bm1_ec_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::Bm1ecAddrLsw, crate::common::RW> {
+        pub const fn bm1_ec_addr_lsw(self) -> crate::common::Reg<regs::Bm1ecAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x021cusize) as _) }
         }
         #[doc = "Bus Master 2 Control Register"]
@@ -16333,408 +16244,292 @@ pub mod espi_memory {
         }
         #[doc = "Bus Master 2 Host Address Register (DWord 0)"]
         #[inline(always)]
-        pub const fn bm2_host_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::Bm2hostAddrLsw, crate::common::RW> {
+        pub const fn bm2_host_addr_lsw(self) -> crate::common::Reg<regs::Bm2hostAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0228usize) as _) }
         }
         #[doc = "Bus Master 2 Host Address Register (DWord 1)"]
         #[inline(always)]
-        pub const fn bm2_host_addr_msw(
-            self,
-        ) -> crate::common::Reg<regs::Bm2hostAddrMsw, crate::common::RW> {
+        pub const fn bm2_host_addr_msw(self) -> crate::common::Reg<regs::Bm2hostAddrMsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x022cusize) as _) }
         }
         #[doc = "Bus Master 2 Internal Address Register"]
         #[inline(always)]
-        pub const fn bm2_ec_addr_lsw(
-            self,
-        ) -> crate::common::Reg<regs::Bm2ecAddrLsw, crate::common::RW> {
+        pub const fn bm2_ec_addr_lsw(self) -> crate::common::Reg<regs::Bm2ecAddrLsw, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0230usize) as _) }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_mbx_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhMbxH0, crate::common::RW> {
+        pub const fn bar_ldh_mbx_h0(self) -> crate::common::Reg<regs::BarLdhMbxH0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0330usize) as _) }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_mbx_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhMbxH1, crate::common::RW> {
+        pub const fn bar_ldh_mbx_h1(self) -> crate::common::Reg<regs::BarLdhMbxH1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0332usize) as _) }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_mbx_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhMbxH2, crate::common::RW> {
+        pub const fn bar_ldh_mbx_h2(self) -> crate::common::Reg<regs::BarLdhMbxH2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0334usize) as _) }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 3)"]
         #[inline(always)]
-        pub const fn bar_ldh_mbx_h3(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhMbxH3, crate::common::RW> {
+        pub const fn bar_ldh_mbx_h3(self) -> crate::common::Reg<regs::BarLdhMbxH3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0336usize) as _) }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 4)"]
         #[inline(always)]
-        pub const fn bar_ldh_mbx_h4(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhMbxH4, crate::common::RW> {
+        pub const fn bar_ldh_mbx_h4(self) -> crate::common::Reg<regs::BarLdhMbxH4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0338usize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec0_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc0h0, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec0_h0(self) -> crate::common::Reg<regs::BarLdhAcpiEc0h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x033ausize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec0_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc0h1, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec0_h1(self) -> crate::common::Reg<regs::BarLdhAcpiEc0h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x033cusize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec0_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc0h2, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec0_h2(self) -> crate::common::Reg<regs::BarLdhAcpiEc0h2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x033eusize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 3)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec0_h3(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc0h3, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec0_h3(self) -> crate::common::Reg<regs::BarLdhAcpiEc0h3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0340usize) as _) }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 4)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec0_h4(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc0h4, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec0_h4(self) -> crate::common::Reg<regs::BarLdhAcpiEc0h4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0342usize) as _) }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec1_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc1h0, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec1_h0(self) -> crate::common::Reg<regs::BarLdhAcpiEc1h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0344usize) as _) }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec1_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc1h1, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec1_h1(self) -> crate::common::Reg<regs::BarLdhAcpiEc1h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0346usize) as _) }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec1_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc1h2, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec1_h2(self) -> crate::common::Reg<regs::BarLdhAcpiEc1h2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0348usize) as _) }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 3)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec1_h3(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc1h3, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec1_h3(self) -> crate::common::Reg<regs::BarLdhAcpiEc1h3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x034ausize) as _) }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 4)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec1_h4(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc1h4, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec1_h4(self) -> crate::common::Reg<regs::BarLdhAcpiEc1h4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x034cusize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec2_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc2h0, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec2_h0(self) -> crate::common::Reg<regs::BarLdhAcpiEc2h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x034eusize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec2_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc2h1, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec2_h1(self) -> crate::common::Reg<regs::BarLdhAcpiEc2h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0350usize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec2_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc2h2, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec2_h2(self) -> crate::common::Reg<regs::BarLdhAcpiEc2h2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0352usize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 3)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec2_h3(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc2h3, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec2_h3(self) -> crate::common::Reg<regs::BarLdhAcpiEc2h3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0354usize) as _) }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 4)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec2_h4(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc2h4, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec2_h4(self) -> crate::common::Reg<regs::BarLdhAcpiEc2h4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0356usize) as _) }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec3_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc3h0, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec3_h0(self) -> crate::common::Reg<regs::BarLdhAcpiEc3h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0358usize) as _) }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec3_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc3h1, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec3_h1(self) -> crate::common::Reg<regs::BarLdhAcpiEc3h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x035ausize) as _) }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec3_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc3h2, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec3_h2(self) -> crate::common::Reg<regs::BarLdhAcpiEc3h2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x035cusize) as _) }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 3)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec3_h3(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc3h3, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec3_h3(self) -> crate::common::Reg<regs::BarLdhAcpiEc3h3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x035eusize) as _) }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 4)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec3_h4(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc3h4, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec3_h4(self) -> crate::common::Reg<regs::BarLdhAcpiEc3h4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0360usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec4_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc4h0, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec4_h0(self) -> crate::common::Reg<regs::BarLdhAcpiEc4h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0362usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec4_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc4h1, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec4_h1(self) -> crate::common::Reg<regs::BarLdhAcpiEc4h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0364usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec4_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc4h2, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec4_h2(self) -> crate::common::Reg<regs::BarLdhAcpiEc4h2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0366usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 3)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec4_h3(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc4h3, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec4_h3(self) -> crate::common::Reg<regs::BarLdhAcpiEc4h3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0368usize) as _) }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 4)"]
         #[inline(always)]
-        pub const fn bar_ldh_acpi_ec4_h4(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhAcpiEc4h4, crate::common::RW> {
+        pub const fn bar_ldh_acpi_ec4_h4(self) -> crate::common::Reg<regs::BarLdhAcpiEc4h4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x036ausize) as _) }
         }
         #[doc = "EMI 0 Memory BAR Configuration Register (Word 0)"]
         #[inline(always)]
-        pub const fn bar_ldh_em0_h0(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhEm0h0, crate::common::RW> {
+        pub const fn bar_ldh_em0_h0(self) -> crate::common::Reg<regs::BarLdhEm0h0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x036cusize) as _) }
         }
         #[doc = "EMI 0 Memory BAR Configuration Address Register (Word 1)"]
         #[inline(always)]
-        pub const fn bar_ldh_em0_h1(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhEm0h1, crate::common::RW> {
+        pub const fn bar_ldh_em0_h1(self) -> crate::common::Reg<regs::BarLdhEm0h1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x036eusize) as _) }
         }
         #[doc = "EMI 0 Memory BAR Configuration Address Register (Word 2)"]
         #[inline(always)]
-        pub const fn bar_ldh_em0_h2(
-            self,
-        ) -> crate::common::Reg<regs::BarLdhEm0h2, crate::common::RW> {
+        pub const fn bar_ldh_em0_h2(self) -> crate::common::Reg<regs::BarLdhEm0h2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0370usize) as _) }
         }
         #[doc = "EMI 0 Memory BAR Configuration Address Register (Word 3)"]
         #[inline(always)]
-        pub const fn emi_0_mem_bar_cfg_w3(
-            self,
-        ) -> crate::common::Reg<regs::Emi0memBarCfgW3, crate::common::RW> {
+        pub const fn emi_0_mem_bar_cfg_w3(self) -> crate::common::Reg<regs::Emi0memBarCfgW3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0372usize) as _) }
         }
         #[doc = "EMI 0 Memory BAR Configuration Address Register (Word 4)"]
         #[inline(always)]
-        pub const fn emi_0_mem_bar_cfg_w4(
-            self,
-        ) -> crate::common::Reg<regs::Emi0memBarCfgW4, crate::common::RW> {
+        pub const fn emi_0_mem_bar_cfg_w4(self) -> crate::common::Reg<regs::Emi0memBarCfgW4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0374usize) as _) }
         }
         #[doc = "EMI 1 Memory BAR Configuration Register (Word 0) )"]
         #[inline(always)]
-        pub const fn emi_1_mem_bar_cfg_w0(
-            self,
-        ) -> crate::common::Reg<regs::Emi1memBarCfgW0, crate::common::RW> {
+        pub const fn emi_1_mem_bar_cfg_w0(self) -> crate::common::Reg<regs::Emi1memBarCfgW0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0376usize) as _) }
         }
         #[doc = "EMI 1 Memory BAR Configuration Register (Word 1) )"]
         #[inline(always)]
-        pub const fn emi_1_mem_bar_cfg_w1(
-            self,
-        ) -> crate::common::Reg<regs::Emi1memBarCfgW1, crate::common::RW> {
+        pub const fn emi_1_mem_bar_cfg_w1(self) -> crate::common::Reg<regs::Emi1memBarCfgW1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0378usize) as _) }
         }
         #[doc = "EMI 1 Memory BAR Configuration Register (Word 2) )"]
         #[inline(always)]
-        pub const fn emi_1_mem_bar_cfg_w2(
-            self,
-        ) -> crate::common::Reg<regs::Emi1memBarCfgW2, crate::common::RW> {
+        pub const fn emi_1_mem_bar_cfg_w2(self) -> crate::common::Reg<regs::Emi1memBarCfgW2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x037ausize) as _) }
         }
         #[doc = "EMI 1 Memory BAR Configuration Register (Word 3) )"]
         #[inline(always)]
-        pub const fn emi_1_mem_bar_cfg_w3(
-            self,
-        ) -> crate::common::Reg<regs::Emi1memBarCfgW3, crate::common::RW> {
+        pub const fn emi_1_mem_bar_cfg_w3(self) -> crate::common::Reg<regs::Emi1memBarCfgW3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x037cusize) as _) }
         }
         #[doc = "EMI 1 Memory BAR Configuration Register (Word 4) )"]
         #[inline(always)]
-        pub const fn emi_1_mem_bar_cfg_w4(
-            self,
-        ) -> crate::common::Reg<regs::Emi1memBarCfgW4, crate::common::RW> {
+        pub const fn emi_1_mem_bar_cfg_w4(self) -> crate::common::Reg<regs::Emi1memBarCfgW4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x037eusize) as _) }
         }
         #[doc = "EMI 2 Memory BAR Configuration Register (Word 0) )"]
         #[inline(always)]
-        pub const fn emi_2_mem_bar_cfg_w0(
-            self,
-        ) -> crate::common::Reg<regs::Emi2memBarCfgW0, crate::common::RW> {
+        pub const fn emi_2_mem_bar_cfg_w0(self) -> crate::common::Reg<regs::Emi2memBarCfgW0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0380usize) as _) }
         }
         #[doc = "EMI 2 Memory BAR Configuration Register (Word 1) )"]
         #[inline(always)]
-        pub const fn emi_2_mem_bar_cfg_w1(
-            self,
-        ) -> crate::common::Reg<regs::Emi2memBarCfgW1, crate::common::RW> {
+        pub const fn emi_2_mem_bar_cfg_w1(self) -> crate::common::Reg<regs::Emi2memBarCfgW1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0382usize) as _) }
         }
         #[doc = "EMI 2 Memory BAR Configuration Register (Word 2) )"]
         #[inline(always)]
-        pub const fn emi_2_mem_bar_cfg_w2(
-            self,
-        ) -> crate::common::Reg<regs::Emi2memBarCfgW2, crate::common::RW> {
+        pub const fn emi_2_mem_bar_cfg_w2(self) -> crate::common::Reg<regs::Emi2memBarCfgW2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0384usize) as _) }
         }
         #[doc = "EMI 2 Memory BAR Configuration Register (Word 3) )"]
         #[inline(always)]
-        pub const fn emi_2_mem_bar_cfg_w3(
-            self,
-        ) -> crate::common::Reg<regs::Emi2memBarCfgW3, crate::common::RW> {
+        pub const fn emi_2_mem_bar_cfg_w3(self) -> crate::common::Reg<regs::Emi2memBarCfgW3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0386usize) as _) }
         }
         #[doc = "EMI 2 Memory BAR Configuration Register (Word 4) )"]
         #[inline(always)]
-        pub const fn emi_2_mem_bar_cfg_w4(
-            self,
-        ) -> crate::common::Reg<regs::Emi2memBarCfgW4, crate::common::RW> {
+        pub const fn emi_2_mem_bar_cfg_w4(self) -> crate::common::Reg<regs::Emi2memBarCfgW4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0388usize) as _) }
         }
         #[doc = "SRAM BAR 0 Configuration Register (Word 0) )"]
         #[inline(always)]
-        pub const fn sram_0_mem_bar_cfg_w0(
-            self,
-        ) -> crate::common::Reg<regs::Sram0memBarCfgW0, crate::common::RW> {
+        pub const fn sram_0_mem_bar_cfg_w0(self) -> crate::common::Reg<regs::Sram0memBarCfgW0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03acusize) as _) }
         }
         #[doc = "SRAM BAR 0 Configuration Register (Word 1) )"]
         #[inline(always)]
-        pub const fn sram_0_mem_bar_cfg_w1(
-            self,
-        ) -> crate::common::Reg<regs::Sram0memBarCfgW1, crate::common::RW> {
+        pub const fn sram_0_mem_bar_cfg_w1(self) -> crate::common::Reg<regs::Sram0memBarCfgW1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03aeusize) as _) }
         }
         #[doc = "SRAM BAR 0 Configuration Register (Word 2) )"]
         #[inline(always)]
-        pub const fn sram_0_mem_bar_cfg_w2(
-            self,
-        ) -> crate::common::Reg<regs::Sram0memBarCfgW2, crate::common::RW> {
+        pub const fn sram_0_mem_bar_cfg_w2(self) -> crate::common::Reg<regs::Sram0memBarCfgW2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b0usize) as _) }
         }
         #[doc = "SRAM BAR 0 Configuration Register (Word 3) )"]
         #[inline(always)]
-        pub const fn sram_0_mem_bar_cfg_w3(
-            self,
-        ) -> crate::common::Reg<regs::Sram0memBarCfgW3, crate::common::RW> {
+        pub const fn sram_0_mem_bar_cfg_w3(self) -> crate::common::Reg<regs::Sram0memBarCfgW3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b2usize) as _) }
         }
         #[doc = "SRAM BAR 0 Configuration Register (Word 4) )"]
         #[inline(always)]
-        pub const fn sram_0_mem_bar_cfg_w4(
-            self,
-        ) -> crate::common::Reg<regs::Sram0memBarCfgW4, crate::common::RW> {
+        pub const fn sram_0_mem_bar_cfg_w4(self) -> crate::common::Reg<regs::Sram0memBarCfgW4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b4usize) as _) }
         }
         #[doc = "SRAM BAR 1 Configuration Register (Word 0) )"]
         #[inline(always)]
-        pub const fn sram_1_mem_bar_cfg_w0(
-            self,
-        ) -> crate::common::Reg<regs::Sram1memBarCfgW0, crate::common::RW> {
+        pub const fn sram_1_mem_bar_cfg_w0(self) -> crate::common::Reg<regs::Sram1memBarCfgW0, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b6usize) as _) }
         }
         #[doc = "SRAM BAR 1 Configuration Register (Word 1) )"]
         #[inline(always)]
-        pub const fn sram_1_mem_bar_cfg_w1(
-            self,
-        ) -> crate::common::Reg<regs::Sram1memBarCfgW1, crate::common::RW> {
+        pub const fn sram_1_mem_bar_cfg_w1(self) -> crate::common::Reg<regs::Sram1memBarCfgW1, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03b8usize) as _) }
         }
         #[doc = "SRAM BAR 1 Configuration Register (Word 2) )"]
         #[inline(always)]
-        pub const fn sram_1_mem_bar_cfg_w2(
-            self,
-        ) -> crate::common::Reg<regs::Sram1memBarCfgW2, crate::common::RW> {
+        pub const fn sram_1_mem_bar_cfg_w2(self) -> crate::common::Reg<regs::Sram1memBarCfgW2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03bausize) as _) }
         }
         #[doc = "SRAM BAR 1 Configuration Register (Word 3) )"]
         #[inline(always)]
-        pub const fn sram_1_mem_bar_cfg_w3(
-            self,
-        ) -> crate::common::Reg<regs::Sram1memBarCfgW3, crate::common::RW> {
+        pub const fn sram_1_mem_bar_cfg_w3(self) -> crate::common::Reg<regs::Sram1memBarCfgW3, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03bcusize) as _) }
         }
         #[doc = "SRAM BAR 1 Configuration Register (Word 4) )"]
         #[inline(always)]
-        pub const fn sram_1_mem_bar_cfg_w4(
-            self,
-        ) -> crate::common::Reg<regs::Sram1memBarCfgW4, crate::common::RW> {
+        pub const fn sram_1_mem_bar_cfg_w4(self) -> crate::common::Reg<regs::Sram1memBarCfgW4, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03beusize) as _) }
         }
     }
@@ -16764,9 +16559,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhAcpiEc0h0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhAcpiEc0h0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhAcpiEc0h0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -16808,11 +16601,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc0h1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc0h1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhAcpiEc0h1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 2)"]
@@ -16848,11 +16637,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc0h2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc0h2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhAcpiEc0h2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 3)"]
@@ -16888,11 +16673,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc0h3 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc0h3 {{ esp_h_addr_w2: {=u16:?} }}",
-                    self.esp_h_addr_w2()
-                )
+                defmt::write!(f, "BarLdhAcpiEc0h3 {{ esp_h_addr_w2: {=u16:?} }}", self.esp_h_addr_w2())
             }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR Configuration Register (Word 4)"]
@@ -16928,11 +16709,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc0h4 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc0h4 {{ esp_h_addr_w3: {=u16:?} }}",
-                    self.esp_h_addr_w3()
-                )
+                defmt::write!(f, "BarLdhAcpiEc0h4 {{ esp_h_addr_w3: {=u16:?} }}", self.esp_h_addr_w3())
             }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 0)"]
@@ -16960,9 +16737,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhAcpiEc1h0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhAcpiEc1h0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhAcpiEc1h0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -17004,11 +16779,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc1h1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc1h1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhAcpiEc1h1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 2)"]
@@ -17044,11 +16815,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc1h2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc1h2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhAcpiEc1h2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 3)"]
@@ -17084,11 +16851,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc1h3 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc1h3 {{ esp_h_addr_w2: {=u16:?} }}",
-                    self.esp_h_addr_w2()
-                )
+                defmt::write!(f, "BarLdhAcpiEc1h3 {{ esp_h_addr_w2: {=u16:?} }}", self.esp_h_addr_w2())
             }
         }
         #[doc = "ACPI EC Channel 1 Memory BAR Configuration Register (Word 4)"]
@@ -17124,11 +16887,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc1h4 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc1h4 {{ esp_h_addr_w3: {=u16:?} }}",
-                    self.esp_h_addr_w3()
-                )
+                defmt::write!(f, "BarLdhAcpiEc1h4 {{ esp_h_addr_w3: {=u16:?} }}", self.esp_h_addr_w3())
             }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 0)"]
@@ -17156,9 +16915,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhAcpiEc2h0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhAcpiEc2h0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhAcpiEc2h0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -17200,11 +16957,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc2h1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc2h1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhAcpiEc2h1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 2)"]
@@ -17240,11 +16993,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc2h2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc2h2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhAcpiEc2h2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 3)"]
@@ -17280,11 +17029,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc2h3 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc2h3 {{ esp_h_addr_w2: {=u16:?} }}",
-                    self.esp_h_addr_w2()
-                )
+                defmt::write!(f, "BarLdhAcpiEc2h3 {{ esp_h_addr_w2: {=u16:?} }}", self.esp_h_addr_w2())
             }
         }
         #[doc = "ACPI EC Channel 2 Memory BAR Configuration Register (Word 4)"]
@@ -17320,11 +17065,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc2h4 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc2h4 {{ esp_h_addr_w3: {=u16:?} }}",
-                    self.esp_h_addr_w3()
-                )
+                defmt::write!(f, "BarLdhAcpiEc2h4 {{ esp_h_addr_w3: {=u16:?} }}", self.esp_h_addr_w3())
             }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 0)"]
@@ -17352,9 +17093,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhAcpiEc3h0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhAcpiEc3h0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhAcpiEc3h0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -17396,11 +17135,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc3h1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc3h1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhAcpiEc3h1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 2)"]
@@ -17436,11 +17171,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc3h2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc3h2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhAcpiEc3h2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 3)"]
@@ -17476,11 +17207,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc3h3 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc3h3 {{ esp_h_addr_w2: {=u16:?} }}",
-                    self.esp_h_addr_w2()
-                )
+                defmt::write!(f, "BarLdhAcpiEc3h3 {{ esp_h_addr_w2: {=u16:?} }}", self.esp_h_addr_w2())
             }
         }
         #[doc = "ACPI EC Channel 3 Memory BAR Configuration Register (Word 4)"]
@@ -17516,11 +17243,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc3h4 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc3h4 {{ esp_h_addr_w3: {=u16:?} }}",
-                    self.esp_h_addr_w3()
-                )
+                defmt::write!(f, "BarLdhAcpiEc3h4 {{ esp_h_addr_w3: {=u16:?} }}", self.esp_h_addr_w3())
             }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 0)"]
@@ -17548,9 +17271,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhAcpiEc4h0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhAcpiEc4h0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhAcpiEc4h0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -17592,11 +17313,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc4h1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc4h1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhAcpiEc4h1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 2)"]
@@ -17632,11 +17349,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc4h2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc4h2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhAcpiEc4h2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 3)"]
@@ -17672,11 +17385,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc4h3 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc4h3 {{ esp_h_addr_w2: {=u16:?} }}",
-                    self.esp_h_addr_w2()
-                )
+                defmt::write!(f, "BarLdhAcpiEc4h3 {{ esp_h_addr_w2: {=u16:?} }}", self.esp_h_addr_w2())
             }
         }
         #[doc = "ACPI EC Channel 4 Memory BAR Configuration Register (Word 4)"]
@@ -17712,11 +17421,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhAcpiEc4h4 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhAcpiEc4h4 {{ esp_h_addr_w3: {=u16:?} }}",
-                    self.esp_h_addr_w3()
-                )
+                defmt::write!(f, "BarLdhAcpiEc4h4 {{ esp_h_addr_w3: {=u16:?} }}", self.esp_h_addr_w3())
             }
         }
         #[doc = "EMI 0 Memory BAR Configuration Register (Word 0)"]
@@ -17744,9 +17449,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhEm0h0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhEm0h0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhEm0h0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -17788,11 +17491,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhEm0h1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhEm0h1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhEm0h1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "EMI 0 Memory BAR Configuration Address Register (Word 2)"]
@@ -17828,11 +17527,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhEm0h2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhEm0h2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhEm0h2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 0)"]
@@ -17860,9 +17555,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdhMbxH0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdhMbxH0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("BarLdhMbxH0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -17904,11 +17597,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhMbxH1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhMbxH1 {{ esp_h_addr_w0: {=u16:?} }}",
-                    self.esp_h_addr_w0()
-                )
+                defmt::write!(f, "BarLdhMbxH1 {{ esp_h_addr_w0: {=u16:?} }}", self.esp_h_addr_w0())
             }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 2)"]
@@ -17944,11 +17633,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhMbxH2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhMbxH2 {{ esp_h_addr_w1: {=u16:?} }}",
-                    self.esp_h_addr_w1()
-                )
+                defmt::write!(f, "BarLdhMbxH2 {{ esp_h_addr_w1: {=u16:?} }}", self.esp_h_addr_w1())
             }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 3)"]
@@ -17984,11 +17669,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhMbxH3 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhMbxH3 {{ esp_h_addr_w2: {=u16:?} }}",
-                    self.esp_h_addr_w2()
-                )
+                defmt::write!(f, "BarLdhMbxH3 {{ esp_h_addr_w2: {=u16:?} }}", self.esp_h_addr_w2())
             }
         }
         #[doc = "Mailbox Memory BAR Configuration Register (Word 4)"]
@@ -18024,11 +17705,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BarLdhMbxH4 {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BarLdhMbxH4 {{ esp_h_addr_w3: {=u16:?} }}",
-                    self.esp_h_addr_w3()
-                )
+                defmt::write!(f, "BarLdhMbxH4 {{ esp_h_addr_w3: {=u16:?} }}", self.esp_h_addr_w3())
             }
         }
         #[doc = "ACPI EC Channel 0 Memory BAR (LSB)"]
@@ -18109,9 +17786,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdiAcpiEc0h1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdiAcpiEc0h1")
-                    .field("vir", &self.vir())
-                    .finish()
+                f.debug_struct("BarLdiAcpiEc0h1").field("vir", &self.vir()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18264,9 +17939,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdiAcpiEc2h1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdiAcpiEc2h1")
-                    .field("vir", &self.vir())
-                    .finish()
+                f.debug_struct("BarLdiAcpiEc2h1").field("vir", &self.vir()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18432,9 +18105,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdiAcpiEc4h1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdiAcpiEc4h1")
-                    .field("vir", &self.vir())
-                    .finish()
+                f.debug_struct("BarLdiAcpiEc4h1").field("vir", &self.vir()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18587,9 +18258,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarLdiEm1h1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarLdiEm1h1")
-                    .field("vir", &self.vir())
-                    .finish()
+                f.debug_struct("BarLdiEm1h1").field("vir", &self.vir()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18821,9 +18490,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarSram0h1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarSram0h1")
-                    .field("addr", &self.addr())
-                    .finish()
+                f.debug_struct("BarSram0h1").field("addr", &self.addr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18857,9 +18524,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarSram0h2 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarSram0h2")
-                    .field("addr", &self.addr())
-                    .finish()
+                f.debug_struct("BarSram0h2").field("addr", &self.addr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18959,9 +18624,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarSram1h1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarSram1h1")
-                    .field("addr", &self.addr())
-                    .finish()
+                f.debug_struct("BarSram1h1").field("addr", &self.addr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -18995,9 +18658,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for BarSram1h2 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BarSram1h2")
-                    .field("addr", &self.addr())
-                    .finish()
+                f.debug_struct("BarSram1h2").field("addr", &self.addr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -19116,8 +18777,7 @@ pub mod espi_memory {
             #[doc = "This register sets the internal address to be used for a transfer on Bus Master Channel 1."]
             #[inline(always)]
             pub fn set_in_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for Bm1ecAddrLsw {
@@ -19153,8 +18813,7 @@ pub mod espi_memory {
             #[doc = "This register sets bits \\[31:0\\] of the Host address used for a transfer on Bus Master Channel 1. This address, combined with the Length, must not cross a 4K boundary, or else the START request will terminate without traffic, posting the Bad Request error status."]
             #[inline(always)]
             pub fn set_lsdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Bm1hostAddrLsw {
@@ -19165,9 +18824,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for Bm1hostAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Bm1hostAddrLsw")
-                    .field("lsdw", &self.lsdw())
-                    .finish()
+                f.debug_struct("Bm1hostAddrLsw").field("lsdw", &self.lsdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -19190,8 +18847,7 @@ pub mod espi_memory {
             #[doc = "This register sets bits \\[63:32\\] of the Host address used for a transfer on Bus Master Channel 1. This address, combined with the Length, must not cross a 4K boundary, or else the START request will terminate without traffic, posting the Bad Request error status."]
             #[inline(always)]
             pub fn set_msdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Bm1hostAddrMsw {
@@ -19202,9 +18858,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for Bm1hostAddrMsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Bm1hostAddrMsw")
-                    .field("msdw", &self.msdw())
-                    .finish()
+                f.debug_struct("Bm1hostAddrMsw").field("msdw", &self.msdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -19323,8 +18977,7 @@ pub mod espi_memory {
             #[doc = "This register sets the internal address to be used for a transfer on Bus Master Channel 2."]
             #[inline(always)]
             pub fn set_in_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for Bm2ecAddrLsw {
@@ -19360,8 +19013,7 @@ pub mod espi_memory {
             #[doc = "This register sets bits \\[31:0\\] of the Host address used for a transfer on Bus Master Channel 2. This address, combined with the Length, must not cross a 4K boundary, or else the START request will terminate without traffic, posting the Bad Request error status."]
             #[inline(always)]
             pub fn set_lsdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Bm2hostAddrLsw {
@@ -19372,9 +19024,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for Bm2hostAddrLsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Bm2hostAddrLsw")
-                    .field("lsdw", &self.lsdw())
-                    .finish()
+                f.debug_struct("Bm2hostAddrLsw").field("lsdw", &self.lsdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -19397,8 +19047,7 @@ pub mod espi_memory {
             #[doc = "This register sets bits \\[63:32\\] of the Host address used for a transfer on Bus Master Channel 2. This address, combined with the Length, must not cross a 4K boundary, or else the START request will terminate without traffic, posting the Bad Request error status."]
             #[inline(always)]
             pub fn set_msdw(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Bm2hostAddrMsw {
@@ -19409,9 +19058,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for Bm2hostAddrMsw {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Bm2hostAddrMsw")
-                    .field("msdw", &self.msdw())
-                    .finish()
+                f.debug_struct("Bm2hostAddrMsw").field("msdw", &self.msdw()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -19465,12 +19112,7 @@ pub mod espi_memory {
         #[cfg(feature = "defmt")]
         impl defmt::Format for BmCfg {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "BmCfg {{ tag1: {=u8:?}, tag2: {=u8:?} }}",
-                    self.tag1(),
-                    self.tag2()
-                )
+                defmt::write!(f, "BmCfg {{ tag1: {=u8:?}, tag2: {=u8:?} }}", self.tag1(), self.tag2())
             }
         }
         #[doc = "Bus Master Interrupt Enable Register"]
@@ -19919,9 +19561,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for Emi1memBarCfgW0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi1memBarCfgW0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("Emi1memBarCfgW0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -20115,9 +19755,7 @@ pub mod espi_memory {
         }
         impl core::fmt::Debug for Emi2memBarCfgW0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Emi2memBarCfgW0")
-                    .field("valid", &self.valid())
-                    .finish()
+                f.debug_struct("Emi2memBarCfgW0").field("valid", &self.valid()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -20873,7 +20511,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw00dw0 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw00dw0 {{ m2s_2h_backup: {=u8:?}, index: {=u8:?}, mtos_src: {=u8:?}, mtos_r_state: {=u8:?} }}" , self . m2s_2h_backup () , self . index () , self . mtos_src () , self . mtos_r_state ())
+                defmt::write!(
+                    f,
+                    "Msvw00dw0 {{ m2s_2h_backup: {=u8:?}, index: {=u8:?}, mtos_src: {=u8:?}, mtos_r_state: {=u8:?} }}",
+                    self.m2s_2h_backup(),
+                    self.index(),
+                    self.mtos_src(),
+                    self.mtos_r_state()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 0 Register (DW 1)"]
@@ -21017,7 +20662,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw00dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw00dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw00dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 1 Register (DW 0)"]
@@ -21227,7 +20879,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw01dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw01dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw01dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 2 Register (DW 0)"]
@@ -21437,7 +21096,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw02dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw02dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw02dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 3 Register (DW 0)"]
@@ -21647,7 +21313,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw03dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw03dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw03dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 4 Register (DW 0)"]
@@ -21857,7 +21530,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw04dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw04dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw04dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 5 Register (DW 0)"]
@@ -22067,7 +21747,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw05dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw05dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw05dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 6 Register (DW 0)"]
@@ -22277,7 +21964,14 @@ pub mod espi_msvw00_06 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw06dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw06dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw06dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
     }
@@ -22568,7 +22262,14 @@ pub mod espi_msvw07_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw07dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw07dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw07dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 8 Register (DW 0)"]
@@ -22778,7 +22479,14 @@ pub mod espi_msvw07_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw08dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw08dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw08dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 9 Register (DW 0)"]
@@ -22988,7 +22696,14 @@ pub mod espi_msvw07_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw09dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw09dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw09dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Master-to-Slave Virtual Wire 10 Register (DW 0)"]
@@ -23198,7 +22913,14 @@ pub mod espi_msvw07_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Msvw10dw2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Msvw10dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Msvw10dw2 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
     }
@@ -23276,8 +22998,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr0(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch0 {
@@ -23288,9 +23009,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch0")
-                    .field("scr0", &self.scr0())
-                    .finish()
+                f.debug_struct("Scratch0").field("scr0", &self.scr0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23313,8 +23032,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr1(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch1 {
@@ -23325,9 +23043,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch1")
-                    .field("scr1", &self.scr1())
-                    .finish()
+                f.debug_struct("Scratch1").field("scr1", &self.scr1()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23350,8 +23066,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr2(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch2 {
@@ -23362,9 +23077,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch2 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch2")
-                    .field("scr2", &self.scr2())
-                    .finish()
+                f.debug_struct("Scratch2").field("scr2", &self.scr2()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23387,8 +23100,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr3(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch3 {
@@ -23399,9 +23111,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch3 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch3")
-                    .field("scr3", &self.scr3())
-                    .finish()
+                f.debug_struct("Scratch3").field("scr3", &self.scr3()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23424,8 +23134,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr4(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch4 {
@@ -23436,9 +23145,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch4 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch4")
-                    .field("scr4", &self.scr4())
-                    .finish()
+                f.debug_struct("Scratch4").field("scr4", &self.scr4()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23461,8 +23168,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr5(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch5 {
@@ -23473,9 +23179,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch5 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch5")
-                    .field("scr5", &self.scr5())
-                    .finish()
+                f.debug_struct("Scratch5").field("scr5", &self.scr5()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23498,8 +23202,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr6(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch6 {
@@ -23510,9 +23213,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch6 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch6")
-                    .field("scr6", &self.scr6())
-                    .finish()
+                f.debug_struct("Scratch6").field("scr6", &self.scr6()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23535,8 +23236,7 @@ pub mod espi_scratch {
             #[doc = "This field has no functionality other than storage. This register is aliased to ESPI Config Scratch Register."]
             #[inline(always)]
             pub fn set_scr7(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Scratch7 {
@@ -23547,9 +23247,7 @@ pub mod espi_scratch {
         }
         impl core::fmt::Debug for Scratch7 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Scratch7")
-                    .field("scr7", &self.scr7())
-                    .finish()
+                f.debug_struct("Scratch7").field("scr7", &self.scr7()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -23866,7 +23564,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw00dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw00dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw00dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 1 Register (DWord 0)"]
@@ -24046,7 +23751,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw01dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw01dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw01dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 2 Register (DWord 0)"]
@@ -24226,7 +23938,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw02dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw02dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw02dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 3 Register (DWord 0)"]
@@ -24406,7 +24125,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw03dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw03dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw03dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 4 Register (DWord 0)"]
@@ -24586,7 +24312,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw04dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw04dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw04dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 5 Register (DWord 0)"]
@@ -24766,7 +24499,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw05dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw05dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw05dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 6 Register (DWord 0)"]
@@ -24946,7 +24686,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw06dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw06dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw06dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 7 Register (DWord 0)"]
@@ -25126,7 +24873,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw07dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw07dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw07dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 8 Register (DWord 0)"]
@@ -25306,7 +25060,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw08dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw08dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw08dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 9 Register (DWord 0)"]
@@ -25486,7 +25247,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw09dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw09dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw09dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
         #[doc = "Slave-to-Master Virtual Wire 10 Register (DWord 0)"]
@@ -25666,7 +25434,14 @@ pub mod espi_smvw00_10 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Smvw10dw1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Smvw10dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}" , self . src0 () , self . src1 () , self . src2 () , self . src3 ())
+                defmt::write!(
+                    f,
+                    "Smvw10dw1 {{ src0: {=bool:?}, src1: {=bool:?}, src2: {=bool:?}, src3: {=bool:?} }}",
+                    self.src0(),
+                    self.src1(),
+                    self.src2(),
+                    self.src3()
+                )
             }
         }
     }
@@ -25725,9 +25500,7 @@ pub mod fan0 {
         }
         #[doc = "The maximum TACH Reading Register value to indicate that the fan is spinning properly."]
         #[inline(always)]
-        pub const fn valid_tch_cnt(
-            self,
-        ) -> crate::common::Reg<regs::ValidTchCnt, crate::common::RW> {
+        pub const fn valid_tch_cnt(self) -> crate::common::Reg<regs::ValidTchCnt, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x09usize) as _) }
         }
         #[doc = "The number of Tach counts used by the Fan Drive Fail detection circuitry"]
@@ -25826,8 +25599,7 @@ pub mod fan0 {
             #[doc = "Control some of the advanced options that affect the error window. When the measured fan speed is within the programmed error window around the target speed, the fan drive setting is not updated. These bits only apply if the Fan Speed Control Algorithm is used. 3=200 RPM 2=100 RPM 1=50 RPM 0=0 RPM"]
             #[inline(always)]
             pub fn set_err_rng(&mut self, val: super::vals::ErrRng) {
-                self.0 =
-                    (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
+                self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
             }
             #[doc = "Control some of the advanced options that affect the derivative portion of the RPM based fan control algorithm. These bits only apply if the Fan Speed Control Algorithm is used."]
             #[inline(always)]
@@ -25915,9 +25687,7 @@ pub mod fan0 {
         }
         impl core::fmt::Debug for DrvBsFreq {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("DrvBsFreq")
-                    .field("pwm_base", &self.pwm_base())
-                    .finish()
+                f.debug_struct("DrvBsFreq").field("pwm_base", &self.pwm_base()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -26057,9 +25827,7 @@ pub mod fan0 {
         }
         impl core::fmt::Debug for MinDrv {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MinDrv")
-                    .field("min_drive", &self.min_drive())
-                    .finish()
+                f.debug_struct("MinDrv").field("min_drive", &self.min_drive()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -26129,9 +25897,7 @@ pub mod fan0 {
         }
         impl core::fmt::Debug for Setng {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Setng")
-                    .field("fan_setng", &self.fan_setng())
-                    .finish()
+                f.debug_struct("Setng").field("fan_setng", &self.fan_setng()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -26209,7 +25975,14 @@ pub mod fan0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for SpnUpCnfg {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "SpnUpCnfg {{ spinup_time: {:?}, spin_lvl: {:?}, nokick: {=bool:?}, drv_fail_cnt: {:?} }}" , self . spinup_time () , self . spin_lvl () , self . nokick () , self . drv_fail_cnt ())
+                defmt::write!(
+                    f,
+                    "SpnUpCnfg {{ spinup_time: {:?}, spin_lvl: {:?}, nokick: {=bool:?}, drv_fail_cnt: {:?} }}",
+                    self.spinup_time(),
+                    self.spin_lvl(),
+                    self.nokick(),
+                    self.drv_fail_cnt()
+                )
             }
         }
         #[doc = "FAN_STEP The Fan Step value represents the maximum step size the fan driver will take between update times"]
@@ -26237,9 +26010,7 @@ pub mod fan0 {
         }
         impl core::fmt::Debug for Step {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Step")
-                    .field("fan_step", &self.fan_step())
-                    .finish()
+                f.debug_struct("Step").field("fan_step", &self.fan_step()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -26347,11 +26118,7 @@ pub mod fan0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for TachRdng {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "TachRdng {{ tach_reading: {=u16:?} }}",
-                    self.tach_reading()
-                )
+                defmt::write!(f, "TachRdng {{ tach_reading: {=u16:?} }}", self.tach_reading())
             }
         }
         #[doc = "The target tachometer value."]
@@ -26387,11 +26154,7 @@ pub mod fan0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for TachTrgt {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "TachTrgt {{ tach_target: {=u16:?} }}",
-                    self.tach_target()
-                )
+                defmt::write!(f, "TachTrgt {{ tach_target: {=u16:?} }}", self.tach_target())
             }
         }
         #[doc = "The maximum TACH Reading Register value to indicate that the fan is spinning properly."]
@@ -26427,11 +26190,7 @@ pub mod fan0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for ValidTchCnt {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "ValidTchCnt {{ valid_tach_cnt: {=u8:?} }}",
-                    self.valid_tach_cnt()
-                )
+                defmt::write!(f, "ValidTchCnt {{ valid_tach_cnt: {=u8:?} }}", self.valid_tach_cnt())
             }
         }
     }
@@ -26862,8 +26621,7 @@ pub mod fpu {
             #[doc = "Address for FP registers in exception stack frame"]
             #[inline(always)]
             pub fn set_address(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
+                self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
             }
         }
         impl Default for Fpcar {
@@ -26874,9 +26632,7 @@ pub mod fpu {
         }
         impl core::fmt::Debug for Fpcar {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Fpcar")
-                    .field("address", &self.address())
-                    .finish()
+                f.debug_struct("Fpcar").field("address", &self.address()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -27013,8 +26769,7 @@ pub mod fpu {
             #[doc = "Default value for FPSCR.RMODE"]
             #[inline(always)]
             pub fn set_rmode(&mut self, val: super::vals::Rmode) {
-                self.0 =
-                    (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
+                self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
             }
             #[doc = "Default value for FPSCR.FZ"]
             #[inline(always)]
@@ -27244,7 +26999,14 @@ pub mod fpu {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Mvfr1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Mvfr1 {{ ft_z_mode: {=u8:?}, d_na_n_mode: {=u8:?}, fp_hpfp: {=u8:?}, fp_fused_mac: {=u8:?} }}" , self . ft_z_mode () , self . d_na_n_mode () , self . fp_hpfp () , self . fp_fused_mac ())
+                defmt::write!(
+                    f,
+                    "Mvfr1 {{ ft_z_mode: {=u8:?}, d_na_n_mode: {=u8:?}, fp_hpfp: {=u8:?}, fp_fused_mac: {=u8:?} }}",
+                    self.ft_z_mode(),
+                    self.d_na_n_mode(),
+                    self.fp_hpfp(),
+                    self.fp_fused_mac()
+                )
             }
         }
     }
@@ -27473,7 +27235,14 @@ pub mod gp_spi0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for ClkCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "ClkCtrl {{ tclkph: {=bool:?}, rclkph: {=bool:?}, clkpol: {=bool:?}, clksrc: {=bool:?} }}" , self . tclkph () , self . rclkph () , self . clkpol () , self . clksrc ())
+                defmt::write!(
+                    f,
+                    "ClkCtrl {{ tclkph: {=bool:?}, rclkph: {=bool:?}, clkpol: {=bool:?}, clksrc: {=bool:?} }}",
+                    self.tclkph(),
+                    self.rclkph(),
+                    self.clkpol(),
+                    self.clksrc()
+                )
             }
         }
         #[doc = "5:0\\] PRELOAD SPI Clock Generator Preload value."]
@@ -27501,9 +27270,7 @@ pub mod gp_spi0 {
         }
         impl core::fmt::Debug for ClkGen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("ClkGen")
-                    .field("preload", &self.preload())
-                    .finish()
+                f.debug_struct("ClkGen").field("preload", &self.preload()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -27693,143 +27460,97 @@ pub mod gpio {
         pub const fn as_ptr(&self) -> *mut () {
             self.ptr as _
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl0(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 4usize) as _) }
+        pub const fn port0(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl1(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize + n * 4usize) as _) }
+        pub const fn port1(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x20usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl2(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize + n * 4usize) as _) }
+        pub const fn port2(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x40usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl3(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x60usize + n * 4usize) as _) }
+        pub const fn port3(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x60usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl4(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x80usize + n * 4usize) as _) }
+        pub const fn port4(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x80usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl5(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa0usize + n * 4usize) as _) }
+        pub const fn port5(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0xa0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl6(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xc0usize + n * 4usize) as _) }
+        pub const fn port6(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0xc0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl7(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xe0usize + n * 4usize) as _) }
+        pub const fn port7(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0xe0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl10(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize + n * 4usize) as _) }
+        pub const fn port10(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0100usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl11(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0120usize + n * 4usize) as _) }
+        pub const fn port11(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0120usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl12(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0140usize + n * 4usize) as _) }
+        pub const fn port12(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0140usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl13(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0160usize + n * 4usize) as _) }
+        pub const fn port13(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0160usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl14(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0180usize + n * 4usize) as _) }
+        pub const fn port14(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0180usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl15(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01a0usize + n * 4usize) as _) }
+        pub const fn port15(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x01a0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl16(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01c0usize + n * 4usize) as _) }
+        pub const fn port16(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x01c0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl17(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01e0usize + n * 4usize) as _) }
+        pub const fn port17(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x01e0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl20(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0200usize + n * 4usize) as _) }
+        pub const fn port20(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0200usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl21(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0220usize + n * 4usize) as _) }
+        pub const fn port21(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0220usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl22(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0240usize + n * 4usize) as _) }
+        pub const fn port22(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0240usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl23(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0260usize + n * 4usize) as _) }
+        pub const fn port23(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0260usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl24(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0280usize + n * 4usize) as _) }
+        pub const fn port24(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x0280usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl25(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02a0usize + n * 4usize) as _) }
+        pub const fn port25(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x02a0usize) as _) }
         }
-        #[doc = "GPIO Pin Control Register"]
         #[inline(always)]
-        pub const fn ctrl26(self, n: usize) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-            assert!(n < 1usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02c0usize + n * 4usize) as _) }
+        pub const fn port26(self) -> Port {
+            unsafe { Port::from_ptr(self.ptr.add(0x02c0usize) as _) }
         }
         #[doc = "The GPIO Input Registers."]
         #[inline(always)]
@@ -27843,241 +27564,62 @@ pub mod gpio {
             assert!(n < 6usize);
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0380usize + n * 4usize) as _) }
         }
+    }
+    #[derive(Copy, Clone, Eq, PartialEq)]
+    pub struct Port {
+        ptr: *mut u8,
+    }
+    unsafe impl Send for Port {}
+    unsafe impl Sync for Port {}
+    impl Port {
+        #[inline(always)]
+        pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+            Self { ptr: ptr as _ }
+        }
+        #[inline(always)]
+        pub const fn as_ptr(&self) -> *mut () {
+            self.ptr as _
+        }
+        #[doc = "GPIO Pin Control Register"]
+        #[inline(always)]
+        pub const fn ctrl1(self, n: usize) -> crate::common::Reg<regs::Ctrl1, crate::common::RW> {
+            assert!(n < 8usize);
+            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 4usize) as _) }
+        }
         #[doc = "The GPIO PIN_CTRL2 Registers"]
         #[inline(always)]
-        pub const fn ctrl2p0(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
+        pub const fn ctrl2(self, n: usize) -> crate::common::Reg<regs::Ctrl2, crate::common::RW> {
             assert!(n < 8usize);
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0500usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p1(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0520usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p2(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0540usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p3(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0560usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p4(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0580usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p5(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x05a0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p6(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x05c0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p7(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x05e0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p10(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0600usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p11(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0620usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p12(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0640usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p13(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0660usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p14(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0680usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p15(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x06a0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p16(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x06c0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p17(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x06e0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p20(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0700usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p21(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0720usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p22(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0740usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p23(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0760usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p24(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0780usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p25(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 8usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x07a0usize + n * 4usize) as _) }
-        }
-        #[doc = "The GPIO PIN_CTRL2 Registers"]
-        #[inline(always)]
-        pub const fn ctrl2p26(
-            self,
-            n: usize,
-        ) -> crate::common::Reg<regs::Ctrl2p, crate::common::RW> {
-            assert!(n < 1usize);
-            unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x07c0usize + n * 4usize) as _) }
         }
     }
     pub mod regs {
         #[doc = "GPIO Pin Control Register"]
         #[repr(transparent)]
         #[derive(Copy, Clone, Eq, PartialEq)]
-        pub struct Ctrl(pub u32);
-        impl Ctrl {
+        pub struct Ctrl1(pub u32);
+        impl Ctrl1 {
             #[doc = "These bits are used to enable an internal pull-up or pull-down resistor."]
             #[inline(always)]
-            pub const fn pu_pd(&self) -> u8 {
+            pub const fn pu_pd(&self) -> super::super::Pull {
                 let val = (self.0 >> 0usize) & 0x03;
-                val as u8
+                super::super::Pull::from_bits(val as u8)
             }
             #[doc = "These bits are used to enable an internal pull-up or pull-down resistor."]
             #[inline(always)]
-            pub fn set_pu_pd(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
+            pub fn set_pu_pd(&mut self, val: super::super::Pull) {
+                self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
             }
             #[doc = "The GPIO pin will be tristated when the selected power well is off."]
             #[inline(always)]
-            pub const fn pwr_gating(&self) -> u8 {
+            pub const fn pwr_gating(&self) -> super::super::Pgs {
                 let val = (self.0 >> 2usize) & 0x03;
-                val as u8
+                super::super::Pgs::from_bits(val as u8)
             }
             #[doc = "The GPIO pin will be tristated when the selected power well is off."]
             #[inline(always)]
-            pub fn set_pwr_gating(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
+            pub fn set_pwr_gating(&mut self, val: super::super::Pgs) {
+                self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
             }
             #[doc = "Determines the interrupt capability of the GPIO input."]
             #[inline(always)]
@@ -28103,58 +27645,58 @@ pub mod gpio {
             }
             #[doc = "0 = Push-Pull, 1 = Open Drain"]
             #[inline(always)]
-            pub const fn out_buff_type(&self) -> bool {
+            pub const fn out_buff_type(&self) -> super::super::BufferType {
                 let val = (self.0 >> 8usize) & 0x01;
-                val != 0
+                super::super::BufferType::from_bits(val as u8)
             }
             #[doc = "0 = Push-Pull, 1 = Open Drain"]
             #[inline(always)]
-            pub fn set_out_buff_type(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
+            pub fn set_out_buff_type(&mut self, val: super::super::BufferType) {
+                self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
             }
             #[doc = "Buffer direction when GPIO selected by pin mux 0 = Input, 1 = Output"]
             #[inline(always)]
-            pub const fn gpio_dir(&self) -> bool {
+            pub const fn dir(&self) -> super::super::Dir {
                 let val = (self.0 >> 9usize) & 0x01;
-                val != 0
+                super::super::Dir::from_bits(val as u8)
             }
             #[doc = "Buffer direction when GPIO selected by pin mux 0 = Input, 1 = Output"]
             #[inline(always)]
-            pub fn set_gpio_dir(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+            pub fn set_dir(&mut self, val: super::super::Dir) {
+                self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
             }
             #[doc = "GPIO outputs registe select.0=GPIO ALTERNATE_GPIO_DATA 1=GPIO Output Register."]
             #[inline(always)]
-            pub const fn gpio_out_sel(&self) -> bool {
+            pub const fn out_sel(&self) -> super::super::Sel {
                 let val = (self.0 >> 10usize) & 0x01;
-                val != 0
+                super::super::Sel::from_bits(val as u8)
             }
             #[doc = "GPIO outputs registe select.0=GPIO ALTERNATE_GPIO_DATA 1=GPIO Output Register."]
             #[inline(always)]
-            pub fn set_gpio_out_sel(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
+            pub fn set_out_sel(&mut self, val: super::super::Sel) {
+                self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
             }
             #[doc = "1=Inverted; 0=Non-inverted"]
             #[inline(always)]
-            pub const fn pol(&self) -> bool {
+            pub const fn pol(&self) -> super::super::Pol {
                 let val = (self.0 >> 11usize) & 0x01;
-                val != 0
+                super::super::Pol::from_bits(val as u8)
             }
             #[doc = "1=Inverted; 0=Non-inverted"]
             #[inline(always)]
-            pub fn set_pol(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+            pub fn set_pol(&mut self, val: super::super::Pol) {
+                self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
             }
             #[doc = "00 = GPIO Function, 01 = Function 1, 10 = Function 2, 11 = Function 3."]
             #[inline(always)]
-            pub const fn mux_ctrl(&self) -> u8 {
+            pub const fn mux_ctrl(&self) -> super::super::Function {
                 let val = (self.0 >> 12usize) & 0x07;
-                val as u8
+                super::super::Function::from_bits(val as u8)
             }
             #[doc = "00 = GPIO Function, 01 = Function 1, 10 = Function 2, 11 = Function 3."]
             #[inline(always)]
-            pub fn set_mux_ctrl(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
+            pub fn set_mux_ctrl(&mut self, val: super::super::Function) {
+                self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
             }
             #[doc = "GPIO input disable"]
             #[inline(always)]
@@ -28169,105 +27711,105 @@ pub mod gpio {
             }
             #[doc = "GPIO Alternate Data Register."]
             #[inline(always)]
-            pub const fn alt_gpio_data(&self) -> bool {
+            pub const fn alt_data(&self) -> bool {
                 let val = (self.0 >> 16usize) & 0x01;
                 val != 0
             }
             #[doc = "GPIO Alternate Data Register."]
             #[inline(always)]
-            pub fn set_alt_gpio_data(&mut self, val: bool) {
+            pub fn set_alt_data(&mut self, val: bool) {
                 self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
             }
             #[doc = "GPIO input from pin, independent of the Mux selection for the pin or the Direction."]
             #[inline(always)]
-            pub const fn gpio_inp(&self) -> bool {
+            pub const fn inp(&self) -> bool {
                 let val = (self.0 >> 24usize) & 0x01;
                 val != 0
             }
             #[doc = "GPIO input from pin, independent of the Mux selection for the pin or the Direction."]
             #[inline(always)]
-            pub fn set_gpio_inp(&mut self, val: bool) {
+            pub fn set_inp(&mut self, val: bool) {
                 self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
             }
         }
-        impl Default for Ctrl {
+        impl Default for Ctrl1 {
             #[inline(always)]
-            fn default() -> Ctrl {
-                Ctrl(0)
+            fn default() -> Ctrl1 {
+                Ctrl1(0)
             }
         }
-        impl core::fmt::Debug for Ctrl {
+        impl core::fmt::Debug for Ctrl1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Ctrl")
+                f.debug_struct("Ctrl1")
                     .field("pu_pd", &self.pu_pd())
                     .field("pwr_gating", &self.pwr_gating())
                     .field("intr_det", &self.intr_det())
                     .field("edge_en", &self.edge_en())
                     .field("out_buff_type", &self.out_buff_type())
-                    .field("gpio_dir", &self.gpio_dir())
-                    .field("gpio_out_sel", &self.gpio_out_sel())
+                    .field("dir", &self.dir())
+                    .field("out_sel", &self.out_sel())
                     .field("pol", &self.pol())
                     .field("mux_ctrl", &self.mux_ctrl())
                     .field("inp_dis", &self.inp_dis())
-                    .field("alt_gpio_data", &self.alt_gpio_data())
-                    .field("gpio_inp", &self.gpio_inp())
+                    .field("alt_data", &self.alt_data())
+                    .field("inp", &self.inp())
                     .finish()
             }
         }
         #[cfg(feature = "defmt")]
-        impl defmt::Format for Ctrl {
+        impl defmt::Format for Ctrl1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ctrl {{ pu_pd: {=u8:?}, pwr_gating: {=u8:?}, intr_det: {=u8:?}, edge_en: {=bool:?}, out_buff_type: {=bool:?}, gpio_dir: {=bool:?}, gpio_out_sel: {=bool:?}, pol: {=bool:?}, mux_ctrl: {=u8:?}, inp_dis: {=bool:?}, alt_gpio_data: {=bool:?}, gpio_inp: {=bool:?} }}" , self . pu_pd () , self . pwr_gating () , self . intr_det () , self . edge_en () , self . out_buff_type () , self . gpio_dir () , self . gpio_out_sel () , self . pol () , self . mux_ctrl () , self . inp_dis () , self . alt_gpio_data () , self . gpio_inp ())
+                defmt :: write ! (f , "Ctrl1 {{ pu_pd: {:?}, pwr_gating: {:?}, intr_det: {=u8:?}, edge_en: {=bool:?}, out_buff_type: {:?}, dir: {:?}, out_sel: {:?}, pol: {:?}, mux_ctrl: {:?}, inp_dis: {=bool:?}, alt_data: {=bool:?}, inp: {=bool:?} }}" , self . pu_pd () , self . pwr_gating () , self . intr_det () , self . edge_en () , self . out_buff_type () , self . dir () , self . out_sel () , self . pol () , self . mux_ctrl () , self . inp_dis () , self . alt_data () , self . inp ())
             }
         }
         #[doc = "The GPIO PIN_CTRL2 Registers"]
         #[repr(transparent)]
         #[derive(Copy, Clone, Eq, PartialEq)]
-        pub struct Ctrl2p(pub u32);
-        impl Ctrl2p {
+        pub struct Ctrl2(pub u32);
+        impl Ctrl2 {
             #[doc = "Selects slew rate on the pin. 1=fast 0=slow"]
             #[inline(always)]
-            pub const fn slew_ctrl(&self) -> bool {
+            pub const fn slew_ctrl(&self) -> super::super::SlewCtrl {
                 let val = (self.0 >> 0usize) & 0x01;
-                val != 0
+                super::super::SlewCtrl::from_bits(val as u8)
             }
             #[doc = "Selects slew rate on the pin. 1=fast 0=slow"]
             #[inline(always)]
-            pub fn set_slew_ctrl(&mut self, val: bool) {
-                self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+            pub fn set_slew_ctrl(&mut self, val: super::super::SlewCtrl) {
+                self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
             }
             #[doc = "Selects the drive strength on the pin. 00 = 2mA, 01 = 4mA, 10 = 8mA, 11 = 12mA"]
             #[inline(always)]
-            pub const fn driv_stren(&self) -> u8 {
+            pub const fn driv_stren(&self) -> super::super::Strength {
                 let val = (self.0 >> 4usize) & 0x03;
-                val as u8
+                super::super::Strength::from_bits(val as u8)
             }
             #[doc = "Selects the drive strength on the pin. 00 = 2mA, 01 = 4mA, 10 = 8mA, 11 = 12mA"]
             #[inline(always)]
-            pub fn set_driv_stren(&mut self, val: u8) {
-                self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
+            pub fn set_driv_stren(&mut self, val: super::super::Strength) {
+                self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
             }
         }
-        impl Default for Ctrl2p {
+        impl Default for Ctrl2 {
             #[inline(always)]
-            fn default() -> Ctrl2p {
-                Ctrl2p(0)
+            fn default() -> Ctrl2 {
+                Ctrl2(0)
             }
         }
-        impl core::fmt::Debug for Ctrl2p {
+        impl core::fmt::Debug for Ctrl2 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Ctrl2p")
+                f.debug_struct("Ctrl2")
                     .field("slew_ctrl", &self.slew_ctrl())
                     .field("driv_stren", &self.driv_stren())
                     .finish()
             }
         }
         #[cfg(feature = "defmt")]
-        impl defmt::Format for Ctrl2p {
+        impl defmt::Format for Ctrl2 {
             fn format(&self, f: defmt::Formatter) {
                 defmt::write!(
                     f,
-                    "Ctrl2p {{ slew_ctrl: {=bool:?}, driv_stren: {=u8:?} }}",
+                    "Ctrl2 {{ slew_ctrl: {:?}, driv_stren: {:?} }}",
                     self.slew_ctrl(),
                     self.driv_stren()
                 )
@@ -28379,9 +27921,7 @@ pub mod imspi {
         }
         #[doc = "IMSPI Timeout Control Register"]
         #[inline(always)]
-        pub const fn timeout_control(
-            self,
-        ) -> crate::common::Reg<regs::TimeoutControl, crate::common::RW> {
+        pub const fn timeout_control(self) -> crate::common::Reg<regs::TimeoutControl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
         }
     }
@@ -28753,9 +28293,7 @@ pub mod kbc {
         }
         impl core::fmt::Debug for Activate {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate")
-                    .field("act", &self.act())
-                    .finish()
+                f.debug_struct("Activate").field("act", &self.act()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -29113,9 +28651,7 @@ pub mod kbc {
         }
         impl core::fmt::Debug for Pcobf {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Pcobf")
-                    .field("pcobf", &self.pcobf())
-                    .finish()
+                f.debug_struct("Pcobf").field("pcobf", &self.pcobf()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -29638,12 +29174,7 @@ pub mod led0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Limit {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "Limit {{ min: {=u8:?}, max: {=u8:?} }}",
-                    self.min(),
-                    self.max()
-                )
+                defmt::write!(f, "Limit {{ min: {=u8:?}, max: {=u8:?} }}", self.min(), self.max())
             }
         }
         #[doc = "LED Output Delay"]
@@ -29671,9 +29202,7 @@ pub mod led0 {
         }
         impl core::fmt::Debug for Outdly {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Outdly")
-                    .field("delay", &self.delay())
-                    .finish()
+                f.debug_struct("Outdly").field("delay", &self.delay()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -30082,8 +29611,7 @@ pub mod otp {
             #[doc = "Each bit locks read to a byte in the OTP range starting byte 320 to 351 0=Not Locked 1=Locked."]
             #[inline(always)]
             pub fn set_rd_fine_lck(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for RdFineLck {
@@ -30102,11 +29630,7 @@ pub mod otp {
         #[cfg(feature = "defmt")]
         impl defmt::Format for RdFineLck {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "RdFineLck {{ rd_fine_lck: {=u32:?} }}",
-                    self.rd_fine_lck()
-                )
+                defmt::write!(f, "RdFineLck {{ rd_fine_lck: {=u32:?} }}", self.rd_fine_lck())
             }
         }
         #[doc = "This is the Read Lock Register."]
@@ -30259,8 +29783,7 @@ pub mod otp {
             #[doc = "Each bit locks write to a byte in the OTP range starting byte 320 to 351 0=Not Locked 1=Locked."]
             #[inline(always)]
             pub fn set_wr_fine_lck(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for WrFineLck {
@@ -30279,11 +29802,7 @@ pub mod otp {
         #[cfg(feature = "defmt")]
         impl defmt::Format for WrFineLck {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "WrFineLck {{ wr_fine_lck: {=u32:?} }}",
-                    self.wr_fine_lck()
-                )
+                defmt::write!(f, "WrFineLck {{ wr_fine_lck: {=u32:?} }}", self.wr_fine_lck())
             }
         }
         #[doc = "This is the Write Lock Register."]
@@ -30448,16 +29967,12 @@ pub mod pcr {
         }
         #[doc = "Processor Clock Control Register \\[7:0\\] Processor Clock Divide Value (PROC_DIV)"]
         #[inline(always)]
-        pub const fn proc_clk_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::ProcClkCtrl, crate::common::RW> {
+        pub const fn proc_clk_ctrl(self) -> crate::common::Reg<regs::ProcClkCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
         }
         #[doc = "Configures the EC_CLK clock domain"]
         #[inline(always)]
-        pub const fn slow_clk_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::SlowClkCtrl, crate::common::RW> {
+        pub const fn slow_clk_ctrl(self) -> crate::common::Reg<regs::SlowClkCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
         }
         #[doc = "Oscillator ID Register"]
@@ -30587,16 +30102,12 @@ pub mod pcr {
         }
         #[doc = "Bandgap Control Running Register"]
         #[inline(always)]
-        pub const fn bndgp_ctrl_run(
-            self,
-        ) -> crate::common::Reg<regs::BndgpCtrlRun, crate::common::R> {
+        pub const fn bndgp_ctrl_run(self) -> crate::common::Reg<regs::BndgpCtrlRun, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa4usize) as _) }
         }
         #[doc = "Bandgap Control Sleeping Register"]
         #[inline(always)]
-        pub const fn bndgp_ctrl_slp(
-            self,
-        ) -> crate::common::Reg<regs::BndgpCtrlSlp, crate::common::R> {
+        pub const fn bndgp_ctrl_slp(self) -> crate::common::Reg<regs::BndgpCtrlSlp, crate::common::R> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa8usize) as _) }
         }
         #[doc = "32KHz Period Counter Register"]
@@ -30626,9 +30137,7 @@ pub mod pcr {
         }
         #[doc = "32KHz Maximum Clock Duty Variation Register"]
         #[inline(always)]
-        pub const fn clk_maxdtyvrtn(
-            self,
-        ) -> crate::common::Reg<regs::ClkMaxdtyvrtn, crate::common::RW> {
+        pub const fn clk_maxdtyvrtn(self) -> crate::common::Reg<regs::ClkMaxdtyvrtn, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xd4usize) as _) }
         }
         #[doc = "32KHz Clock Valid Count Register"]
@@ -30643,9 +30152,7 @@ pub mod pcr {
         }
         #[doc = "32KHz Clock Control Register"]
         #[inline(always)]
-        pub const fn clk_32khz_ctrl(
-            self,
-        ) -> crate::common::Reg<regs::Clk32khzCtrl, crate::common::RW> {
+        pub const fn clk_32khz_ctrl(self) -> crate::common::Reg<regs::Clk32khzCtrl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xe0usize) as _) }
         }
         #[doc = "32KHz Clock Monitor Status Register"]
@@ -30674,8 +30181,7 @@ pub mod pcr {
             #[doc = "Regulator Control Running Register."]
             #[inline(always)]
             pub fn set_ctrl_run(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for BndgpCtrlRun {
@@ -30711,8 +30217,7 @@ pub mod pcr {
             #[doc = "Regulator Control Running Register."]
             #[inline(always)]
             pub fn set_ctrl_slp(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for BndgpCtrlSlp {
@@ -30832,8 +30337,7 @@ pub mod pcr {
             #[doc = "This is the difference in system clocks between the 32kHz clocks High Pulse Width and its Low Pulse Width."]
             #[inline(always)]
             pub fn set_clk_dtyvrtn(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkDtyvrtn {
@@ -30852,11 +30356,7 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for ClkDtyvrtn {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "ClkDtyvrtn {{ clk_dtyvrtn: {=u32:?} }}",
-                    self.clk_dtyvrtn()
-                )
+                defmt::write!(f, "ClkDtyvrtn {{ clk_dtyvrtn: {=u32:?} }}", self.clk_dtyvrtn())
             }
         }
         #[doc = "32KHz Clock High Pulse Register"]
@@ -30873,8 +30373,7 @@ pub mod pcr {
             #[doc = "Counter 32khz High Counts how many system clock cycles the 32kHz clock remains HIGH for."]
             #[inline(always)]
             pub fn set_clk_hghpls(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkHghpls {
@@ -31018,8 +30517,7 @@ pub mod pcr {
             #[doc = "This is the difference maximum variation allowed to generate a PASS condition for the 32kHz clock"]
             #[inline(always)]
             pub fn set_clk_maxdtyvrtn(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkMaxdtyvrtn {
@@ -31038,11 +30536,7 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for ClkMaxdtyvrtn {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "ClkMaxdtyvrtn {{ clk_maxdtyvrtn: {=u32:?} }}",
-                    self.clk_maxdtyvrtn()
-                )
+                defmt::write!(f, "ClkMaxdtyvrtn {{ clk_maxdtyvrtn: {=u32:?} }}", self.clk_maxdtyvrtn())
             }
         }
         #[doc = "32KHz Clock Max Period Register"]
@@ -31059,8 +30553,7 @@ pub mod pcr {
             #[doc = "This is the maximum period count that is acceptable for the 32kHz counter to flag a PASS status."]
             #[inline(always)]
             pub fn set_clk_maxprd(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkMaxprd {
@@ -31096,8 +30589,7 @@ pub mod pcr {
             #[doc = "This is the minimum period count that is acceptable for the 32kHz counter to flag a PASS status."]
             #[inline(always)]
             pub fn set_clk_minprd(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkMinprd {
@@ -31133,8 +30625,7 @@ pub mod pcr {
             #[doc = "Counter 32khz period Counts system clock cycles between 2 positive edges of an 32kHz clock."]
             #[inline(always)]
             pub fn set_clk_prd(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkPrd {
@@ -31145,9 +30636,7 @@ pub mod pcr {
         }
         impl core::fmt::Debug for ClkPrd {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("ClkPrd")
-                    .field("clk_prd", &self.clk_prd())
-                    .finish()
+                f.debug_struct("ClkPrd").field("clk_prd", &self.clk_prd()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -31213,7 +30702,13 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for ClkReq0 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "ClkReq0 {{ jtag_stap_clk_req: {=bool:?}, otp_clk_req: {=bool:?}, imspi_clk_req: {=bool:?} }}" , self . jtag_stap_clk_req () , self . otp_clk_req () , self . imspi_clk_req ())
+                defmt::write!(
+                    f,
+                    "ClkReq0 {{ jtag_stap_clk_req: {=bool:?}, otp_clk_req: {=bool:?}, imspi_clk_req: {=bool:?} }}",
+                    self.jtag_stap_clk_req(),
+                    self.otp_clk_req(),
+                    self.imspi_clk_req()
+                )
             }
         }
         #[doc = "Clock Required 1 Register"]
@@ -32226,8 +31721,7 @@ pub mod pcr {
             #[doc = "This counts the number of valid 32kHz periods and pulse width variations measured in a row. This count increments on a PASS and will reset on a FAIL."]
             #[inline(always)]
             pub fn set_clk_vldcnt(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkVldcnt {
@@ -32263,8 +31757,7 @@ pub mod pcr {
             #[doc = "This is the minimum value of Counter 32kHz Valid Count that will flag the status Counter Valid."]
             #[inline(always)]
             pub fn set_clk_vldmin(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for ClkVldmin {
@@ -32300,8 +31793,7 @@ pub mod pcr {
             #[doc = "PCR Reset Enable Lock Register."]
             #[inline(always)]
             pub fn set_pcr_rst_en_lock(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for LockReg {
@@ -32320,11 +31812,7 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for LockReg {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "LockReg {{ pcr_rst_en_lock: {=u32:?} }}",
-                    self.pcr_rst_en_lock()
-                )
+                defmt::write!(f, "LockReg {{ pcr_rst_en_lock: {=u32:?} }}", self.pcr_rst_en_lock())
             }
         }
         #[doc = "Oscillator ID Register"]
@@ -32405,9 +31893,7 @@ pub mod pcr {
         }
         impl core::fmt::Debug for PllRef {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PllRef")
-                    .field("pll_ref", &self.pll_ref())
-                    .finish()
+                f.debug_struct("PllRef").field("pll_ref", &self.pll_ref()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -32441,9 +31927,7 @@ pub mod pcr {
         }
         impl core::fmt::Debug for ProcClkCtrl {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("ProcClkCtrl")
-                    .field("div", &self.div())
-                    .finish()
+                f.debug_struct("ProcClkCtrl").field("div", &self.div()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -32663,8 +32147,7 @@ pub mod pcr {
             #[doc = "Regulator Control Running Register."]
             #[inline(always)]
             pub fn set_ctrl_run(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for RegCtrlRun {
@@ -32700,8 +32183,7 @@ pub mod pcr {
             #[doc = "Regulator Control Running Register."]
             #[inline(always)]
             pub fn set_ctrl_slp(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for RegCtrlSlp {
@@ -33757,11 +33239,7 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for SftVbatPor {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "SftVbatPor {{ sft_vbat_por: {=bool:?} }}",
-                    self.sft_vbat_por()
-                )
+                defmt::write!(f, "SftVbatPor {{ sft_vbat_por: {=bool:?} }}", self.sft_vbat_por())
             }
         }
         #[doc = "Configures the EC_CLK clock domain"]
@@ -33789,9 +33267,7 @@ pub mod pcr {
         }
         impl core::fmt::Debug for SlowClkCtrl {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SlowClkCtrl")
-                    .field("div", &self.div())
-                    .finish()
+                f.debug_struct("SlowClkCtrl").field("div", &self.div()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -34678,11 +34154,7 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for SysRst {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "SysRst {{ soft_sys_rst: {=bool:?} }}",
-                    self.soft_sys_rst()
-                )
+                defmt::write!(f, "SysRst {{ soft_sys_rst: {=bool:?} }}", self.soft_sys_rst())
             }
         }
         #[doc = "System Sleep Control"]
@@ -34742,7 +34214,13 @@ pub mod pcr {
         #[cfg(feature = "defmt")]
         impl defmt::Format for SysSlpCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "SysSlpCtrl {{ sl_mod: {=bool:?}, reg_stndby_en: {=bool:?}, slp_all: {=bool:?} }}" , self . sl_mod () , self . reg_stndby_en () , self . slp_all ())
+                defmt::write!(
+                    f,
+                    "SysSlpCtrl {{ sl_mod: {=bool:?}, reg_stndby_en: {=bool:?}, slp_all: {=bool:?} }}",
+                    self.sl_mod(),
+                    self.reg_stndby_en(),
+                    self.slp_all()
+                )
             }
         }
     }
@@ -34974,7 +34452,15 @@ pub mod peci {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ctrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ctrl {{ pd: {=bool:?}, rst: {=bool:?}, frst: {=bool:?}, txen: {=bool:?}, mien: {=bool:?} }}" , self . pd () , self . rst () , self . frst () , self . txen () , self . mien ())
+                defmt::write!(
+                    f,
+                    "Ctrl {{ pd: {=bool:?}, rst: {=bool:?}, frst: {=bool:?}, txen: {=bool:?}, mien: {=bool:?} }}",
+                    self.pd(),
+                    self.rst(),
+                    self.frst(),
+                    self.txen(),
+                    self.mien()
+                )
             }
         }
         #[doc = "Error Register"]
@@ -35166,7 +34652,15 @@ pub mod peci {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ien1 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ien1 {{ bien: {=bool:?}, eien: {=bool:?}, eren: {=bool:?}, rlen: {=bool:?}, rhen: {=bool:?} }}" , self . bien () , self . eien () , self . eren () , self . rlen () , self . rhen ())
+                defmt::write!(
+                    f,
+                    "Ien1 {{ bien: {=bool:?}, eien: {=bool:?}, eren: {=bool:?}, rlen: {=bool:?}, rhen: {=bool:?} }}",
+                    self.bien(),
+                    self.eien(),
+                    self.eren(),
+                    self.rlen(),
+                    self.rhen()
+                )
             }
         }
         #[doc = "Interrupt Enable 2 Register"]
@@ -35411,7 +34905,15 @@ pub mod peci {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Sts2 {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Sts2 {{ wff: {=bool:?}, wfe: {=bool:?}, rff: {=bool:?}, rfe: {=bool:?}, idle: {=bool:?} }}" , self . wff () , self . wfe () , self . rff () , self . rfe () , self . idle ())
+                defmt::write!(
+                    f,
+                    "Sts2 {{ wff: {=bool:?}, wfe: {=bool:?}, rff: {=bool:?}, rfe: {=bool:?}, idle: {=bool:?} }}",
+                    self.wff(),
+                    self.wfe(),
+                    self.rff(),
+                    self.rfe(),
+                    self.idle()
+                )
             }
         }
     }
@@ -35490,9 +34992,7 @@ pub mod phot {
         }
         impl core::fmt::Debug for Asclim {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Asclim")
-                    .field("clim", &self.clim())
-                    .finish()
+                f.debug_struct("Asclim").field("clim", &self.clim()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -35669,8 +35169,7 @@ pub mod phot {
             #[doc = "This register contains the current filtered PROCHOT Active Counter value."]
             #[inline(always)]
             pub fn set_active(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
             }
         }
         impl Default for Cucnt {
@@ -35681,9 +35180,7 @@ pub mod phot {
         }
         impl core::fmt::Debug for Cucnt {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Cucnt")
-                    .field("active", &self.active())
-                    .finish()
+                f.debug_struct("Cucnt").field("active", &self.active()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -35706,8 +35203,7 @@ pub mod phot {
             #[doc = "The contents of the PROCHOT Cumulative Count Register is copied into this register when the PROCHOT Duty Cycle Period Register transitions from 1 to 0."]
             #[inline(always)]
             pub fn set_cnt(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
             }
         }
         impl Default for DcCnt {
@@ -35741,8 +35237,7 @@ pub mod phot {
             #[doc = "This register defines the number of 100KHz periods required for a duty cycle measurement."]
             #[inline(always)]
             pub fn set_per(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
             }
         }
         impl Default for DcPer {
@@ -36408,9 +35903,7 @@ pub mod port92 {
         }
         impl core::fmt::Debug for Gatea20 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Gatea20")
-                    .field("gatea20", &self.gatea20())
-                    .finish()
+                f.debug_struct("Gatea20").field("gatea20", &self.gatea20()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -36553,9 +36046,7 @@ pub mod port_80_debug {
         }
         #[doc = "Host Alias Data Register"]
         #[inline(always)]
-        pub const fn hst_alis_data(
-            self,
-        ) -> crate::common::Reg<regs::HstAlisData, crate::common::RW> {
+        pub const fn hst_alis_data(self) -> crate::common::Reg<regs::HstAlisData, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x07f0usize) as _) }
         }
     }
@@ -36585,9 +36076,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for Activate32 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate32")
-                    .field("act", &self.act())
-                    .finish()
+                f.debug_struct("Activate32").field("act", &self.act()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -36621,9 +36110,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for Activate8 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Activate8")
-                    .field("activate", &self.activate())
-                    .finish()
+                f.debug_struct("Activate8").field("activate", &self.activate()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -36646,8 +36133,7 @@ pub mod port_80_debug {
             #[doc = "Current image of the 4-byte Port 80 value capture register."]
             #[inline(always)]
             pub fn set_capture(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Capture {
@@ -36658,9 +36144,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for Capture {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Capture")
-                    .field("capture", &self.capture())
-                    .finish()
+                f.debug_struct("Capture").field("capture", &self.capture()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -36738,7 +36222,14 @@ pub mod port_80_debug {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cfg {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cfg {{ flush: {=bool:?}, snpsht_clr: {=bool:?}, fifo_threshold: {=u8:?}, soft_rst: {=bool:?} }}" , self . flush () , self . snpsht_clr () , self . fifo_threshold () , self . soft_rst ())
+                defmt::write!(
+                    f,
+                    "Cfg {{ flush: {=bool:?}, snpsht_clr: {=bool:?}, fifo_threshold: {=u8:?}, soft_rst: {=bool:?} }}",
+                    self.flush(),
+                    self.snpsht_clr(),
+                    self.fifo_threshold(),
+                    self.soft_rst()
+                )
             }
         }
         #[doc = "EC Attribute Register."]
@@ -36850,9 +36341,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for EcData {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcData")
-                    .field("ec_data", &self.ec_data())
-                    .finish()
+                f.debug_struct("EcData").field("ec_data", &self.ec_data()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -36875,8 +36364,7 @@ pub mod port_80_debug {
             #[doc = "This is the host data."]
             #[inline(always)]
             pub fn set_h_dat(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for HostData32 {
@@ -36887,9 +36375,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for HostData32 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("HostData32")
-                    .field("h_dat", &self.h_dat())
-                    .finish()
+                f.debug_struct("HostData32").field("h_dat", &self.h_dat()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -36967,11 +36453,7 @@ pub mod port_80_debug {
         #[cfg(feature = "defmt")]
         impl defmt::Format for HstAlisData {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "HstAlisData {{ alis_blane: {=u8:?} }}",
-                    self.alis_blane()
-                )
+                defmt::write!(f, "HstAlisData {{ alis_blane: {=u8:?} }}", self.alis_blane())
             }
         }
         #[doc = "Interrupt Enable Register"]
@@ -36999,9 +36481,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for IntEn {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("IntEn")
-                    .field("thres_ien", &self.thres_ien())
-                    .finish()
+                f.debug_struct("IntEn").field("thres_ien", &self.thres_ien()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -37024,8 +36504,7 @@ pub mod port_80_debug {
             #[doc = "Current image of the 4-byte Port 80 value, captured immediately from the Host CPU."]
             #[inline(always)]
             pub fn set_snapshot(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Snapshot {
@@ -37036,9 +36515,7 @@ pub mod port_80_debug {
         }
         impl core::fmt::Debug for Snapshot {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Snapshot")
-                    .field("snapshot", &self.snapshot())
-                    .finish()
+                f.debug_struct("Snapshot").field("snapshot", &self.snapshot()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -37187,16 +36664,12 @@ pub mod powerguard_0 {
         }
         #[doc = "LPF1 Frequency Cut-off Rate Register"]
         #[inline(always)]
-        pub const fn lpf1_freq_cutoff_rate(
-            self,
-        ) -> crate::common::Reg<regs::Lpf1freqCutoffRate, crate::common::RW> {
+        pub const fn lpf1_freq_cutoff_rate(self) -> crate::common::Reg<regs::Lpf1freqCutoffRate, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
         }
         #[doc = "LPF2 Frequency Cut-off Rate Register"]
         #[inline(always)]
-        pub const fn lpf2_freq_cutoff_rate(
-            self,
-        ) -> crate::common::Reg<regs::Lpf2freqCutoffRate, crate::common::RW> {
+        pub const fn lpf2_freq_cutoff_rate(self) -> crate::common::Reg<regs::Lpf2freqCutoffRate, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
         }
         #[doc = "Data Register"]
@@ -37206,9 +36679,7 @@ pub mod powerguard_0 {
         }
         #[doc = "Threshold Limit Register."]
         #[inline(always)]
-        pub const fn threshold_limit(
-            self,
-        ) -> crate::common::Reg<regs::ThresholdLimit, crate::common::RW> {
+        pub const fn threshold_limit(self) -> crate::common::Reg<regs::ThresholdLimit, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
         }
         #[doc = "Low Timer Register"]
@@ -37514,10 +36985,7 @@ pub mod powerguard_0 {
                     .field("prochot_gate", &self.prochot_gate())
                     .field("test_data_mux_select", &self.test_data_mux_select())
                     .field("prochot_data_mux_select", &self.prochot_data_mux_select())
-                    .field(
-                        "low_comparator_hysteresis_mode",
-                        &self.low_comparator_hysteresis_mode(),
-                    )
+                    .field("low_comparator_hysteresis_mode", &self.low_comparator_hysteresis_mode())
                     .field(
                         "high_comparator_hysteresis_mode",
                         &self.high_comparator_hysteresis_mode(),
@@ -37678,10 +37146,7 @@ pub mod powerguard_0 {
                     .field("high_timer_counter", &self.high_timer_counter())
                     .field("high_timer_load", &self.high_timer_load())
                     .field("test_bit", &self.test_bit())
-                    .field(
-                        "high_timer_recovery_options",
-                        &self.high_timer_recovery_options(),
-                    )
+                    .field("high_timer_recovery_options", &self.high_timer_recovery_options())
                     .finish()
             }
         }
@@ -37921,10 +37386,7 @@ pub mod powerguard_0 {
                     .field("low_timer_counter", &self.low_timer_counter())
                     .field("low_timer_load", &self.low_timer_load())
                     .field("test_bit", &self.test_bit())
-                    .field(
-                        "low_timer_recovery_options",
-                        &self.low_timer_recovery_options(),
-                    )
+                    .field("low_timer_recovery_options", &self.low_timer_recovery_options())
                     .finish()
             }
         }
@@ -37948,8 +37410,7 @@ pub mod powerguard_0 {
             #[doc = "The cutoff frequency for the Linear Predictive Filter 1."]
             #[inline(always)]
             pub fn set_lpf1_cutoff_freq(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+                self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
             }
             #[doc = "This bit controls the weight parameter W in the First Order Average Equation and the weight parameter W2 in the Second Order Average Equation for Linear Predictive Filter 1."]
             #[inline(always)]
@@ -38009,8 +37470,7 @@ pub mod powerguard_0 {
             #[doc = "The cutoff frequency for the Linear Predictive Filter 2."]
             #[inline(always)]
             pub fn set_lpf2_cutoff_freq(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+                self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
             }
             #[doc = "This bit controls the weight parameter W in the First Order Average Equation and the weight parameter W2 in the Second Order Average Equation for Linear Predictive Filter 1."]
             #[inline(always)]
@@ -38473,7 +37933,14 @@ pub mod pwm0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cfg {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cfg {{ pwm_en: {=bool:?}, clk_sel: {=bool:?}, inv: {=bool:?}, clk_pre_div: {=u8:?} }}" , self . pwm_en () , self . clk_sel () , self . inv () , self . clk_pre_div ())
+                defmt::write!(
+                    f,
+                    "Cfg {{ pwm_en: {=bool:?}, clk_sel: {=bool:?}, inv: {=bool:?}, clk_pre_div: {=u8:?} }}",
+                    self.pwm_en(),
+                    self.clk_sel(),
+                    self.inv(),
+                    self.clk_pre_div()
+                )
             }
         }
     }
@@ -38501,9 +37968,7 @@ pub mod qmspi {
         }
         #[doc = "QMSPI Local DMA Rx Start Address Register"]
         #[inline(always)]
-        pub const fn ldma_rxstrt_addr(
-            self,
-        ) -> crate::common::Reg<regs::LdmaRxstrtAddr, crate::common::RW> {
+        pub const fn ldma_rxstrt_addr(self) -> crate::common::Reg<regs::LdmaRxstrtAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
         }
         #[doc = "QMSPI Local DMA Rx Length Register"]
@@ -38539,9 +38004,7 @@ pub mod qmspi {
         }
         #[doc = "QMSPI Local DMA Tx Start Address Register"]
         #[inline(always)]
-        pub const fn ldma_txstrt_addr(
-            self,
-        ) -> crate::common::Reg<regs::LdmaTxstrtAddr, crate::common::RW> {
+        pub const fn ldma_txstrt_addr(self) -> crate::common::Reg<regs::LdmaTxstrtAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
         }
         #[doc = "QMSPI Local DMA Tx Length Register"]
@@ -38659,16 +38122,12 @@ pub mod qmspi {
         }
         #[doc = "QMSPI Descriptor Local DMA Rx Enable Register"]
         #[inline(always)]
-        pub const fn desc_ldma_rxen(
-            self,
-        ) -> crate::common::Reg<regs::DescLdmaRxen, crate::common::RW> {
+        pub const fn desc_ldma_rxen(self) -> crate::common::Reg<regs::DescLdmaRxen, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize) as _) }
         }
         #[doc = "QMSPI Descriptor Local DMA Tx Enable Register"]
         #[inline(always)]
-        pub const fn desc_ldma_txen(
-            self,
-        ) -> crate::common::Reg<regs::DescLdmaTxen, crate::common::RW> {
+        pub const fn desc_ldma_txen(self) -> crate::common::Reg<regs::DescLdmaTxen, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0104usize) as _) }
         }
         #[inline(always)]
@@ -39182,11 +38641,7 @@ pub mod qmspi {
         #[cfg(feature = "defmt")]
         impl defmt::Format for DescLdmaRxen {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "DescLdmaRxen {{ desc_ldma_rxen: {=u16:?} }}",
-                    self.desc_ldma_rxen()
-                )
+                defmt::write!(f, "DescLdmaRxen {{ desc_ldma_rxen: {=u16:?} }}", self.desc_ldma_rxen())
             }
         }
         #[doc = "QMSPI Descriptor Local DMA Tx Enable Register"]
@@ -39222,11 +38677,7 @@ pub mod qmspi {
         #[cfg(feature = "defmt")]
         impl defmt::Format for DescLdmaTxen {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "DescLdmaTxen {{ desc_ldma_txen: {=u16:?} }}",
-                    self.desc_ldma_txen()
-                )
+                defmt::write!(f, "DescLdmaTxen {{ desc_ldma_txen: {=u16:?} }}", self.desc_ldma_txen())
             }
         }
         #[doc = "QMSPI Description Buffer 0 Register"]
@@ -39753,8 +39204,7 @@ pub mod qmspi {
             #[doc = "This is the maximum Length of the transfer in Bytes that the DMA Channel will allow access to."]
             #[inline(always)]
             pub fn set_rx_len(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for LdmaRxLen {
@@ -39765,9 +39215,7 @@ pub mod qmspi {
         }
         impl core::fmt::Debug for LdmaRxLen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("LdmaRxLen")
-                    .field("rx_len", &self.rx_len())
-                    .finish()
+                f.debug_struct("LdmaRxLen").field("rx_len", &self.rx_len()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -39886,8 +39334,7 @@ pub mod qmspi {
             #[doc = "This is the Starting Address for the DMA access into the memory space (write to this address on Rx). This address is updated by the transfer size based on the Local DMA Access Size after every access."]
             #[inline(always)]
             pub fn set_strt_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for LdmaRxstrtAddr {
@@ -39906,11 +39353,7 @@ pub mod qmspi {
         #[cfg(feature = "defmt")]
         impl defmt::Format for LdmaRxstrtAddr {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "LdmaRxstrtAddr {{ strt_addr: {=u32:?} }}",
-                    self.strt_addr()
-                )
+                defmt::write!(f, "LdmaRxstrtAddr {{ strt_addr: {=u32:?} }}", self.strt_addr())
             }
         }
         #[doc = "QMSPI Local DMA Tx Length Register"]
@@ -39927,8 +39370,7 @@ pub mod qmspi {
             #[doc = "This is the maximum Length of the transfer in Bytes that the DMA Channel will allow access to."]
             #[inline(always)]
             pub fn set_tx_len(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for LdmaTxLen {
@@ -39939,9 +39381,7 @@ pub mod qmspi {
         }
         impl core::fmt::Debug for LdmaTxLen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("LdmaTxLen")
-                    .field("tx_len", &self.tx_len())
-                    .finish()
+                f.debug_struct("LdmaTxLen").field("tx_len", &self.tx_len()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -40060,8 +39500,7 @@ pub mod qmspi {
             #[doc = "This is the Starting Address for the DMA access into the memory space (Read from this address on Tx). This address is updated by the transfer size based on the Local DMA Access Size after every access."]
             #[inline(always)]
             pub fn set_strt_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for LdmaTxstrtAddr {
@@ -40080,11 +39519,7 @@ pub mod qmspi {
         #[cfg(feature = "defmt")]
         impl defmt::Format for LdmaTxstrtAddr {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "LdmaTxstrtAddr {{ strt_addr: {=u32:?} }}",
-                    self.strt_addr()
-                )
+                defmt::write!(f, "LdmaTxstrtAddr {{ strt_addr: {=u32:?} }}", self.strt_addr())
             }
         }
         #[doc = "QMSPI Mode Register"]
@@ -40298,8 +39733,7 @@ pub mod qmspi {
             #[doc = "Buffer that stores data from the external SPI Slave device to the SPI Master (this block), which is received over MISO or IO. Reads from this register will empty the Rx FIFO. A 1 Byte read will have valid data on bits \\[7:0\\] and a Word read will have data on bits \\[15:0\\]. It is possible to request more data than the FIFO has (underflow condition), but this will cause an error (Rx Buffer Error). Read accesses to this register decrement the RECEIVE_BUFFER_COUNT field."]
             #[inline(always)]
             pub fn set_rx_buf(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for RxFifo {
@@ -40310,9 +39744,7 @@ pub mod qmspi {
         }
         impl core::fmt::Debug for RxFifo {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("RxFifo")
-                    .field("rx_buf", &self.rx_buf())
-                    .finish()
+                f.debug_struct("RxFifo").field("rx_buf", &self.rx_buf()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -40671,7 +40103,14 @@ pub mod qmspi {
         #[cfg(feature = "defmt")]
         impl defmt::Format for TapCtrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "TapCtrl {{ auto_mod: {=u8:?}, ctrl: {=bool:?}, fw_go: {=bool:?}, auto_mult: {=u8:?} }}" , self . auto_mod () , self . ctrl () , self . fw_go () , self . auto_mult ())
+                defmt::write!(
+                    f,
+                    "TapCtrl {{ auto_mod: {=u8:?}, ctrl: {=bool:?}, fw_go: {=bool:?}, auto_mult: {=u8:?} }}",
+                    self.auto_mod(),
+                    self.ctrl(),
+                    self.fw_go(),
+                    self.auto_mult()
+                )
             }
         }
         #[doc = "QMSPI TAPs Register"]
@@ -40741,8 +40180,7 @@ pub mod qmspi {
             #[doc = "Writes to this register store data to be transmitted from the SPI Master to the external SPI Slave. Writes to this block will be written to the Transmit FIFO. A 1 Byte write fills 1 byte of the FIFO. A Word write fills 2 Bytes and a Doubleword write fills 4 bytes. The data must always be aligned to the bottom most byte (so 1 byte write is on bits \\[7:0\\] and Word write is on \\[15:0\\]). An overflow condition, TRANSMIT_BUFFER_ERROR, if a write to a full FIFO occurs. Write accesses to this register increment the TRANSMIT_BUFFER_COUNT field."]
             #[inline(always)]
             pub fn set_tx_buf(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for TxFifo {
@@ -40753,9 +40191,7 @@ pub mod qmspi {
         }
         impl core::fmt::Debug for TxFifo {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("TxFifo")
-                    .field("tx_buf", &self.tx_buf())
-                    .finish()
+                f.debug_struct("TxFifo").field("tx_buf", &self.tx_buf()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -40916,9 +40352,7 @@ pub mod rc_id0 {
         }
         impl core::fmt::Debug for Data {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Data")
-                    .field("rcid_data", &self.rcid_data())
-                    .finish()
+                f.debug_struct("Data").field("rcid_data", &self.rcid_data()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -41107,7 +40541,14 @@ pub mod rtc {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ctrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ctrl {{ blk_en: {=bool:?}, soft_rst: {=bool:?}, vci_en: {=bool:?}, alm_en: {=bool:?} }}" , self . blk_en () , self . soft_rst () , self . vci_en () , self . alm_en ())
+                defmt::write!(
+                    f,
+                    "Ctrl {{ blk_en: {=bool:?}, soft_rst: {=bool:?}, vci_en: {=bool:?}, alm_en: {=bool:?} }}",
+                    self.blk_en(),
+                    self.soft_rst(),
+                    self.vci_en(),
+                    self.alm_en()
+                )
             }
         }
         #[doc = "Daylight Savings Backward Register"]
@@ -41333,8 +40774,7 @@ pub mod rtos {
             #[doc = "This register contains the current value of the RTOS Timer counter. This register should be read as a DWORD. There is no latching mechanism of the upper bytes implemented if the register is accessed as a byte or word. Reading the register with byte or word operations may give incorrect results."]
             #[inline(always)]
             pub fn set_cntr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Cnt {
@@ -41452,8 +40892,7 @@ pub mod rtos {
             #[doc = "The this register is loaded into the RTOS Timer counter either when the TIMER_START bit is written with a 1, or when the timer counter counts down to 0 and the AUTO_RELOAD bit is 1. This register must be programmed with a new count value before the TIMER_START bit is set to 1. If this register is updated while the counter is operating, the new count value will only take effect if the counter transitions form 1 to 0 while the AUTO_RELOAD bit is set."]
             #[inline(always)]
             pub fn set_preload(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Prld {
@@ -41464,9 +40903,7 @@ pub mod rtos {
         }
         impl core::fmt::Debug for Prld {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Prld")
-                    .field("preload", &self.preload())
-                    .finish()
+                f.debug_struct("Prld").field("preload", &self.preload()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -41544,7 +40981,14 @@ pub mod rtos {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Softirq {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Softirq {{ swi0: {=bool:?}, swi1: {=bool:?}, swi2: {=bool:?}, swi3: {=bool:?} }}" , self . swi0 () , self . swi1 () , self . swi2 () , self . swi3 ())
+                defmt::write!(
+                    f,
+                    "Softirq {{ swi0: {=bool:?}, swi1: {=bool:?}, swi2: {=bool:?}, swi3: {=bool:?} }}",
+                    self.swi0(),
+                    self.swi1(),
+                    self.swi2(),
+                    self.swi3()
+                )
             }
         }
     }
@@ -41568,9 +41012,7 @@ pub mod safbc_cache {
         }
         #[doc = "This register defines the command type and length of transfers requested by EC firmware"]
         #[inline(always)]
-        pub const fn ec_len_tag_cmd(
-            self,
-        ) -> crate::common::Reg<regs::EcLenTagCmd, crate::common::RW> {
+        pub const fn ec_len_tag_cmd(self) -> crate::common::Reg<regs::EcLenTagCmd, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
         }
         #[doc = "This register hold the Flash Space address to be accessed by the current command from EC firmware."]
@@ -41590,9 +41032,7 @@ pub mod safbc_cache {
         }
         #[doc = "This register holds the DONE status bit."]
         #[inline(always)]
-        pub const fn ec_done_status(
-            self,
-        ) -> crate::common::Reg<regs::EcDoneStatus, crate::common::RW> {
+        pub const fn ec_done_status(self) -> crate::common::Reg<regs::EcDoneStatus, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
         }
         #[doc = "This register contains the one bit DONE_EN in bit position\\[0\\]. This bit enables the DONE bit in the status register to trigger an interrupt."]
@@ -41627,8 +41067,7 @@ pub mod safbc_cache {
             #[doc = "This field holds bits \\[31:2\\] of the SRAM buffer address. Bits\\[1:0\\] of the address are fixed at 00."]
             #[inline(always)]
             pub fn set_buf_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for EcAhbAdd {
@@ -41946,8 +41385,7 @@ pub mod safbc_cache {
             #[doc = "FLASH_ADDR: This field holds the Flash address to be accessed."]
             #[inline(always)]
             pub fn set_flash_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for EcFlashAdd {
@@ -41966,11 +41404,7 @@ pub mod safbc_cache {
         #[cfg(feature = "defmt")]
         impl defmt::Format for EcFlashAdd {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "EcFlashAdd {{ flash_addr: {=u32:?} }}",
-                    self.flash_addr()
-                )
+                defmt::write!(f, "EcFlashAdd {{ flash_addr: {=u32:?} }}", self.flash_addr())
             }
         }
         #[doc = "This register defines the command type and length of transfers requested by EC firmware"]
@@ -42030,7 +41464,13 @@ pub mod safbc_cache {
         #[cfg(feature = "defmt")]
         impl defmt::Format for EcLenTagCmd {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "EcLenTagCmd {{ ec_put_cmd: {=u8:?}, ec_ctype_cmd: {=u8:?}, ec_length: {=u8:?} }}" , self . ec_put_cmd () , self . ec_ctype_cmd () , self . ec_length ())
+                defmt::write!(
+                    f,
+                    "EcLenTagCmd {{ ec_put_cmd: {=u8:?}, ec_ctype_cmd: {=u8:?}, ec_length: {=u8:?} }}",
+                    self.ec_put_cmd(),
+                    self.ec_ctype_cmd(),
+                    self.ec_length()
+                )
             }
         }
         #[doc = "This register contains the Start control for a Flash access requested in the rest of the EC Portal registers. It triggers the requested transfer."]
@@ -42058,9 +41498,7 @@ pub mod safbc_cache {
         }
         impl core::fmt::Debug for EcStart {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcStart")
-                    .field("start", &self.start())
-                    .finish()
+                f.debug_struct("EcStart").field("start", &self.start()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -42131,9 +41569,7 @@ pub mod safbc_ec {
         }
         #[doc = "This register hold the Flash Space address to be accessed by the current command from EC firmware."]
         #[inline(always)]
-        pub const fn ecp_flash_addr(
-            self,
-        ) -> crate::common::Reg<regs::EcpFlashAddr, crate::common::RW> {
+        pub const fn ecp_flash_addr(self) -> crate::common::Reg<regs::EcpFlashAddr, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
         }
         #[doc = "This register contains the Start control for a Flash access requested in the rest of the EC Portal registers. It triggers the requested transfer."]
@@ -42158,9 +41594,7 @@ pub mod safbc_ec {
         }
         #[doc = "This register declares the address of the final byte of the Flash space implemented in the physically present Flash device or devices."]
         #[inline(always)]
-        pub const fn flash_size_lim(
-            self,
-        ) -> crate::common::Reg<regs::FlashSizeLim, crate::common::RW> {
+        pub const fn flash_size_lim(self) -> crate::common::Reg<regs::FlashSizeLim, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
         }
         #[doc = "This register declares whether there are two Flash devices, and if so, where the boundary is between the devices."]
@@ -42170,16 +41604,12 @@ pub mod safbc_ec {
         }
         #[doc = "Bits\\[7:6\\] (PREFIX) declare the need for some Flash devices (notably Micron) to be given an explicit command to enter Continuous Mode, as opposed to requiring only Mode bits in the first Read access."]
         #[inline(always)]
-        pub const fn flash_misc_cfg(
-            self,
-        ) -> crate::common::Reg<regs::FlashMiscCfg, crate::common::RW> {
+        pub const fn flash_misc_cfg(self) -> crate::common::Reg<regs::FlashMiscCfg, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
         }
         #[doc = "These bits may be individually enabled to trigger interrupts using the corresponding Interrupt Enable register."]
         #[inline(always)]
-        pub const fn espi_errintr_stat(
-            self,
-        ) -> crate::common::Reg<regs::EspiErrintrStat, crate::common::RW> {
+        pub const fn espi_errintr_stat(self) -> crate::common::Reg<regs::EspiErrintrStat, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x3cusize) as _) }
         }
         #[doc = "This is the eSPI Error interrupt Enable Register."]
@@ -42279,23 +41709,17 @@ pub mod safbc_ec {
         }
         #[doc = "The value placed in this register provides necessary programmable support to a Flash that is performing an Erase or a Program operation. When an Erase or Program is started or Resumed, a Suspend is held off until this time expires. While an Erase or Program is in process but Suspended, a Resume is forced when this time expires, even if Read requests are still pending, causing the Erase or Program operation to continue, and again inhibiting the next Suspend until it expires again."]
         #[inline(always)]
-        pub const fn susp_res_intrvl(
-            self,
-        ) -> crate::common::Reg<regs::SuspResIntrvl, crate::common::RW> {
+        pub const fn susp_res_intrvl(self) -> crate::common::Reg<regs::SuspResIntrvl, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x019cusize) as _) }
         }
         #[doc = "This register is used to detect when a series of Read transfers has finished. When this time expires without any new Read request, any suspended Erase or Program operation is given the Resume command to continue."]
         #[inline(always)]
-        pub const fn consec_rd_tmout(
-            self,
-        ) -> crate::common::Reg<regs::ConsecRdTmout, crate::common::RW> {
+        pub const fn consec_rd_tmout(self) -> crate::common::Reg<regs::ConsecRdTmout, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01a0usize) as _) }
         }
         #[doc = "Upon issuing a Suspend command, a Poll-1 operation is repeated until the Flash is no longer BUSY, then a Poll-2 operation to determine whether the Flash device is in a Suspended state."]
         #[inline(always)]
-        pub const fn fc_poll2_mask(
-            self,
-        ) -> crate::common::Reg<regs::FcPoll2mask, crate::common::RW> {
+        pub const fn fc_poll2_mask(self) -> crate::common::Reg<regs::FcPoll2mask, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01a4usize) as _) }
         }
         #[doc = "This register provides special mode control."]
@@ -42305,23 +41729,17 @@ pub mod safbc_ec {
         }
         #[doc = "This register provides a time delay for support of some Flash devices. It holds off the first Poll-1 check after a Suspend command has been given to the Flash."]
         #[inline(always)]
-        pub const fn susp_check_dly(
-            self,
-        ) -> crate::common::Reg<regs::SuspCheckDly, crate::common::RW> {
+        pub const fn susp_check_dly(self) -> crate::common::Reg<regs::SuspCheckDly, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01acusize) as _) }
         }
         #[doc = "Micron requires a prefix consisting of two command frames (in separate CS# assertions) to be sent before Mode information will be recognized to enter Continuous Read mode. This technique is called (Micron XIP) in their datasheets. The support for these chips requires setting up this register and setting the corresponding Prefix Enable bit(s) to enable this handling. The first command frame of the Prefix sequence will be a single byte consisting of the Write Enable opcode, taken from the OP_WE opcode field of the appropriate Opcode A register (Section 7.3.5, on page 113). The second command frame of the Prefix sequence comes from this register, consisting of first the PREFIX_OP byte for the corresponding Flash device (CS0/CS1), and then its PREFIX_DAT byte. The PREFIX_OP byte will be 81h always, which is documented as the Micron opcode (WRITE VOLATILE CONFIGURATION REGISTER) The PREFIX_DAT byte contains the data written to the Micron Flash device's Volatile Configuration Register. It has potential side-effects beyond just enabling Micron XIP Mode, so it must be constructed very carefully."]
         #[inline(always)]
-        pub const fn fc_spec_mode2(
-            self,
-        ) -> crate::common::Reg<regs::FcSpecMode2, crate::common::RW> {
+        pub const fn fc_spec_mode2(self) -> crate::common::Reg<regs::FcSpecMode2, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01b0usize) as _) }
         }
         #[doc = "DnX DnX Protection Bypass Register."]
         #[inline(always)]
-        pub const fn dnx_pro_bypas(
-            self,
-        ) -> crate::common::Reg<regs::DnxProBypas, crate::common::RW> {
+        pub const fn dnx_pro_bypas(self) -> crate::common::Reg<regs::DnxProBypas, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01b4usize) as _) }
         }
         #[doc = "Timeout Activity Counter."]
@@ -42351,9 +41769,7 @@ pub mod safbc_ec {
         }
         #[doc = "Flash Timeout Power Down Up."]
         #[inline(always)]
-        pub const fn fpd_tout_pdup(
-            self,
-        ) -> crate::common::Reg<regs::FpdToutPdup, crate::common::RW> {
+        pub const fn fpd_tout_pdup(self) -> crate::common::Reg<regs::FpdToutPdup, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01ccusize) as _) }
         }
         #[doc = "Clock Divider for CS0."]
@@ -42368,23 +41784,17 @@ pub mod safbc_ec {
         }
         #[doc = "eSPI RPMC OP2 Result Address."]
         #[inline(always)]
-        pub const fn espirpmcop2_resadd(
-            self,
-        ) -> crate::common::Reg<regs::Espirpmcop2resadd, crate::common::RW> {
+        pub const fn espirpmcop2_resadd(self) -> crate::common::Reg<regs::Espirpmcop2resadd, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0208usize) as _) }
         }
         #[doc = "EC0 RPMC OP2 Result Address."]
         #[inline(always)]
-        pub const fn ec0rpmcop2_resadd(
-            self,
-        ) -> crate::common::Reg<regs::Ec0rpmcop2resadd, crate::common::RW> {
+        pub const fn ec0rpmcop2_resadd(self) -> crate::common::Reg<regs::Ec0rpmcop2resadd, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x020cusize) as _) }
         }
         #[doc = "EC1 RPMC OP2 Result Address."]
         #[inline(always)]
-        pub const fn ec1rpmcop2_resadd(
-            self,
-        ) -> crate::common::Reg<regs::Ec1rpmcop2resadd, crate::common::RW> {
+        pub const fn ec1rpmcop2_resadd(self) -> crate::common::Reg<regs::Ec1rpmcop2resadd, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0210usize) as _) }
         }
     }
@@ -42439,8 +41849,7 @@ pub mod safbc_ec {
             #[doc = "This field provides a timeout value in units of the EC internal clock MCLK. This value is tunable for system performance, but a value at or below 20us is suggested."]
             #[inline(always)]
             pub fn set_rd_tout(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+                self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
             }
         }
         impl Default for ConsecRdTmout {
@@ -42584,7 +41993,14 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cs0opa {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cs0opa {{ op_we: {=u8:?}, op_sus: {=u8:?}, op_rsm: {=u8:?}, op_poll1: {=u8:?} }}" , self . op_we () , self . op_sus () , self . op_rsm () , self . op_poll1 ())
+                defmt::write!(
+                    f,
+                    "Cs0opa {{ op_we: {=u8:?}, op_sus: {=u8:?}, op_rsm: {=u8:?}, op_poll1: {=u8:?} }}",
+                    self.op_we(),
+                    self.op_sus(),
+                    self.op_rsm(),
+                    self.op_poll1()
+                )
             }
         }
         #[doc = "There are two Opcode B registers, one associated with each of the Flashes. If the CS1 Flash does not exist, its register can be left in its default state. The OP_PROGRAM field is mandatory, and must hold the Page Program opcode for the respective Flash. The Erase size of 4K is mandatory, and so the OP_ERASE0 field must be initialized to the appropriate opcode for the Flash device. There is only one bit declaring each Erase size up to the Host System (instead of one per Flash device, see eSPI Configuration Register 44h), so if there are two Flash devices, each Erase size over 4K must be declared here only if BOTH Flash devices support it."]
@@ -42656,7 +42072,14 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cs0opb {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cs0opb {{ op_erase0: {=u8:?}, op_erase1: {=u8:?}, op_erase2: {=u8:?}, op_prg: {=u8:?} }}" , self . op_erase0 () , self . op_erase1 () , self . op_erase2 () , self . op_prg ())
+                defmt::write!(
+                    f,
+                    "Cs0opb {{ op_erase0: {=u8:?}, op_erase1: {=u8:?}, op_erase2: {=u8:?}, op_prg: {=u8:?} }}",
+                    self.op_erase0(),
+                    self.op_erase1(),
+                    self.op_erase2(),
+                    self.op_prg()
+                )
             }
         }
         #[doc = "There are two Opcode C registers, one associated with each of the Flashes. If the CS1 Flash does not exist, its register can be left in its default state. Two fields (OP) define opcodes, and two fields (MODE) represent the Mode code values. Mode codes are provided immediately after the Address in Continuous Read traffic, and are used to keep the Flash device in Continuous Read Mode. Depending on the Flash device manufacturer, this mode may be documented in their datasheet as either a Mode byte, or as certain bits of a first Dummy byte or first Dummy clock. The recommended Mode values given below are selected to be appropriate for any Flash device."]
@@ -42728,7 +42151,14 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cs0opc {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cs0opc {{ op_read: {=u8:?}, mode_nonc: {=u8:?}, mode_cont: {=u8:?}, op_poll2: {=u8:?} }}" , self . op_read () , self . mode_nonc () , self . mode_cont () , self . op_poll2 ())
+                defmt::write!(
+                    f,
+                    "Cs0opc {{ op_read: {=u8:?}, mode_nonc: {=u8:?}, mode_cont: {=u8:?}, op_poll2: {=u8:?} }}",
+                    self.op_read(),
+                    self.mode_nonc(),
+                    self.mode_cont(),
+                    self.op_poll2()
+                )
             }
         }
         #[doc = "There are two Per-Flash Descriptors registers, one associated with each of the Flash devices."]
@@ -42919,7 +42349,14 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cs1opa {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cs1opa {{ op_we: {=u8:?}, op_sus: {=u8:?}, op_rsm: {=u8:?}, op_poll1: {=u8:?} }}" , self . op_we () , self . op_sus () , self . op_rsm () , self . op_poll1 ())
+                defmt::write!(
+                    f,
+                    "Cs1opa {{ op_we: {=u8:?}, op_sus: {=u8:?}, op_rsm: {=u8:?}, op_poll1: {=u8:?} }}",
+                    self.op_we(),
+                    self.op_sus(),
+                    self.op_rsm(),
+                    self.op_poll1()
+                )
             }
         }
         #[doc = "This is the CS1 Flash Opcode B register. If the CS1 Flash does not exist, its register can be left in its default state. The OP_PROGRAM field is mandatory, and must hold the Page Program opcode for the respective Flash. The Erase size of 4K is mandatory, and so the OP_ERASE0 field must be initialized to the appropriate opcode for the Flash device. There is only one bit declaring each Erase size up to the Host System (instead of one per Flash device, see eSPI Configuration Register 44h), so if there are two Flash devices, each Erase size over 4K must be declared here only if BOTH Flash devices support it."]
@@ -42991,7 +42428,14 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cs1opb {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cs1opb {{ op_erase0: {=u8:?}, op_erase1: {=u8:?}, op_erase2: {=u8:?}, op_program: {=u8:?} }}" , self . op_erase0 () , self . op_erase1 () , self . op_erase2 () , self . op_program ())
+                defmt::write!(
+                    f,
+                    "Cs1opb {{ op_erase0: {=u8:?}, op_erase1: {=u8:?}, op_erase2: {=u8:?}, op_program: {=u8:?} }}",
+                    self.op_erase0(),
+                    self.op_erase1(),
+                    self.op_erase2(),
+                    self.op_program()
+                )
             }
         }
         #[doc = "This is the CS1 Flash device Opcode C register. If the CS1 Flash does not exist, its register can be left in its default state. Two fields (OP) define opcodes, and two fields (MODE) represent the Mode code values. Mode codes are provided immediately after the Address in Continuous Read traffic, and are used to keep the Flash device in Continuous Read Mode. Depending on the Flash device manufacturer, this mode may be documented in their datasheet as either a Mode byte, or as certain bits of a first Dummy byte or first Dummy clock. The recommended Mode values given below are selected to be appropriate for any Flash device."]
@@ -43063,7 +42507,14 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Cs1opc {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Cs1opc {{ op_read: {=u8:?}, mode_nonc: {=u8:?}, mode_cont: {=u8:?}, op_poll2: {=u8:?} }}" , self . op_read () , self . mode_nonc () , self . mode_cont () , self . op_poll2 ())
+                defmt::write!(
+                    f,
+                    "Cs1opc {{ op_read: {=u8:?}, mode_nonc: {=u8:?}, mode_cont: {=u8:?}, op_poll2: {=u8:?} }}",
+                    self.op_read(),
+                    self.mode_nonc(),
+                    self.mode_cont(),
+                    self.op_poll2()
+                )
             }
         }
         #[doc = "This is the Per-Flash Descriptors register for CS1 Flash."]
@@ -43157,9 +42608,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for DnxProBypas {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("DnxProBypas")
-                    .field("dnx_lk", &self.dnx_lk())
-                    .finish()
+                f.debug_struct("DnxProBypas").field("dnx_lk", &self.dnx_lk()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -43182,8 +42631,7 @@ pub mod safbc_ec {
             #[doc = "eSPI RPMC OP2 Result Address for EC0."]
             #[inline(always)]
             pub fn set_ec0rpmcop2_resadd(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Ec0rpmcop2resadd {
@@ -43223,8 +42671,7 @@ pub mod safbc_ec {
             #[doc = "eSPI RPMC OP2 Result Address for EC1."]
             #[inline(always)]
             pub fn set_ec1rpmcop2_resadd(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Ec1rpmcop2resadd {
@@ -43275,9 +42722,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for EcBusy {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcBusy")
-                    .field("ec_busy", &self.ec_busy())
-                    .finish()
+                f.debug_struct("EcBusy").field("ec_busy", &self.ec_busy()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -43300,8 +42745,7 @@ pub mod safbc_ec {
             #[doc = "This field holds bits \\[31:2\\] of the SRAM buffer address. Bits\\[1:0\\] of the address are fixed at 00."]
             #[inline(always)]
             pub fn set_adr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
+                self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
             }
         }
         impl Default for EcpBufAddr {
@@ -43312,9 +42756,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for EcpBufAddr {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcpBufAddr")
-                    .field("adr", &self.adr())
-                    .finish()
+                f.debug_struct("EcpBufAddr").field("adr", &self.adr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -43403,8 +42845,7 @@ pub mod safbc_ec {
             #[doc = "FLASH_ADDR: This field holds the Flash address to be accessed."]
             #[inline(always)]
             pub fn set_addr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for EcpFlashAddr {
@@ -43415,9 +42856,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for EcpFlashAddr {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcpFlashAddr")
-                    .field("addr", &self.addr())
-                    .finish()
+                f.debug_struct("EcpFlashAddr").field("addr", &self.addr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -43583,9 +43022,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for EcpStart {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("EcpStart")
-                    .field("start", &self.start())
-                    .finish()
+                f.debug_struct("EcpStart").field("start", &self.start()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -43932,8 +43369,7 @@ pub mod safbc_ec {
             #[doc = "eSPI RPMC OP2 Result Address for EC0."]
             #[inline(always)]
             pub fn set_ec0rpmcop2_resadd(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Espirpmcop2resadd {
@@ -44045,11 +43481,7 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for FcSpecMode {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "FcSpecMode {{ dis_suspend: {=bool:?} }}",
-                    self.dis_suspend()
-                )
+                defmt::write!(f, "FcSpecMode {{ dis_suspend: {=bool:?} }}", self.dis_suspend())
             }
         }
         #[doc = "Micron requires a prefix consisting of two command frames (in separate CS# assertions) to be sent before Mode information will be recognized to enter Continuous Read mode. This technique is called (Micron XIP) in their datasheets. The support for these chips requires setting up this register and setting the corresponding Prefix Enable bit(s) to enable this handling. The first command frame of the Prefix sequence will be a single byte consisting of the Write Enable opcode, taken from the OP_WE opcode field of the appropriate Opcode A register (Section 7.3.5, on page 113). The second command frame of the Prefix sequence comes from this register, consisting of first the PREFIX_OP byte for the corresponding Flash device (CS0/CS1), and then its PREFIX_DAT byte. The PREFIX_OP byte will be 81h always, which is documented as the Micron opcode (WRITE VOLATILE CONFIGURATION REGISTER) The PREFIX_DAT byte contains the data written to the Micron Flash device's Volatile Configuration Register. It has potential side-effects beyond just enabling Micron XIP Mode, so it must be constructed very carefully."]
@@ -44330,8 +43762,7 @@ pub mod safbc_ec {
             #[doc = "This register declares the address of the final byte of the Flash space implemented in the physically present Flash device or devices."]
             #[inline(always)]
             pub fn set_limit(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FlashSizeLim {
@@ -44342,9 +43773,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for FlashSizeLim {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FlashSizeLim")
-                    .field("limit", &self.limit())
-                    .finish()
+                f.debug_struct("FlashSizeLim").field("limit", &self.limit()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -44367,8 +43796,7 @@ pub mod safbc_ec {
             #[doc = "The address placed in this register is the address of the first byte of the second Flash device. If there is only one Flash device, then this register must contain a value greater than the Size Limit register above."]
             #[inline(always)]
             pub fn set_thres(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for FlashThr {
@@ -44379,9 +43807,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for FlashThr {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("FlashThr")
-                    .field("thres", &self.thres())
-                    .finish()
+                f.debug_struct("FlashThr").field("thres", &self.thres()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -44447,7 +43873,13 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for FlpCs0opcd {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "FlpCs0opcd {{ cs0opcd_ntry: {=u8:?}, cs0opcd_xit: {=u8:?}, cs0_rpmc_op2: {=u8:?} }}" , self . cs0opcd_ntry () , self . cs0opcd_xit () , self . cs0_rpmc_op2 ())
+                defmt::write!(
+                    f,
+                    "FlpCs0opcd {{ cs0opcd_ntry: {=u8:?}, cs0opcd_xit: {=u8:?}, cs0_rpmc_op2: {=u8:?} }}",
+                    self.cs0opcd_ntry(),
+                    self.cs0opcd_xit(),
+                    self.cs0_rpmc_op2()
+                )
             }
         }
         #[doc = "SAF Low Power CS0 OPCODE Register."]
@@ -44507,7 +43939,13 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for FlpCs1opcd {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "FlpCs1opcd {{ cs1opcd_ntry: {=u8:?}, cs1opcd_xit: {=u8:?}, cs1_rpmc_op2: {=u8:?} }}" , self . cs1opcd_ntry () , self . cs1opcd_xit () , self . cs1_rpmc_op2 ())
+                defmt::write!(
+                    f,
+                    "FlpCs1opcd {{ cs1opcd_ntry: {=u8:?}, cs1opcd_xit: {=u8:?}, cs1_rpmc_op2: {=u8:?} }}",
+                    self.cs1opcd_ntry(),
+                    self.cs1opcd_xit(),
+                    self.cs1_rpmc_op2()
+                )
             }
         }
         #[doc = "SAF Low Power Control Register."]
@@ -44571,14 +44009,8 @@ pub mod safbc_ec {
                 f.debug_struct("FlpCtrl")
                     .field("cs0lp_en", &self.cs0lp_en())
                     .field("cs1lp_en", &self.cs1lp_en())
-                    .field(
-                        "cs0wakon_processor_acti_en",
-                        &self.cs0wakon_processor_acti_en(),
-                    )
-                    .field(
-                        "cs1wakon_processor_acti_en",
-                        &self.cs1wakon_processor_acti_en(),
-                    )
+                    .field("cs0wakon_processor_acti_en", &self.cs0wakon_processor_acti_en())
+                    .field("cs1wakon_processor_acti_en", &self.cs1wakon_processor_acti_en())
                     .finish()
             }
         }
@@ -44674,11 +44106,7 @@ pub mod safbc_ec {
         #[cfg(feature = "defmt")]
         impl defmt::Format for FpdToutPdup {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "FpdToutPdup {{ fpd_tout_cnt: {=u16:?} }}",
-                    self.fpd_tout_cnt()
-                )
+                defmt::write!(f, "FpdToutPdup {{ fpd_tout_cnt: {=u16:?} }}", self.fpd_tout_cnt())
             }
         }
         #[doc = "This is a single register, which accompanies the two Per-Flash Descriptors registers, and provides Descriptor pointers that are shared by both CS0 and CS1 devices uniformly. Each 4-bit field is a pointer which identifies a Timing Descriptor location in the Captive QMSPI block's memory. The EXIT_CONT field (Exit Continuous Mode) points to the single chain invoked to exit the Flash from Continuous Mode, allowing an Erase or Program command to be entered. This chain is identical for either Flash device, regardless of its manufacturer, and simply directs a universal Exit symbol to the appropriate CS0/CS1 device. The POLL1 and POLL2 fields should both point to the same chain. This chain will issue the appropriate opcode for the operation (Poll1 or Poll2) supplied by the SAF Bridge from the Opcode registers, and will read back 16 bits of information for use by the SAF Bridge."]
@@ -44761,8 +44189,7 @@ pub mod safbc_ec {
             #[doc = "This field contains the limit address of this Region, in units of 4K bytes. The entire 4K block identified is within the Region: that is, the final byte address is determined by appending FFFh to this field."]
             #[inline(always)]
             pub fn set_saf_prot(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+                self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
             }
         }
         impl Default for Limit {
@@ -44773,9 +44200,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for Limit {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Limit")
-                    .field("saf_prot", &self.saf_prot())
-                    .finish()
+                f.debug_struct("Limit").field("saf_prot", &self.saf_prot()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -44809,9 +44234,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for PollIntrvl {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PollIntrvl")
-                    .field("intrvl", &self.intrvl())
-                    .finish()
+                f.debug_struct("PollIntrvl").field("intrvl", &self.intrvl()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -44834,8 +44257,7 @@ pub mod safbc_ec {
             #[doc = "This field provides a polling timeout value in units of the 32KHz clock. Recommended value is 5 seconds, expressed as 28000h (163,840 decimal) in this field."]
             #[inline(always)]
             pub fn set_tout(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
+                self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
             }
         }
         impl Default for PollTmout {
@@ -44846,9 +44268,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for PollTmout {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PollTmout")
-                    .field("tout", &self.tout())
-                    .finish()
+                f.debug_struct("PollTmout").field("tout", &self.tout()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -45387,8 +44807,7 @@ pub mod safbc_ec {
             #[doc = "This field contains the start address of this Region, in units of 4K bytes."]
             #[inline(always)]
             pub fn set_saf_prot(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+                self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
             }
         }
         impl Default for Start {
@@ -45399,9 +44818,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for Start {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Start")
-                    .field("saf_prot", &self.saf_prot())
-                    .finish()
+                f.debug_struct("Start").field("saf_prot", &self.saf_prot()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -45424,8 +44841,7 @@ pub mod safbc_ec {
             #[doc = "This field provides a delay value in units of the EC internal clock MCLK. This value should be set to 20us."]
             #[inline(always)]
             pub fn set_dly(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+                self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
             }
         }
         impl Default for SuspCheckDly {
@@ -45436,9 +44852,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for SuspCheckDly {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SuspCheckDly")
-                    .field("dly", &self.dly())
-                    .finish()
+                f.debug_struct("SuspCheckDly").field("dly", &self.dly()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -45472,9 +44886,7 @@ pub mod safbc_ec {
         }
         impl core::fmt::Debug for SuspResIntrvl {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SuspResIntrvl")
-                    .field("intrvl", &self.intrvl())
-                    .finish()
+                f.debug_struct("SuspResIntrvl").field("intrvl", &self.intrvl()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -45955,11 +45367,7 @@ pub mod safcomm {
         #[cfg(feature = "defmt")]
         impl defmt::Format for SafMode {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "SafMode {{ prefetch_en: {=bool:?} }}",
-                    self.prefetch_en()
-                )
+                defmt::write!(f, "SafMode {{ prefetch_en: {=bool:?} }}", self.prefetch_en())
             }
         }
     }
@@ -47262,9 +46670,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for MtrRxb {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MtrRxb")
-                    .field("mrxb", &self.mrxb())
-                    .finish()
+                f.debug_struct("MtrRxb").field("mrxb", &self.mrxb()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47298,9 +46704,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for MtrTxb {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MtrTxb")
-                    .field("mtxb", &self.mtxb())
-                    .finish()
+                f.debug_struct("MtrTxb").field("mtxb", &self.mtxb()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47421,9 +46825,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for PrmCtrl {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PrmCtrl")
-                    .field("ack_nak", &self.ack_nak())
-                    .finish()
+                f.debug_struct("PrmCtrl").field("ack_nak", &self.ack_nak()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47457,9 +46859,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for PrmIen {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PrmIen")
-                    .field("addr", &self.addr())
-                    .finish()
+                f.debug_struct("PrmIen").field("addr", &self.addr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47493,9 +46893,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for PrmSts {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PrmSts")
-                    .field("addr_intr", &self.addr_intr())
-                    .finish()
+                f.debug_struct("PrmSts").field("addr_intr", &self.addr_intr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47529,9 +46927,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for Rshtm {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Rshtm")
-                    .field("rshtm", &self.rshtm())
-                    .finish()
+                f.debug_struct("Rshtm").field("rshtm", &self.rshtm()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47741,7 +47137,15 @@ pub mod smb0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Scmd {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Scmd {{ srun: {=bool:?}, sproceed: {=bool:?}, pec: {=bool:?}, wr_cnt: {=u8:?}, rd_cnt: {=u8:?} }}" , self . srun () , self . sproceed () , self . pec () , self . wr_cnt () , self . rd_cnt ())
+                defmt::write!(
+                    f,
+                    "Scmd {{ srun: {=bool:?}, sproceed: {=bool:?}, pec: {=bool:?}, wr_cnt: {=u8:?}, rd_cnt: {=u8:?} }}",
+                    self.srun(),
+                    self.sproceed(),
+                    self.pec(),
+                    self.wr_cnt(),
+                    self.rd_cnt()
+                )
             }
         }
         #[doc = "This is the I2C Shadow Data Register"]
@@ -47805,9 +47209,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for SlvAddr {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SlvAddr")
-                    .field("saddr", &self.saddr())
-                    .finish()
+                f.debug_struct("SlvAddr").field("saddr", &self.saddr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47841,9 +47243,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for SlvRxb {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SlvRxb")
-                    .field("srxb", &self.srxb())
-                    .finish()
+                f.debug_struct("SlvRxb").field("srxb", &self.srxb()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -47877,9 +47277,7 @@ pub mod smb0 {
         }
         impl core::fmt::Debug for SlvTxb {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SlvTxb")
-                    .field("stxb", &self.stxb())
-                    .finish()
+                f.debug_struct("SlvTxb").field("stxb", &self.stxb()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48027,11 +47425,7 @@ pub mod smb0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for WakeEn {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "WakeEn {{ start_det_int_en: {=bool:?} }}",
-                    self.start_det_int_en()
-                )
+                defmt::write!(f, "WakeEn {{ start_det_int_en: {=bool:?} }}", self.start_det_int_en())
             }
         }
         #[doc = "WAKE STATUS Register"]
@@ -48067,11 +47461,7 @@ pub mod smb0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for WakeSts {
             fn format(&self, f: defmt::Formatter) {
-                defmt::write!(
-                    f,
-                    "WakeSts {{ start_bit_det: {=bool:?} }}",
-                    self.start_bit_det()
-                )
+                defmt::write!(f, "WakeSts {{ start_bit_det: {=bool:?} }}", self.start_bit_det())
             }
         }
         #[doc = "Control Register"]
@@ -48300,8 +47690,7 @@ pub mod spi_slave {
             #[doc = "Read only register for the Host. When data is written to this register the OBF Flag is set. Host can read the data and writes of 0xFFFF_FFFF will clear this register, also clearing the flag. Any form of read will clear the flag for this register"]
             #[inline(always)]
             pub fn set_ec2m(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Ec2spimMbx {
@@ -48312,9 +47701,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for Ec2spimMbx {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Ec2spimMbx")
-                    .field("ec2m", &self.ec2m())
-                    .finish()
+                f.debug_struct("Ec2spimMbx").field("ec2m", &self.ec2m()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48673,8 +48060,7 @@ pub mod spi_slave {
             #[doc = "Base Address for Region 0."]
             #[inline(always)]
             pub fn set_bas_add0(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for MemBar0 {
@@ -48685,9 +48071,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for MemBar0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MemBar0")
-                    .field("bas_add0", &self.bas_add0())
-                    .finish()
+                f.debug_struct("MemBar0").field("bas_add0", &self.bas_add0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48710,8 +48094,7 @@ pub mod spi_slave {
             #[doc = "Base Address for Region 1."]
             #[inline(always)]
             pub fn set_add1(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for MemBar1 {
@@ -48722,9 +48105,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for MemBar1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MemBar1")
-                    .field("add1", &self.add1())
-                    .finish()
+                f.debug_struct("MemBar1").field("add1", &self.add1()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48811,9 +48192,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for MemRdLim0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MemRdLim0")
-                    .field("lmt0", &self.lmt0())
-                    .finish()
+                f.debug_struct("MemRdLim0").field("lmt0", &self.lmt0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48847,9 +48226,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for MemRdLim1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MemRdLim1")
-                    .field("lmt1", &self.lmt1())
-                    .finish()
+                f.debug_struct("MemRdLim1").field("lmt1", &self.lmt1()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48883,9 +48260,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for MemWrLim0 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MemWrLim0")
-                    .field("lmt0", &self.lmt0())
-                    .finish()
+                f.debug_struct("MemWrLim0").field("lmt0", &self.lmt0()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48919,9 +48294,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for MemWrLim1 {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("MemWrLim1")
-                    .field("lmt1", &self.lmt1())
-                    .finish()
+                f.debug_struct("MemWrLim1").field("lmt1", &self.lmt1()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48955,9 +48328,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for RxfByteCnt {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("RxfByteCnt")
-                    .field("bcnt", &self.bcnt())
-                    .finish()
+                f.debug_struct("RxfByteCnt").field("bcnt", &self.bcnt()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -48991,9 +48362,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for RxfHostBar {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("RxfHostBar")
-                    .field("bar", &self.bar())
-                    .finish()
+                f.debug_struct("RxfHostBar").field("bar", &self.bar()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -50090,8 +49459,7 @@ pub mod spi_slave {
             #[doc = "Write only register for the Host. When data is written to this register the IBF Flag is set. EC can read the data and writes of 0xFFFF will clear this register. Any form of read will clear the flag for this register."]
             #[inline(always)]
             pub fn set_m2ec(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for Spim2ecMbx {
@@ -50102,9 +49470,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for Spim2ecMbx {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Spim2ecMbx")
-                    .field("m2ec", &self.m2ec())
-                    .finish()
+                f.debug_struct("Spim2ecMbx").field("m2ec", &self.m2ec()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -50318,9 +49684,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for TxfByteCnt {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("TxfByteCnt")
-                    .field("bcnt", &self.bcnt())
-                    .finish()
+                f.debug_struct("TxfByteCnt").field("bcnt", &self.bcnt()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -50354,9 +49718,7 @@ pub mod spi_slave {
         }
         impl core::fmt::Debug for TxfHostBar {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("TxfHostBar")
-                    .field("bar", &self.bar())
-                    .finish()
+                f.debug_struct("TxfHostBar").field("bar", &self.bar()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -50551,9 +49913,7 @@ pub mod tach0 {
         }
         impl core::fmt::Debug for LimHi {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("LimHi")
-                    .field("t_high", &self.t_high())
-                    .finish()
+                f.debug_struct("LimHi").field("t_high", &self.t_high()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -50587,9 +49947,7 @@ pub mod tach0 {
         }
         impl core::fmt::Debug for LimLo {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("LimLo")
-                    .field("t_low", &self.t_low())
-                    .finish()
+                f.debug_struct("LimLo").field("t_low", &self.t_low()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -50770,7 +50128,14 @@ pub mod tfdp {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ctrl {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, edge_sel: {=bool:?}, divsel: {=u8:?}, ip_dly: {=u8:?} }}" , self . en () , self . edge_sel () , self . divsel () , self . ip_dly ())
+                defmt::write!(
+                    f,
+                    "Ctrl {{ en: {=bool:?}, edge_sel: {=bool:?}, divsel: {=u8:?}, ip_dly: {=u8:?} }}",
+                    self.en(),
+                    self.edge_sel(),
+                    self.divsel(),
+                    self.ip_dly()
+                )
             }
         }
     }
@@ -50998,9 +50363,7 @@ pub mod timer16_0 {
         }
         impl core::fmt::Debug for Sts {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Sts")
-                    .field("evt_int", &self.evt_int())
-                    .finish()
+                f.debug_struct("Sts").field("evt_int", &self.evt_int()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -51234,9 +50597,7 @@ pub mod timer32_0 {
         }
         impl core::fmt::Debug for Sts {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Sts")
-                    .field("evt_int", &self.evt_int())
-                    .finish()
+                f.debug_struct("Sts").field("evt_int", &self.evt_int()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -52790,7 +52151,14 @@ pub mod uart0 {
         #[cfg(feature = "defmt")]
         impl defmt::Format for Ien {
             fn format(&self, f: defmt::Formatter) {
-                defmt :: write ! (f , "Ien {{ erdai: {=bool:?}, ethrei: {=bool:?}, elsi: {=bool:?}, emsi: {=bool:?} }}" , self . erdai () , self . ethrei () , self . elsi () , self . emsi ())
+                defmt::write!(
+                    f,
+                    "Ien {{ erdai: {=bool:?}, ethrei: {=bool:?}, elsi: {=bool:?}, emsi: {=bool:?} }}",
+                    self.erdai(),
+                    self.ethrei(),
+                    self.elsi(),
+                    self.emsi()
+                )
             }
         }
     }
@@ -52834,9 +52202,7 @@ pub mod vbat {
         }
         #[doc = "Embedded Reset Debouce Enable."]
         #[inline(always)]
-        pub const fn emdrst_dbnc_en(
-            self,
-        ) -> crate::common::Reg<regs::EmdrstDbncEn, crate::common::RW> {
+        pub const fn emdrst_dbnc_en(self) -> crate::common::Reg<regs::EmdrstDbncEn, crate::common::RW> {
             unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
         }
     }
@@ -52999,8 +52365,7 @@ pub mod vbat {
             #[doc = "Thirty-two bit read/write register. If software sets this register to an incrementing value, based on an external non-volatile store, this register may be combined with the Monotonic Counter Register to form a 64-bit monotonic counter."]
             #[inline(always)]
             pub fn set_cntr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for McntHi {
@@ -53011,9 +52376,7 @@ pub mod vbat {
         }
         impl core::fmt::Debug for McntHi {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("McntHi")
-                    .field("cntr", &self.cntr())
-                    .finish()
+                f.debug_struct("McntHi").field("cntr", &self.cntr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53036,8 +52399,7 @@ pub mod vbat {
             #[doc = "Read-only register that increments by 1 every time it is read. It is reset to 0 on a VBAT Power On Reset."]
             #[inline(always)]
             pub fn set_cntr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+                self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
             }
         }
         impl Default for McntLo {
@@ -53048,9 +52410,7 @@ pub mod vbat {
         }
         impl core::fmt::Debug for McntLo {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("McntLo")
-                    .field("cntr", &self.cntr())
-                    .finish()
+                f.debug_struct("McntLo").field("cntr", &self.cntr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53271,9 +52631,7 @@ pub mod vci {
         }
         impl core::fmt::Debug for BufferEn {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BufferEn")
-                    .field("v_buf", &self.v_buf())
-                    .finish()
+                f.debug_struct("BufferEn").field("v_buf", &self.v_buf()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53451,9 +52809,7 @@ pub mod vci {
         }
         impl core::fmt::Debug for HldoffCnt {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("HldoffCnt")
-                    .field("time", &self.time())
-                    .finish()
+                f.debug_struct("HldoffCnt").field("time", &self.time()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53653,9 +53009,7 @@ pub mod vci {
         }
         impl core::fmt::Debug for NedgeDet {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("NedgeDet")
-                    .field("vci_in", &self.vci_in())
-                    .finish()
+                f.debug_struct("NedgeDet").field("vci_in", &self.vci_in()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53689,9 +53043,7 @@ pub mod vci {
         }
         impl core::fmt::Debug for PedgeDet {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("PedgeDet")
-                    .field("vci_in", &self.vci_in())
-                    .finish()
+                f.debug_struct("PedgeDet").field("vci_in", &self.vci_in()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53725,9 +53077,7 @@ pub mod vci {
         }
         impl core::fmt::Debug for Polarity {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Polarity")
-                    .field("vci_in", &self.vci_in())
-                    .finish()
+                f.debug_struct("Polarity").field("vci_in", &self.vci_in()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53908,9 +53258,7 @@ pub mod wdt {
         }
         impl core::fmt::Debug for Ien {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Ien")
-                    .field("wdt_inten", &self.wdt_inten())
-                    .finish()
+                f.debug_struct("Ien").field("wdt_inten", &self.wdt_inten()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -53944,9 +53292,7 @@ pub mod wdt {
         }
         impl core::fmt::Debug for Sts {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("Sts")
-                    .field("wdt_ev_irq", &self.wdt_ev_irq())
-                    .finish()
+                f.debug_struct("Sts").field("wdt_ev_irq", &self.wdt_ev_irq()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -54040,8 +53386,7 @@ pub mod week {
             #[doc = "While the WT_ENABLE bit is 1, this register is incremented at a 1 Hz rate. Writes of this register may require one second to take effect. Reads return the current state of the register. Reads and writes complete independently of the state of WT_ENABLE."]
             #[inline(always)]
             pub fn set_wk_cntr(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x0fff_ffff << 0usize)) | (((val as u32) & 0x0fff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x0fff_ffff << 0usize)) | (((val as u32) & 0x0fff_ffff) << 0usize);
             }
         }
         impl Default for AlarmCnt {
@@ -54052,9 +53397,7 @@ pub mod week {
         }
         impl core::fmt::Debug for AlarmCnt {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("AlarmCnt")
-                    .field("wk_cntr", &self.wk_cntr())
-                    .finish()
+                f.debug_struct("AlarmCnt").field("wk_cntr", &self.wk_cntr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -54088,9 +53431,7 @@ pub mod week {
         }
         impl core::fmt::Debug for BgpoData {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("BgpoData")
-                    .field("dat", &self.dat())
-                    .finish()
+                f.debug_struct("BgpoData").field("dat", &self.dat()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -54279,9 +53620,7 @@ pub mod week {
         }
         impl core::fmt::Debug for SsIntrSel {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("SsIntrSel")
-                    .field("spisr", &self.spisr())
-                    .finish()
+                f.debug_struct("SsIntrSel").field("spisr", &self.spisr()).finish()
             }
         }
         #[cfg(feature = "defmt")]
@@ -54453,8 +53792,7 @@ pub mod week {
             #[doc = "A Week Alarm Interrupt and a Week Alarm Power-Up Event are asserted when the Week Alarm Counter Register is greater than or equal to the contents of this register. Reads and writes complete independently of the state of WT_ENABLE."]
             #[inline(always)]
             pub fn set_wk_comp(&mut self, val: u32) {
-                self.0 =
-                    (self.0 & !(0x0fff_ffff << 0usize)) | (((val as u32) & 0x0fff_ffff) << 0usize);
+                self.0 = (self.0 & !(0x0fff_ffff << 0usize)) | (((val as u32) & 0x0fff_ffff) << 0usize);
             }
         }
         impl Default for TmrComp {
@@ -54465,9 +53803,7 @@ pub mod week {
         }
         impl core::fmt::Debug for TmrComp {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-                f.debug_struct("TmrComp")
-                    .field("wk_comp", &self.wk_comp())
-                    .finish()
+                f.debug_struct("TmrComp").field("wk_comp", &self.wk_comp()).finish()
             }
         }
         #[cfg(feature = "defmt")]
