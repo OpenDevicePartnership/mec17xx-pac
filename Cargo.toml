@@ -8,7 +8,7 @@ description = "Peripheral Access Crate for the Microchip MEC17xx family of MCUs"
 repository = "https://github.com/OpenDevicePartnership/microchip-pac"
 readme = "README.md"
 keywords = [ "microchip", "mec17", "mec172", "no_std", "embedded" ]
-categories = [ "embedded", "no_std" ]
+categories = [ "embedded", "no-std" ]
 rust-version = "1.85"
 exclude = [ "svd/*", "transforms/*" ]
 
@@ -18,7 +18,7 @@ cortex-m-rt = { version = ">=0.7.5,<0.8", optional = true }
 defmt = { version = "0.3.10", optional = true }
 
 [features]
-default = []
+default = ["rt", "mec1723n_b0_sz"]
 rt = ["cortex-m-rt/device"]
 defmt = ["dep:defmt"]
 
