@@ -1,7 +1,7 @@
 use std::env;
 
 fn main() {
-    let _chip_core_name = match env::vars()
+    let _chip = match env::vars()
         .map(|(a, _)| a)
         .filter(|x| x.starts_with("CARGO_FEATURE_CEC") || x.starts_with("CARGO_FEATURE_MEC"))
         .get_one()
@@ -16,11 +16,18 @@ fn main() {
     .replace('_', "-");
 
     #[cfg(feature = "rt")]
-    println!(
-        "cargo:rustc-link-search={}/src/chips/{}",
-        env::var("CARGO_MANIFEST_DIR").unwrap(),
-        _chip_core_name,
-    );
+    if _chip.starts_with("mec1723") || _chip.starts_with("mec1724") {
+        println!(
+            "cargo:rustc-link-search={}/src/chips/mec1723_4",
+            env::var("CARGO_MANIFEST_DIR").unwrap()
+        );
+    } else {
+        println!(
+            "cargo:rustc-link-search={}/src/chips/{}",
+            env::var("CARGO_MANIFEST_DIR").unwrap(),
+            _chip,
+        );
+    }
 
     println!("cargo:rerun-if-changed=build.rs");
 }
