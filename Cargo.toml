@@ -1,11 +1,11 @@
 [package]
-name = "microchip-pac"
-version = "0.1.0"
+name = "mec17xx-pac"
+version = "0.1.1"
 authors = [ "Felipe Balbi <febalbi@microsoft.com>" ]
 edition = "2021"
 license = "MIT"
 description = "Peripheral Access Crate for the Microchip MEC17xx family of MCUs"
-repository = "https://github.com/OpenDevicePartnership/microchip-pac"
+repository = "https://github.com/OpenDevicePartnership/mec17xx-pac"
 readme = "README.md"
 keywords = [ "microchip", "mec17", "mec172", "no_std", "embedded" ]
 categories = [ "embedded", "no-std" ]
