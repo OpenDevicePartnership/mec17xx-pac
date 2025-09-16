@@ -1,6 +1,6 @@
 [package]
 name = "mec17xx-pac"
-version = "0.1.1"
+version = "0.1.2"
 authors = [ "Felipe Balbi <febalbi@microsoft.com>" ]
 edition = "2021"
 license = "MIT"
@@ -15,7 +15,7 @@ exclude = [ "svd/*", "transforms/*" ]
 [dependencies]
 cortex-m = "0.7.7"
 cortex-m-rt = { version = ">=0.7.5,<0.8", optional = true }
-defmt = { version = "0.3.10", optional = true }
+defmt = { version = "1.0", optional = true }
 
 [features]
 default = ["rt", "mec1723n_b0_sz"]
